@@ -9,7 +9,7 @@
     <x:Property Name="counter_for_workflow" Type="InOutArgument(x:Int32)" />
     <x:Property Name="counter" Type="InOutArgument(x:Int32)" />
   </x:Members>
-  <sap:VirtualizedContainerService.HintSize>1371,5601</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1404,5139</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="32">
@@ -72,13 +72,13 @@
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="繰り返し (東京その他)" sap:VirtualizedContainerService.HintSize="758,5536" sap2010:WorkflowViewState.IdRef="ForEach`1_3" Values="[array_location]">
+  <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="繰り返し (東京その他)" sap:VirtualizedContainerService.HintSize="692,5074" sap2010:WorkflowViewState.IdRef="ForEach`1_3" Values="[array_location]">
     <ui:ForEach.Body>
       <ActivityAction x:TypeArguments="x:Object">
         <ActivityAction.Argument>
           <DelegateInArgument x:TypeArguments="x:Object" Name="item" />
         </ActivityAction.Argument>
-        <Sequence DisplayName="本文" sap:VirtualizedContainerService.HintSize="722,5402" sap2010:WorkflowViewState.IdRef="Sequence_350">
+        <Sequence DisplayName="本文" sap:VirtualizedContainerService.HintSize="656,4940" sap2010:WorkflowViewState.IdRef="Sequence_350">
           <Sequence.Variables>
             <Variable x:TypeArguments="x:String" Name="location" />
           </Sequence.Variables>
@@ -87,7 +87,7 @@
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <Assign DisplayName="代入" sap:VirtualizedContainerService.HintSize="680,60" sap2010:WorkflowViewState.IdRef="Assign_3">
+          <Assign DisplayName="代入" sap:VirtualizedContainerService.HintSize="614,60" sap2010:WorkflowViewState.IdRef="Assign_3">
             <Assign.To>
               <OutArgument x:TypeArguments="x:String">[location]</OutArgument>
             </Assign.To>
@@ -95,7 +95,7 @@
               <InArgument x:TypeArguments="x:String">[item.ToString]</InArgument>
             </Assign.Value>
           </Assign>
-          <Assign DisplayName="代入" sap:VirtualizedContainerService.HintSize="680,60" sap2010:WorkflowViewState.IdRef="Assign_4">
+          <Assign DisplayName="代入" sap:VirtualizedContainerService.HintSize="614,60" sap2010:WorkflowViewState.IdRef="Assign_4">
             <Assign.To>
               <OutArgument x:TypeArguments="x:Int32">[counter]</OutArgument>
             </Assign.To>
@@ -103,7 +103,7 @@
               <InArgument x:TypeArguments="x:Int32">[counter + 1]</InArgument>
             </Assign.Value>
           </Assign>
-          <Sequence DisplayName="レインズ_土地_神奈川_その他" sap:VirtualizedContainerService.HintSize="680,4958" sap2010:WorkflowViewState.IdRef="Sequence_349">
+          <Sequence DisplayName="レインズ_土地_神奈川_その他" sap:VirtualizedContainerService.HintSize="614,4496" sap2010:WorkflowViewState.IdRef="Sequence_349">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:Boolean" Name="elementExists" />
             </Sequence.Variables>
@@ -112,13 +112,13 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Edge" DisplayName="ブラウザーにアタッチ 'msedge.exe  REINS IP'" sap:VirtualizedContainerService.HintSize="638,3769" sap2010:WorkflowViewState.IdRef="BrowserScope_150" InformativeScreenshot="82a0f256142359759abe679353872299" Selector="&lt;html app='msedge.exe' omit:htmlwindowname=' Microsoft Edge 87 ' title='REINS IP' /&gt;">
+            <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Edge" DisplayName="ブラウザーにアタッチ 'msedge.exe  REINS IP'" sap:VirtualizedContainerService.HintSize="572,3307" sap2010:WorkflowViewState.IdRef="BrowserScope_150" InformativeScreenshot="82a0f256142359759abe679353872299" Selector="&lt;html app='msedge.exe' omit:htmlwindowname=' Microsoft Edge 87 ' title='REINS IP' /&gt;">
               <ui:BrowserScope.Body>
                 <ActivityAction x:TypeArguments="x:Object">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="604,3623" sap2010:WorkflowViewState.IdRef="Sequence_345">
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="538,3161" sap2010:WorkflowViewState.IdRef="Sequence_345">
                     <Sequence.Variables>
                       <Variable x:TypeArguments="x:String" Name="id" />
                     </Sequence.Variables>
@@ -127,8 +127,8 @@
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ui:LogMessage DisplayName="メッセージをログ" sap:VirtualizedContainerService.HintSize="562,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Warn" Message="[property_type &amp; &quot;_&quot; &amp; first_district &amp; &quot;_&quot; &amp; location &amp; &quot;の処理を開始しました&quot;]" />
-                    <If Condition="[counter = 1]" DisplayName="条件分岐" sap:VirtualizedContainerService.HintSize="562,1096" sap2010:WorkflowViewState.IdRef="If_62">
+                    <ui:LogMessage DisplayName="メッセージをログ" sap:VirtualizedContainerService.HintSize="496,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Warn" Message="[property_type &amp; &quot;_&quot; &amp; first_district &amp; &quot;_&quot; &amp; location &amp; &quot;の処理を開始しました&quot;]" />
+                    <If Condition="[counter = 1]" DisplayName="条件分岐" sap:VirtualizedContainerService.HintSize="496,1106" sap2010:WorkflowViewState.IdRef="If_62">
                       <If.Then>
                         <Sequence DisplayName="シーケンス" sap:VirtualizedContainerService.HintSize="460,920" sap2010:WorkflowViewState.IdRef="Sequence_358">
                           <sap:WorkflowViewStateService.ViewState>
@@ -226,7 +226,7 @@
                         </Sequence>
                       </If.Then>
                     </If>
-                    <ui:InjectJsScript InputParameter="{x:Null}" DisplayName="JS スクリプトを挿入" sap:VirtualizedContainerService.HintSize="562,96" sap2010:WorkflowViewState.IdRef="InjectJsScript_22" ScriptCode="GetFirstLocationID.js">
+                    <ui:InjectJsScript InputParameter="{x:Null}" DisplayName="JS スクリプトを挿入" sap:VirtualizedContainerService.HintSize="496,96" sap2010:WorkflowViewState.IdRef="InjectJsScript_22" ScriptCode="GetFirstLocationID.js">
                       <ui:InjectJsScript.ScriptOutput>
                         <OutArgument x:TypeArguments="x:String">[id]</OutArgument>
                       </ui:InjectJsScript.ScriptOutput>
@@ -241,7 +241,7 @@
                         </ui:Target>
                       </ui:InjectJsScript.Target>
                     </ui:InjectJsScript>
-                    <ui:SetValue AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="都道府県名にテキストを設定" sap:VirtualizedContainerService.HintSize="562,134" sap2010:WorkflowViewState.IdRef="SetValue_1" Text="[first_district]">
+                    <ui:SetValue AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="都道府県名にテキストを設定" sap:VirtualizedContainerService.HintSize="496,134" sap2010:WorkflowViewState.IdRef="SetValue_1" Text="[first_district]">
                       <ui:SetValue.Target>
                         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="ba1789a4-2f40-4260-a162-034b599dd9db" InformativeScreenshot="d3e3d2516eedcb2d8b8878c500a4cca0" Selector="&lt;webctrl id='{{id}}' tag='INPUT' type='text' /&gt;">
                           <ui:Target.TimeoutMS>
@@ -253,7 +253,7 @@
                         </ui:Target>
                       </ui:SetValue.Target>
                     </ui:SetValue>
-                    <ui:InjectJsScript InputParameter="{x:Null}" DisplayName="JS スクリプトを挿入" sap:VirtualizedContainerService.HintSize="562,96" sap2010:WorkflowViewState.IdRef="InjectJsScript_23" ScriptCode="GetSecondLocationID.js">
+                    <ui:InjectJsScript InputParameter="{x:Null}" DisplayName="JS スクリプトを挿入" sap:VirtualizedContainerService.HintSize="496,96" sap2010:WorkflowViewState.IdRef="InjectJsScript_23" ScriptCode="GetSecondLocationID.js">
                       <ui:InjectJsScript.ScriptOutput>
                         <OutArgument x:TypeArguments="x:String">[id]</OutArgument>
                       </ui:InjectJsScript.ScriptOutput>
@@ -268,7 +268,7 @@
                         </ui:Target>
                       </ui:InjectJsScript.Target>
                     </ui:InjectJsScript>
-                    <ui:SetValue AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="所在地１にテキストを設定" sap:VirtualizedContainerService.HintSize="562,134" sap2010:WorkflowViewState.IdRef="SetValue_2" Text="[location]">
+                    <ui:SetValue AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="所在地１にテキストを設定" sap:VirtualizedContainerService.HintSize="496,134" sap2010:WorkflowViewState.IdRef="SetValue_2" Text="[location]">
                       <ui:SetValue.Target>
                         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="18aab0d2-9d9a-4e44-8fa9-0c9fb6cfccc6" InformativeScreenshot="b80cbb58d6b61f15556db55ff47f12b7" Selector="&lt;webctrl id='{{id}}' tag='INPUT' type='text' /&gt;">
                           <ui:Target.TimeoutMS>
@@ -280,44 +280,7 @@
                         </ui:Target>
                       </ui:SetValue.Target>
                     </ui:SetValue>
-                    <ui:CommentOut DisplayName="コメント アウト" sap:VirtualizedContainerService.HintSize="562,452" sap2010:WorkflowViewState.IdRef="CommentOut_1">
-                      <ui:CommentOut.Body>
-                        <Sequence DisplayName="無視されたアクティビティ" sap:VirtualizedContainerService.HintSize="526,374" sap2010:WorkflowViewState.IdRef="Sequence_359">
-                          <sap:WorkflowViewStateService.ViewState>
-                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                            </scg:Dictionary>
-                          </sap:WorkflowViewStateService.ViewState>
-                          <If Condition="[counter = 1]" DisplayName="条件分岐" sap:VirtualizedContainerService.HintSize="484,282" sap2010:WorkflowViewState.IdRef="If_64">
-                            <If.Then>
-                              <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="クリック 'BUTTON'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_344" KeyModifiers="None" MouseButton="BTN_LEFT">
-                                <ui:Click.CursorPosition>
-                                  <ui:CursorPosition Position="Center">
-                                    <ui:CursorPosition.OffsetX>
-                                      <InArgument x:TypeArguments="x:Int32" />
-                                    </ui:CursorPosition.OffsetX>
-                                    <ui:CursorPosition.OffsetY>
-                                      <InArgument x:TypeArguments="x:Int32" />
-                                    </ui:CursorPosition.OffsetY>
-                                  </ui:CursorPosition>
-                                </ui:Click.CursorPosition>
-                                <ui:Click.Target>
-                                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="ccf4e797-5bb9-4047-999e-ce236ad89f6c" InformativeScreenshot="8745f723ea5cc3fe6507abf58ce57090" Selector="&lt;webctrl aaname='詳細検索' tag='BUTTON' /&gt;">
-                                    <ui:Target.TimeoutMS>
-                                      <InArgument x:TypeArguments="x:Int32" />
-                                    </ui:Target.TimeoutMS>
-                                    <ui:Target.WaitForReady>
-                                      <InArgument x:TypeArguments="ui:WaitForReady" />
-                                    </ui:Target.WaitForReady>
-                                  </ui:Target>
-                                </ui:Click.Target>
-                              </ui:Click>
-                            </If.Then>
-                          </If>
-                        </Sequence>
-                      </ui:CommentOut.Body>
-                    </ui:CommentOut>
-                    <If Condition="[counter = 1]" DisplayName="条件分岐" sap:VirtualizedContainerService.HintSize="562,538" sap2010:WorkflowViewState.IdRef="If_61">
+                    <If Condition="[counter = 1]" DisplayName="条件分岐" sap:VirtualizedContainerService.HintSize="496,548" sap2010:WorkflowViewState.IdRef="If_61">
                       <If.Then>
                         <ui:RetryScope DisplayName="リトライ スコープ" sap:VirtualizedContainerService.HintSize="418,362" sap2010:WorkflowViewState.IdRef="RetryScope_3">
                           <ui:RetryScope.ActivityBody>
@@ -349,7 +312,7 @@
                         </ui:RetryScope>
                       </If.Then>
                     </If>
-                    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="クリック 'BUTTON'" sap:VirtualizedContainerService.HintSize="562,106" sap2010:WorkflowViewState.IdRef="Click_333" KeyModifiers="None" MouseButton="BTN_LEFT">
+                    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="クリック 'BUTTON'" sap:VirtualizedContainerService.HintSize="496,106" sap2010:WorkflowViewState.IdRef="Click_333" KeyModifiers="None" MouseButton="BTN_LEFT">
                       <ui:Click.CursorPosition>
                         <ui:CursorPosition Position="Center">
                           <ui:CursorPosition.OffsetX>
@@ -371,7 +334,7 @@
                         </ui:Target>
                       </ui:Click.Target>
                     </ui:Click>
-                    <ui:UiElementExists DisplayName="要素の存在を確認 'HEADER  __BVID__2379___...'" Exists="[elementExists]" sap:VirtualizedContainerService.HintSize="562,106" sap2010:WorkflowViewState.IdRef="UiElementExists_73">
+                    <ui:UiElementExists DisplayName="要素の存在を確認 'HEADER  __BVID__2379___...'" Exists="[elementExists]" sap:VirtualizedContainerService.HintSize="496,106" sap2010:WorkflowViewState.IdRef="UiElementExists_73">
                       <ui:UiElementExists.Target>
                         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="f71a833f-a6ec-4eb0-8fa5-adcc16b257a1" InformativeScreenshot="fadc4ec0d30571b4e5b66e1e61666dc8" Selector="&lt;html app='msedge.exe' title='REINS IP' /&gt;&lt;webctrl aaname='確認' /&gt;" TimeoutMS="3000">
                           <ui:Target.WaitForReady>
@@ -380,7 +343,7 @@
                         </ui:Target>
                       </ui:UiElementExists.Target>
                     </ui:UiElementExists>
-                    <If Condition="[elementExists = True]" DisplayName="条件分岐" sap:VirtualizedContainerService.HintSize="562,282" sap2010:WorkflowViewState.IdRef="If_59">
+                    <If Condition="[elementExists = True]" DisplayName="条件分岐" sap:VirtualizedContainerService.HintSize="496,292" sap2010:WorkflowViewState.IdRef="If_59">
                       <If.Then>
                         <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="クリック 'BUTTON'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_334" KeyModifiers="None" MouseButton="BTN_LEFT">
                           <ui:Click.CursorPosition>
