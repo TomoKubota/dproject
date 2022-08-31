@@ -1,0 +1,2842 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="ja" id="masterChannel-ait"><head>
+<meta http-equiv="content-type" content="text/html;charset=shift_jis">
+<meta http-equiv="content-style-type" content="text/css">
+<meta http-equiv="content-script-type" content="text/javascript">
+
+<meta name="referrer" content="no-referrer-when-downgrade">
+
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<script>var swspv = '(none)';var cms_summary_flag = '0';</script>
+<script src="/js/spv/movePC2SP.js?date=200721152649"></script>
+<!-- FIX DMOZ -->
+
+	<!-- masterType = not top -->
+
+
+	<!-- masterType == article -->
+	<meta name="TMP_SERVER" content="pcv">
+	<!-- SET SERIES FLAG -->
+	
+		
+		<meta name="TMP_SeriesID" id="TMP_SeriesID" content="1591">
+	
+	<!-- SET AUTHOR FLAG -->
+	
+		
+		<meta name="TMP_JointWriterID" id="TMP_JointWriterID" content="200671,208386">
+	
+	<!-- SET CANONICAL FLAG -->
+	
+		
+			
+				
+				<link rel="canonical" href="https://www.atmarkit.co.jp/ait/articles/0408/27/news104.html">
+			
+		
+	
+	
+	<meta property="article:modified_time" content="2018-09-19T05:02:16+09:00">
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- JSONLD ARTICLE -->
+<script type="application/ld+json">
+{
+"@context":"https://schema.org",
+"@type":"NewsArticle",
+"mainEntityOfPage":{
+"@type":"WebPage",
+"@id":"https://www.atmarkit.co.jp/ait/articles/0408/27/news104.html"
+},
+"image":["https://image.itmedia.co.jp/ait/files/20010101/backn2.gif",
+"https://image.itmedia.co.jp/images/logo/1200x630_500x500_ait.gif"],
+"datePublished":"2015-11-24T05:00:00Z",
+"dateModified":"2018-09-19T05:02:00Z",
+"headline":"日付や時刻を文字列に変換するには？：.NET TIPS",
+"author":{
+"@type":"Person",
+"name":"遠藤孝信,かわさきしんじ，共著"
+},
+"publisher":{
+"@type":"Organization",
+"name":"＠IT",
+"logo":{
+"@type":"ImageObject",
+"url":"https://image.itmedia.co.jp/images/logo/amp_publisher_ait.gif"
+}
+},
+"description":"DateTime構造体を介して得られる日付や時刻を、標準書式指定／カスタム書式指定文字列を使用して文字列に変更する方法を解説する（C# 6.0／VB 14対応）。",
+"articleSection":"連載",
+"keywords":"Insider.NET"
+}
+</script>
+<meta name="itmid:series" content=".NET TIPS">
+<meta name="build" content="2015年11月24日 05時00分">
+<meta name="keywords" content="Insider.NET">
+<meta name="description" content="DateTime構造体を介して得られる日付や時刻を、標準書式指定／カスタム書式指定文字列を使用して文字列に変更する方法を解説する（C# 6.0／VB 14対応）。">
+<meta name="extraid" content="at-series	ao-dotnet	kw-insiderdotnet">
+<meta name="writer" content="遠藤孝信,かわさきしんじ，<b>共著</b>">
+<meta name="dispatch" content="国内">
+<meta name="adpath" content="root/ITmedia/ait/article/dotnet">
+<meta name="rcid" content="">
+<meta name="rcid_filename" content="">
+<link rel="alternate" media="only screen and (max-width: 640px)" href="https://www.atmarkit.co.jp/ait/spv/0408/27/news104.html">
+
+<meta property="og:title" content="日付や時刻を文字列に変換するには？">
+<meta property="og:description" content="DateTime構造体を介して得られる日付や時刻を、標準書式指定／カスタム書式指定文字列を使用して文字列に変更する方法を解説する（C# 6.0／VB 14対応）。">
+<title>日付や時刻を文字列に変換するには？：.NET TIPS - ＠IT</title>
+<!-- ********** prevnext ********** -->
+
+<!-- ********** prevnext ********** -->
+<script>
+const ArticleDataDefinition = {
+    VariousURLs: {
+        HOST: 'https://www.atmarkit.co.jp',
+        PCV: '/ait/articles/0408/27/news104.html',
+        SPV: '/ait/spv/0408/27/news104.html',
+        AMP: '/ait/amp/0408/27/news104.html',
+        SUMMARY_SPV: '',
+        REFERENCE_PCV: '/ait/articles/0408/27/news104_00.html',
+        REFERENCE_SPV: '/ait/spv/0408/27/news104_00.html',
+        PRIMARY_HOST: 'https://www.atmarkit.co.jp',
+        PRIMARY_PCV:'/ait/articles/0408/27/news104.html',
+        PRIMARY_SPV: '/ait/spv/0408/27/news104.html',
+        PRIMARY_AMP: '/ait/amp/0408/27/news104.html',
+        PRIMARY_SUMMARY_SPV: '',
+        PRIMARY_REFERENCE_PCV: '/ait/articles/0408/27/news104_00.html',
+        PRIMARY_REFERENCE_SPV: '/ait/spv/0408/27/news104_00.html'
+    }
+};
+</script>
+<!--
+hosturl: https://www.atmarkit.co.jp
+pcvurl: /ait/articles/0408/27/news104.html
+spvurl: /ait/spv/0408/27/news104.html
+ampurl: /ait/amp/0408/27/news104.html
+summary_spvurl: 
+reference_pcvurl: /ait/articles/0408/27/news104_00.html
+reference_spvurl: /ait/spv/0408/27/news104_00.html
+primary_hosturl: https://www.atmarkit.co.jp
+primary_pcvurl: /ait/articles/0408/27/news104.html
+primary_spvurl: /ait/spv/0408/27/news104.html
+primary_ampurl: /ait/amp/0408/27/news104.html
+primary_summary_spvurl: 
+primary_reference_pcvurl: /ait/articles/0408/27/news104_00.html
+primary_reference_spvurl: /ait/spv/0408/27/news104_00.html
+-->
+
+
+
+
+
+<meta name="robots" content="noodp">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@atmark_it">
+<meta name="twitter:creator" content="@atmark_it">
+<meta property="og:site_name" content="＠IT">
+<meta property="og:url" content="https://www.atmarkit.co.jp/ait/articles/0408/27/news104.html">
+<meta property="og:type" content="article">
+
+<meta property="og:image" content="https://image.itmedia.co.jp/ait/articles/0408/27/240_news104.png">
+
+
+<meta property="fb:app_id" content="1724827814406155">
+
+<!--EDIT START-->
+<!--EDIT END-->
+
+<!-- ITIKW -->
+
+	<!-- masterType = article -->
+	
+		<!-- CMSKW NOT JIBUN ITIKW -->
+			<script src="//cgi.itmedia.co.jp/keywords/ait/articles/0408/27/news104.html"></script>
+		
+	
+
+
+<link rel="stylesheet" href="//www.itmedia.co.jp/css/ait/base.css?201910111842" type="text/css" media="all">
+<link rel="stylesheet" href="//www.itmedia.co.jp/css/ait/ad.css?202010081730" type="text/css" media="all">
+<link rel="stylesheet" href="//www.itmedia.co.jp/css/ait/article.css?202101251100" type="text/css" media="all">
+
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js" charset="UTF-8"></script>
+<script>jQuery.noConflict();</script>
+<script src="//fc.itmedia.co.jp/fpcookie?site_id=itm_"></script>
+
+<script src="/js/scAccount.js"></script>
+<script src="/js/dlvRequest.js"></script>
+<script src="/js/scRequest.js"></script>
+
+
+<!-- Get user segments, normal use, with sync load of cx.js -->
+<script src="//scdn.cxense.com/cx.js"></script>
+<script src="//scdn.cxense.com/cx.cce.js"></script>
+<script>
+var cx_segments = cX.getUserSegmentIds({persistedQueryId:'32780b6d6fb51c7b1fefeb67a7e3305b165e5c6a'});
+</script>
+<script src="/js/ait/ex_adRequest.js?date=201711221649"></script>
+<script src="/js/base.js?date=201906041205"></script>
+<script src="/js/ad.js?date=201302061956"></script>
+<script src="/js/article.js?date=201910081843"></script>
+<script src="/js/ait/base.js?date=201905201527"></script>
+<script src="/js/ait/ad.js?date=201204121927"></script>
+<script src="/js/ait/article.js?date=201904231123"></script>
+<script>
+(function(){
+var d = document,h = location.hash,u = '//cx.api.itmedia.co.jp/v1.js';
+if(h.match(/^#[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}$/)) u += '?ip=' + h.replace('#','');
+d.write('<script src="' + u + '"><\/script>');
+})();
+</script>
+<script src="//tr.api.itmedia.jp/v1.js"></script>
+<script src="/js/lib/cx_v2_cce.js?date=202101051417"></script>
+<script>
+var cX = cX || {}; cX.callQueue = cX.callQueue || [];
+var cx_k_param = cx_api_itm('ad');
+cX.callQueue.push(['setSiteId','1127153793923352357']);
+window.addEventListener('DOMContentLoaded',function(){
+	cx_push_iitt();
+	cX.callQueue.push(['setSiteId','1127153793923352357']);
+	cx_push_cxapi('7afa26d5cf882cbdf1133ef0a74bc60ab5581d17');
+	cx_click_map('1141827478709654509');
+	cX.callQueue.push(['sync','frk']);
+	cX.callQueue.push(['sync','aam']);
+	cx_add_meta();
+	cx_push_readable('7afa26d5cf882cbdf1133ef0a74bc60ab5581d17');
+},false);
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-W3CLTQN');</script>
+<!-- End Google Tag Manager -->
+<!-- Cxense script end -->
+
+</head><body id="masterType-article">
+
+<script>
+// JavaScript用Facebook SDK
+
+window.fbAsyncInit = function(){
+	FB.init({
+		appId:'1724827814406155',
+		autoLogAppEvents : true,
+		xfbml : true,
+		version : 'v3.3'
+	});
+	FB.AppEvents.logPageView();
+};
+
+(function(d,s,id){
+var js, fjs = d.getElementsByTagName(s)[0];
+if(d.getElementById(id)){return;}
+js = d.createElement(s); js.id = id;
+js.src = "//connect.facebook.net/ja_JP/sdk.js";
+fjs.parentNode.insertBefore(js,fjs);
+}(document,'script','facebook-jssdk'));
+</script>
+
+
+<script type="text/javascript">
+var dcl_start = new Date();
+attachBodyClass();
+function masterChannel(){return 'ait';}
+function masterType(){return 'article';}
+function prFlag(){return '';}
+function spFlag(){return '';}
+(function(){
+if(getUrl()['domain'].match(/(preview|localhost)/)) document.write('<div id="PATHDEBUG">masterChannel = <strong>' + masterChannel() + '</strong> / masterType = <strong>' + masterType() + '</strong> / smartPhone = <strong>' + spFlag() + '</strong></div>');
+return true;
+})();
+</script>
+<!--ITWS-->
+
+	
+		<div id="ITWS"><script>adRequest({'position':'ITWS'});</script></div>
+	
+
+<!--/ITWS-->
+
+<!--ITWL-->
+
+	
+		<script>adRequest({'position':'ITWL'});</script>
+	
+
+<!--/ITWL-->
+
+<!--ITASB-->
+
+<!--/ITASB-->
+<div id="masterBody"><div id="masterBodyOut"><div id="masterBodyIn">
+
+
+
+
+<link rel="stylesheet" href="//www.itmedia.co.jp/css/gnavi.css?date=202001281043">
+<div id="g_nav" data-theme="light">
+<div id="g_nav_o">
+<!---->
+
+<div id="g_nav_i">
+	<div class="g_nav_box">
+		<div class="g_btn" id="g_btn_menu" data-menu="0">
+			<div class="g_float g_float_left"></div>
+			<div class="g_inbtn">
+				<div class="g_lines">
+					<div class="g_line"></div>
+					<div class="g_line"></div>
+					<div class="g_line"></div>
+					<div class="g_line"></div>
+				</div>
+				<div class="g_txt">メディア</div>
+			</div>
+		</div>
+	</div>
+<div class="g_nav_box"><div id="g_logo"><a href="//www.atmarkit.co.jp/"><img src="//image.itmedia.co.jp/images/logo/pcvheader_ait_20th.png" width="102" height="59" alt="＠IT20周年"></a></div></div>
+<div class="g_nav_box _flex"><div class="g_free_box">
+<div class="g_local g_local_btn gray_1">
+<div class="g_lnav_o"><a href="https://www.atmarkit.co.jp/ait/series/search/"><div >連載一覧</div></a>
+</div>
+<div class="g_lnav_o"><a href="https://www.atmarkit.co.jp/ait/subtop/features/special/"><div >＠IT Special</div></a>
+</div>
+<div class="g_lnav_o"><a href="https://www.atmarkit.co.jp/ait/subtop/features/seminar/"><div >セミナー</div></a>
+</div>
+<div class="g_lnav_o"><a href="https://wp.techtarget.itmedia.co.jp/"><div >ホワイトペーパー</div></a>
+</div>
+<div class="g_lnav_o"><a href="https://www.atmarkit.co.jp/ait/kw/atmarkit_ebook.html"><div >eBook</div></a>
+</div>
+<div class="g_lnav_o"><a href="http://el.jibun.atmarkit.co.jp/"><div >ブログ</div></a>
+</div>
+<div class="g_lnav_o"><a href="http://job.atmarkit.co.jp/"><div >転職</div></a>
+</div>
+</div><div class="g_local g_local_btn">
+<div class="g_lnav_o"><a href="//www.atmarkit.co.jp/ait/subtop/cloud.html"><div >クラウド</div></a>
+</div>
+<div class="g_lnav_o"><a href="//www.atmarkit.co.jp/ait/subtop/ai.html"><div >AI IoT</div></a>
+</div>
+<div class="g_lnav_o"><a href="//www.atmarkit.co.jp/ait/subtop/devops.html"><div >アジャイル/DevOps</div></a>
+</div>
+<div class="g_lnav_o"><a href="//www.atmarkit.co.jp/ait/subtop/security.html"><div >セキュリティ</div></a>
+</div>
+<div class="g_lnav_o"><a href="//www.atmarkit.co.jp/ait/subtop/jibun/"><div >キャリア&スキル</div></a>
+</div>
+<div class="g_lnav_o"><a href="//www.atmarkit.co.jp/ait/subtop/win/"><div >Windows</div></a>
+</div>
+<div class="g_lnav_o"><a href="//www.atmarkit.co.jp/ait/subtop/di/"><div >機械学習</div></a>
+</div>
+<div class="g_lnav_o"><a href="javascript:void(0);"><div >その他</div></a>
+<div class="g_lnav_i"><ul>
+<li><a href="//www.atmarkit.co.jp/ait/subtop/server/"><div >Server &amp; Storage</div></a></li>
+<li><a href="//www.atmarkit.co.jp/ait/subtop/ux/"><div >HTML5 + UX</div></a></li>
+<li><a href="//www.atmarkit.co.jp/ait/subtop/smart/"><div >Smart & Social</div></a></li>
+<li><a href="//www.atmarkit.co.jp/ait/subtop/coding/"><div >Coding Edge</div></a></li>
+<li><a href="//www.atmarkit.co.jp/ait/subtop/java/"><div >Java Agile</div></a></li>
+<li><a href="//www.atmarkit.co.jp/ait/subtop/db/"><div >Database Expert</div></a></li>
+<li><a href="//www.atmarkit.co.jp/ait/subtop/linux/"><div >Linux ＆ OSS</div></a></li>
+<li><a href="//www.atmarkit.co.jp/ait/subtop/network/"><div >Master of IP Network</div></a></li>
+<li><a href="//www.atmarkit.co.jp/ait/subtop/security/"><div >Security &amp; Trust</div></a></li>
+<li><a href="//www.atmarkit.co.jp/ait/subtop/systemdesign/"><div >System Design</div></a></li>
+<li><a href="//www.atmarkit.co.jp/ait/subtop/testtools/"><div >Test & Tools</div></a></li>
+<li><a href="//www.atmarkit.co.jp/ait/subtop/dotnet/"><div >Insider.NET</div></a></li>
+</ul></div>
+</div>
+</div><div class="g_local g_local_txt">
+<div class="g_lnav_o"><a href="https://www.atmarkit.co.jp/ait/subtop/features/security/sase.html"><div >SASE</div></a>
+</div>
+<div class="g_lnav_o"><a href="https://www.atmarkit.co.jp/ait/subtop/features/jibun/smodernization.html"><div >年収向上戦略</div></a>
+</div>
+<div class="g_lnav_o"><a href="https://www.atmarkit.co.jp/ait/subtop/features/server/ms_win_2021.html"><div >Windows最前線</div></a>
+</div>
+<div class="g_lnav_o"><a href="https://www.atmarkit.co.jp/ait/subtop/features/security/cloud_sec.html"><div >クラウドセキュリティ</div></a>
+</div>
+<div class="g_lnav_o"><a href="https://www.atmarkit.co.jp/ait/subtop/features/linux/opensource_manners.html"><div >OSS活用</div></a>
+</div>
+<div class="g_lnav_o"><a href="https://www.atmarkit.co.jp/ait/subtop/features/theme/index.html"><div >その他の特集</div></a>
+</div>
+</div></div></div>
+
+
+<div class="g_nav_box">
+<div class="g_btn" id="g_btn_member" data-menu="0">
+<div class="g_float g_float_right"></div>
+<a class="g_inbtn" href="javascript:void(0);">
+<div class="g_circles">
+<div class="g_circle"></div><div class="g_circle"></div><div class="g_circle"></div>
+</div>
+<div class="g_txt"></div>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script src="/js/gnavi.js?202008171808" async></script>
+
+<div id="masterBodyOuter"><!----><div id="masterBodyInner">
+
+<div id="masterHeader">
+	<div id="globalHeader">
+		<div id="globalHeaderMiddle">
+		<!-- ITN -->
+		<!-- masterType = not 404 -->
+		
+			<!-- masterType = not 404 && not noad -->
+			<div id="ITN"><script>adRequest({'position':'ITN'});</script></div>
+		
+		</div>
+		<div id="globalHeaderBottom">
+		
+			<div id="localPankuzu"><div class="lpanOut"><div class="lpanIn">
+				
+<ol itemscope="" itemtype="http://schema.org/BreadcrumbList">
+<li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a itemscope="" itemtype="http://schema.org/Thing" itemprop="item" href="https://www.atmarkit.co.jp/"><span itemprop="name">＠IT</span></a><meta itemprop="position" content="1" /></li>
+
+<li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a itemscope="" itemtype="http://schema.org/Thing" itemprop="item" href="https://www.atmarkit.co.jp/ait/subtop/devops.html"><span itemprop="name">アジャイル/DevOps</span></a><meta itemprop="position" content="2" /></li>
+<li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><a itemscope="" itemtype="http://schema.org/Thing" itemprop="item" href="https://www.atmarkit.co.jp/ait/subtop/dotnet/"><span itemprop="name">Insider.NET</span></a><meta itemprop="position" content="3" /></li>
+
+
+<li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"><span itemprop="name" id="lastPankuzu"></span><meta itemprop="position" content="4" /></li>
+</ol>
+<script type="text/javascript">
+var pankuzuspan = document.getElementById('lastPankuzu');
+var str = document.title.replace(/\<\!\-\-EDIT START\-\-\>/g,'').replace(/\<\!\-\-EDIT END\-\-\>/g,'').replace(' - ＠IT','');
+str = cutString(str,50);
+pankuzuspan.innerText = str;
+</script>
+
+			</div></div></div>
+		
+		</div>
+	</div><!-- /#globalHeader -->
+
+
+</div>
+
+<div id="masterContents"><div id="globalContents">
+<div id="masterMain">
+
+
+
+<div id="tmplNews" class="tmplArticle"><div id="tmplNewsIn" class="tmplArticleIn">
+
+
+<!-- keyword not match -->
+
+<!-- 記事上バナー -->
+
+<div id="cmsType"><div class="inner">連載</div></div>
+<!--EDIT START-->
+<!--EDIT END-->
+
+<div id="cmsDate"><div class="inner"><span class="arrow">&raquo;</span> <span id="update">2015年11月24日 05時00分 公開</span></div></div>
+<!--EDIT START-->
+<!--EDIT END-->
+
+<div id="cmsTitle"><div class="inner">
+<h1 class="title"><span class="title__maintext">日付や時刻を文字列に変換するには？</span><i class="title__delimiter">：</i><i class="title__subtitle">.NET TIPS</i></h1>
+</div></div>
+<!--EDIT START-->
+<!--EDIT END-->
+
+<div id="cmsAbstract"><div class="inner"><h2>DateTime構造体を介して得られる日付や時刻を、標準書式指定／カスタム書式指定文字列を使用して文字列に変更する方法を解説する（C# 6.0／VB 14対応）。</h2></div></div>
+<!--EDIT START-->
+<!--EDIT END-->
+
+<div id="cmsByline"><div class="inner" id="byline"><b>[</b>遠藤孝信, かわさきしんじ，<b>共著]</b></div></div>
+<!--EDIT START--><!--EDIT END-->
+<div id="cmsBody"><div class="inner">
+<script>
+(function(){
+	var d = document;
+	var date = d.getElementById('cmsDate');
+	var type = d.getElementById('cmsType');
+	var byline = d.getElementById('cmsByline');
+	// 位置を移動
+	byline.parentNode.insertBefore(date,byline);
+	// 要素を削除
+	type.parentNode.removeChild(type);
+})();
+</script>
+
+<!-- SET AUTHOR INDEX LINK -->
+<script>
+jQuery(document).ready(function(){
+
+var d = document;
+
+// 著者 META と著者 DOM のチェック
+if(!d.getElementById('byline') || !d.getElementById('TMP_JointWriterID')) return false;
+
+// 著者 META の取得
+var authorID = d.getElementById('TMP_JointWriterID').content;
+
+// 著者 META content のチェック
+if(authorID == '') return false;
+
+// 著者 META を配列にする
+var authorIDs = authorID.split(',');
+
+// 著者 DOM の取得
+var authorDOM = d.getElementById('byline');
+
+// 著者 HTML の取得
+var authorHTML = authorDOM.innerHTML;
+
+// 著者 HTML の分解
+// [0] = <b>[</b>著者名1, 著者名2，<b>シグネチャ</b>
+// [1] = <b>[</b>
+// [2] = 著者名1, 著者名2
+// [3] = ，<b>シグネチャ</b>
+var authorHTMLs = authorHTML.match(/^(<b>\[<\/b>)(.+)(，<b>.+<\/b>)$/);
+
+// 正しく分解できているかチェック
+if(authorHTMLs == null) return false;
+if(authorHTMLs.length != 4) return false;
+
+// 著者名を配列にする
+var authorTXTs = authorHTMLs[2].split(', ');
+
+// 著者名を著者インデックスへのリンク付きに変換
+var rep_authorTXTs = [];
+for(var i = 0; i < authorTXTs.length; i++){
+	rep_authorTXTs.push('<a href="//www.itmedia.co.jp/author/' + authorIDs[i] + '/">' + authorTXTs[i] + '</a>');
+}
+
+// リンク付き著者名をオリジナルと入れ替える
+authorHTMLs[2] = rep_authorTXTs.join(', ');
+
+// 著者 DOM 内に HTML を戻す
+authorDOM.innerHTML = authorHTMLs[1] + authorHTMLs[2] + authorHTMLs[3];
+
+return true;
+});
+</script>
+
+
+<link rel="stylesheet" href="//www.itmedia.co.jp/css/socialbutton.css?202001221022">
+<script>
+var msbBtnLoadScript = [];
+</script>
+<script src="/js/socialbutton.js?202012011114"></script>
+<div id="masterSocialbuttonTop" class="masterSocialbutton"><div class="msbOut" id="msbTopOut"></div></div>
+
+
+	<!-- enterprise|news|ait|pcuser|mobile|lifestyle|hc|dc -->
+	<script>
+	msbBtn({
+	'pos':'top',
+	'tag':'table',
+	'popup_pos':'under',
+	'base_color':'white',
+	'base_class':'minimal_count',
+	'line':[
+	[
+		{'name':'印刷','title':'この記事を印刷する','id':'printbutton'},
+		{'name':'通知','id':'itmid','data':[
+			{'name':'類似記事の掲載をメールで通知','id':'alertbutton'},
+			{'name':'連載「％」の新着をメールで通知','id':'alertseries'},
+		{}]},
+		{'name':'ツイート','id':'tweetbutton_minimal'},
+		{'name':'シェア','id':'sharebutton_minimal'},
+		{'name':'はてなブックマーク','id':'hatenabookmark_minimal'},
+		{'name':'Pocket Button','id':'pocket_minimal'},
+	{}],
+	[]]
+	});
+	</script>
+
+
+
+
+<div class="colBoxClear"></div>
+<!-- DMP Body -->
+<div id="dmp">
+<div id="insertAdSpaceBeforeThis_0000000161e4c1f6" style="display:none"></div>
+<script type="text/javascript"> (function() { try { var scriptEl = document.createElement('script'); scriptEl.type = 'text/javascript'; scriptEl.async = 'async'; scriptEl.src = ('https:' == document.location.protocol) ? 'https://scdn.cxense.com/cx.js' : 'http://cdn.cxense.com/cx.js'; var targetEl = document.getElementsByTagName('script')[0]; targetEl.parentNode.insertBefore(scriptEl, targetEl); } catch (e) {}; })(); </script> <script type="text/javascript"> var cX = cX || {}; cX.callQueue = cX.callQueue || []; cX.callQueue.push(['insertAdSpace', { adSpaceId:'0000000161e4c1f6', width:500, height:60, initialHorizontalAdUnits:1, initialVerticalAdUnits:1, resizeToContentSize: true, renderTemplateUrl: '//www.atmarkit.co.jp/ait/files/20150815/rendertemplate.html',k:cx_k_param } ]); </script>
+</div>
+<!-- /DMP Body -->
+<div class="colBoxClear h10px"></div>
+
+
+
+
+
+<div id="cmsMark"><!-- -->
+</div>
+<!-- cmsBodyCtrlTop -->
+
+<!-- cmsBodyMainStart -->
+<!-- cxenseparse_start -->
+<!--CAP-->
+<div id="col200l"><a name="backn2.gif"></a><a href="https://www.atmarkit.co.jp/ait/subtop/features/dotnet/dotnettips_index.html" class="imgLink" target="_blank"><img src="https://image.itmedia.co.jp/ait/files/20010101/backn2.gif" width="146" height="20" alt="「.NET TIPS」のインデックス"></a></div>
+<!--CAPEND-->
+<p><A HREF="https://www.atmarkit.co.jp/ait/subtop/features/dotnet/dotnettips_index.html">連載目次</A></p>
+<div class="box cmsBox cmsBox cmsBoxGreen" id="green">
+<p>本稿は2004/08/27に初版公開、2004/09/02に改訂された記事を再改訂し、C# 6.0／Visual Basic 14（以下、VB 14）の補完文字列についての記述を追加したものです。また、本稿のコードは全てC# 6.0／VB 14で動作を確認しました。</p>
+<br clear="all"><span></span></div>
+<p>　.NET Frameworkのクラスライブラリでは、日付や時刻の情報は、DateTime構造体（System名前空間）を使って扱うことができる。本稿では、このDateTimeオブジェクトを指定した形式の文字列に変換するための基本的な方法について示す。</p>
+<p>　また、C# 6.0／VB 14では、「補間文字列」（interpolated string）という機能を使うことで、同じ内容のコードをより簡潔に記述することも可能だ。補間文字列を使用したコードを知りたい方は<A HREF="//www.atmarkit.co.jp/fdotnet/dotnettips/200customdate/#interpolateddate" target="_blank">こちら</A>を参照してほしい。</p>
+<h4>標準書式指定とカスタム書式指定</h4>
+<p>　DateTime構造体には、日付や時刻の情報を文字列に変換するために、大きく次の三つの方法がある。</p>
+<p><span class="cmsColorRed"><strong>（1）</strong></span> ToLongDateString、ToLongTimeString、ToShortDateString、ToShortTimeStringなどのメソッドを呼び出す</p>
+<p><span class="cmsColorRed"><strong>（2）</strong></span> 標準書式指定文字列（d、D、t、T、f、F、g、Gなど）をパラメーターに指定して、ToStringメソッドを呼び出す</p>
+<p><span class="cmsColorRed"><strong>（3）</strong></span> カスタム書式指定文字列（後述）をパラメーターに指定して、ToStringメソッドを呼び出す</p>
+<p>　<span class="cmsColorRed"><strong>（1）</strong></span>に挙げたメソッドは、<span class="cmsColorRed"><strong>（2）</strong></span>の方法によるToString("D")、ToString("T")、ToString("d")、ToString("t")などの呼び出しを置き換えたにすぎない（標準書式指定文字列については、MSDNの「<A HREF="https://msdn.microsoft.com/ja-jp/library/az4se3k1(v=vs.110).aspx" target="_blank">標準の日時書式指定文字列</A>」を参照）。いずれにせよ、<span class="cmsColorRed"><strong>（1）</strong></span>と<span class="cmsColorRed"><strong>（2）</strong></span>の方法はカルチャ情報に依存した文字列が出力される。つまり、例えば、以下のコードを実行すると、その結果が日本語環境では「2004年8月24日 20:23:06」などになるが、英語環境では、これは「Tuesday, August 24, 2004 8:23:06 PM」といった値となる。</p>
+<div class="box cmsBoxNoborder cmsBox">
+<div class="cmsBodyBox cmsBodyBoxBlue">
+<div class="cmsBodyBoxInner">
+<p>DateTime.Now.ToString(<span class="cmsColorRed">&quot;F&quot;</span>)</p>
+</div>
+<div class="cmsBodyBoxCaption"><strong>現在の時刻を完全な日付と時刻のパターン（長い形式の時刻）に変換するコード</strong></div>
+</div>
+<br clear="all"><span></span></div>
+<p>　カルチャ情報に依存した文字列表記は、単純に日時を画面に表示したい場合などには便利であるが、日時を文字列に変換してデータ項目の一つとして利用したいような場合（例えば、ファイル名として使用するために「20040824202306」という文字列を得たい場合）などには使えない。このような場合には、<span class="cmsColorRed"><strong>（3）</strong></span>のカスタム書式指定文字列による文字列変換を利用すると、その出力形式を自由に指定できる。</p>
+<h4>カスタム書式指定文字列による変換</h4>
+<p>　カスタム書式指定文字列では、書式指定子の組み合わせにより、独自の出力形式でDateTimeオブジェクトを文字列に変換できる。例えば次の例では、その結果が「20040824202306」などとなる。</p>
+<div class="box cmsBoxNoborder cmsBox">
+<div class="cmsBodyBox cmsBodyBoxBlue">
+<div class="cmsBodyBoxInner">
+<p>DateTime.Now.ToString(<span class="cmsColorRed">&quot;yyyyMMddHHmmss&quot;</span>)</p>
+</div>
+<div class="cmsBodyBoxCaption"><strong>現在の時刻を「西暦月日時分秒」の順に数字だけで構成される文字列に変換</strong></div>
+</div>
+<br clear="all"><span></span></div>
+<p>　利用頻度が高いと思われる書式指定子を次にまとめた。</p>
+<div class="box cmsBoxNoborder cmsBox">
+<table id="tbl" class="cmsTable cmsTable cmsTable">
+<caption></caption>
+<thead><tr>
+<th id="null">書式指定子</th>
+<th id="null">説明</th>
+<th id="null">出力例</th>
+</tr></thead><tbody><tr>
+<th id="null">yyyy</th>
+<td id="null">4けたの年</td>
+<td id="null">2004</td>
+</tr><tr>
+<th id="null">yy</th>
+<td id="null">0埋め2けたの年</td>
+<td id="null">04</td>
+</tr><tr>
+<th id="null">MM</th>
+<td id="null">0埋め2けたの月</td>
+<td id="null">08</td>
+</tr><tr>
+<th id="null">dd</th>
+<td id="null">0埋め2けたの日</td>
+<td id="null">24</td>
+</tr><tr>
+<th id="null">ddd</th>
+<td id="null">曜日の省略名（カルチャに依存）</td>
+<td id="null">火</td>
+</tr><tr>
+<th id="null">dddd</th>
+<td id="null">曜日の完全名（カルチャに依存）</td>
+<td id="null">火曜日</td>
+</tr><tr>
+<th id="null">HH</th>
+<td id="null">0埋め2けたの時間（24時間表記）</td>
+<td id="null">20</td>
+</tr><tr>
+<th id="null">hh</th>
+<td id="null">0埋め2けたの時間（12時間表記）</td>
+<td id="null">08</td>
+</tr><tr>
+<th id="null">mm</th>
+<td id="null">0埋め2けたの分</td>
+<td id="null">23</td>
+</tr><tr>
+<th id="null">ss</th>
+<td id="null">0埋め2けたの秒</td>
+<td id="null">06</td>
+</tr></tbody>
+<tfoot><tr><td colspan="3"><strong>利用頻度が高いと思われる書式指定子</strong></td></tr></tfoot>
+</table>
+<br clear="all"><span></span></div>
+<p>　ここでは固定幅で出力可能な書式指定子のみを挙げている（書式指定子の完全な一覧は、MSDNの「<A HREF="https://msdn.microsoft.com/ja-jp/library/8kb3ddd4(v=vs.110).aspx" target="_blank">カスタム日時書式指定文字列</A>」などを参照）。</p>
+<p>　上表の中では、月が「MM」、分が「mm」と、どちらも同じ「エム」であることに注意が必要だ。</p>
+<p>　なお、曜日に置き換わる「ddd」および「dddd」の二つはカルチャ情報に依存している。例えば「火曜日」は、英語環境では「Tue」および「Tuesday」となる。</p>
+<h4>カスタム書式指定文字列を使用したサンプルプログラム</h4>
+<p>　上記の書式指定子を使用してDateTimeオブジェクトを文字列に変換している簡単なサンプルプログラムを次に示す。</p>
+<div class="box cmsBoxNoborder cmsBox">
+<div class="cmsBodyBox cmsBodyBoxBlue">
+<div class="cmsBodyBoxInner">
+<p><span class="cmsColorGreen">// customdate.cs</span><br><br><span class="cmsColorBlue">using</span> System;<br><br><span class="cmsColorBlue">public</span> <span class="cmsColorBlue">class</span> <span class="cmsColorOrange">CustomDateTime</span> {<br>&nbsp; <span class="cmsColorBlue">static</span> <span class="cmsColorBlue">void</span> Main() {<br><br>&nbsp;&nbsp;&nbsp; DateTime now = DateTime.Now;<br><br>&nbsp;&nbsp;&nbsp; Console.WriteLine(now); <span class="cmsColorGreen">// 出力例：2004/08/24 20:23:06</span><br><br>&nbsp;&nbsp;&nbsp; Console.WriteLine(now.ToString(<span class="cmsColorRed">&quot;yyyy/MM/dd HH:mm:ss&quot;</span>));<br>&nbsp;&nbsp;&nbsp; Console.WriteLine(now.ToString(<span class="cmsColorRed">&quot;yyyyMMddHHmmss&quot;</span>));<br>&nbsp;&nbsp;&nbsp; Console.WriteLine(now.ToString(<span class="cmsColorRed">&quot;yy年MM月dd日(ddd)&quot;</span>));<br>&nbsp;&nbsp;&nbsp; Console.WriteLine(now.ToString(<span class="cmsColorRed">&quot;hh時mm分ss秒&quot;</span>));<br>&nbsp;&nbsp;&nbsp; <span class="cmsColorGreen">// 出力例：</span><br>&nbsp;&nbsp;&nbsp; <span class="cmsColorGreen">// 2004/08/24 20:23:06</span><br>&nbsp;&nbsp;&nbsp; <span class="cmsColorGreen">// 20040824202306</span><br>&nbsp;&nbsp;&nbsp; <span class="cmsColorGreen">// 04年08月24日(火)</span><br>&nbsp;&nbsp;&nbsp; <span class="cmsColorGreen">// 08時23分06秒</span><br><br>&nbsp;&nbsp;&nbsp; Console.WriteLine(<span class="cmsColorRed">&quot;{0:yyyy/MM/dd HH:mm:ss}&quot;</span>, now);<br>&nbsp;&nbsp;&nbsp; Console.WriteLine(<span class="cmsColorRed">&quot;{0:yyyyMMddHHmmss}&quot;</span>, now);<br>&nbsp;&nbsp;&nbsp; Console.WriteLine(<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="cmsColorRed">&quot;{0:yy年MM月dd日(dddd)} {0:hh時mm分ss秒}&quot;</span>, now);<br>&nbsp;&nbsp;&nbsp; <span class="cmsColorGreen">// 出力例：</span><br>&nbsp;&nbsp;&nbsp; <span class="cmsColorGreen">// 2004/08/24 20:23:06</span><br>&nbsp;&nbsp;&nbsp; <span class="cmsColorGreen">// 20040824202306</span><br>&nbsp;&nbsp;&nbsp; <span class="cmsColorGreen">// 04年08月24日(火曜日) 08時23分06秒</span><br>&nbsp; }<br>}<br><br><span class="cmsColorGreen">// コンパイル方法：csc customdate.cs</span></p>
+</div>
+<div class="cmsBodyBoxCaption"><strong>カスタム書式指定文字列を使用したC#のサンプルプログラム（customdate.csファイル）</strong><br>customdate.csファイルのダウンロードは<A HREF="https://www.atmarkit.co.jp/ait/files/20040827/customdate.cs">こちら</A>から。</div>
+</div>
+<br clear="all"><span></span></div>
+<div class="box cmsBoxNoborder cmsBox">
+<div class="cmsBodyBox cmsBodyBoxGreen">
+<div class="cmsBodyBoxInner">
+<p><span class="cmsColorGreen">&#39; customdate.vb</span><br><br><span class="cmsColorBlue">Imports</span> System<br><br><span class="cmsColorBlue">Public</span> <span class="cmsColorBlue">Class</span> <span class="cmsColorOrange">CustomDateTime</span><br>&nbsp; <span class="cmsColorBlue">Shared</span> <span class="cmsColorBlue">Sub</span> Main()<br><br>&nbsp;&nbsp;&nbsp; <span class="cmsColorBlue">Dim</span> now <span class="cmsColorBlue">As</span> DateTime = DateTime.Now<br><br>&nbsp;&nbsp;&nbsp; Console.WriteLine(now) <span class="cmsColorGreen">&#39; 出力例：2004/08/24 20:23:06</span><br><br>&nbsp;&nbsp;&nbsp; Console.WriteLine(now.ToString(<span class="cmsColorRed">&quot;yyyy/MM/dd HH:mm:ss&quot;</span>))<br>&nbsp;&nbsp;&nbsp; Console.WriteLine(now.ToString(<span class="cmsColorRed">&quot;yyyyMMddHHmmss&quot;</span>))<br>&nbsp;&nbsp;&nbsp; Console.WriteLine(now.ToString(<span class="cmsColorRed">&quot;yy年MM月dd日(ddd)&quot;</span>))<br>&nbsp;&nbsp;&nbsp; Console.WriteLine(now.ToString(<span class="cmsColorRed">&quot;hh時mm分ss秒&quot;</span>))<br>&nbsp;&nbsp;&nbsp; <span class="cmsColorGreen">&#39; 出力例：</span><br>&nbsp;&nbsp;&nbsp; <span class="cmsColorGreen">&#39; 2004/08/24 20:23:06</span><br>&nbsp;&nbsp;&nbsp; <span class="cmsColorGreen">&#39; 20040824202306</span><br>&nbsp;&nbsp;&nbsp; <span class="cmsColorGreen">&#39; 04年08月24日(火)</span><br>&nbsp;&nbsp;&nbsp; <span class="cmsColorGreen">&#39; 08時23分06秒</span><br><br>&nbsp;&nbsp;&nbsp; Console.WriteLine(<span class="cmsColorRed">&quot;{0:yyyy/MM/dd HH:mm:ss}&quot;</span>, now)<br>&nbsp;&nbsp;&nbsp; Console.WriteLine(<span class="cmsColorRed">&quot;{0:yyyyMMddHHmmss}&quot;</span>, now)<br>&nbsp;&nbsp;&nbsp; Console.WriteLine( _<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="cmsColorRed">&quot;{0: yy年MM月dd日(dddd)} {0:hh時mm分ss秒}&quot;</span>, now)<br>&nbsp;&nbsp;&nbsp; <span class="cmsColorGreen">&#39; 出力例：</span><br>&nbsp;&nbsp;&nbsp; <span class="cmsColorGreen">&#39; 2004/08/24 20:23:06</span><br>&nbsp;&nbsp;&nbsp; <span class="cmsColorGreen">&#39; 20040824202306</span><br>&nbsp;&nbsp;&nbsp; <span class="cmsColorGreen">&#39; 04年08月24日(火曜日) 08時23分06秒</span><br>&nbsp; <span class="cmsColorBlue">End</span> <span class="cmsColorBlue">Sub</span><br><span class="cmsColorBlue">End</span> <span class="cmsColorBlue">Class</span><br><br><span class="cmsColorGreen">&#39; コンパイル方法：vbc customdate.vb</span></p>
+</div>
+<div class="cmsBodyBoxCaption"><strong>カスタム書式指定文字列を使用したVB.NETのサンプルプログラム（customdate.vbファイル）</strong><br>customdate.vbファイルのダウンロードは<A HREF="https://www.atmarkit.co.jp/ait/files/20040827/customdate.vb">こちら</A>から。</div>
+</div>
+<br clear="all"><span></span></div>
+<p>　各サンプルプログラムの後半は、書式指定項目（インデックス付きのプレースホルダー）を使用した例である（書式指定項目についての詳細はMSDNの「<A HREF="https://msdn.microsoft.com/ja-jp/library/txafckwd.aspx" target="_blank">複合書式指定</A>」を参照）。</p>
+<p>　なお、独自形式により出力された日時文字列をDateTimeオブジェクトに変換する方法については「<A HREF="https://www.atmarkit.co.jp/ait/articles/0409/03/news087.html">.NET TIPS：日付や時刻の文字列をDateTimeオブジェクトに変換するには？</A>」で示している。</p>
+<h4>C# 6.0／VB 14で追加された補間文字列機能を使用する</h4>
+<a name="interpolateddate"></a>
+<p>　C# 6.0／VB 14では「<A HREF="https://msdn.microsoft.com/ja-jp/library/dn961160.aspx" target="_blank">補間文字列</A>」を使用することで、より簡潔な記述で、DateTime構造体を文字列に変換できる。</p>
+<p>　補間文字列は先の例の後半で使用している複合書式指定における書式指定項目のインデックス（「{0}」「{1}」における「0」「1」など）の部分に直接、変数や式などを記述するものだと考えると分かりやすい。また、文字列の先頭には「$」記号を付加する。</p>
+<div class="box cmsBoxNoborder cmsBox">
+<div class="cmsBodyBox cmsBodyBoxBlue">
+<div class="cmsBodyBoxInner">
+<p><span class="cmsColorGreen"><strong>$</strong></span><span class="cmsColorRed">&quot;字面通りに表示されるテキスト <strong>{ 補間式, 文字列の幅:書式指定子}</strong> ……&quot;</span></p>
+</div>
+<div class="cmsBodyBoxCaption"><strong>補間文字列</strong><br>「字面通りに表示されるテキスト」「文字列の幅」「書式指定子」は省略可能。補間式に指定した要素が評価され、その結果が文字列に埋め込まれる。</div>
+</div>
+<br clear="all"><span></span></div>
+<p>　「,文字列の幅」には文字列の幅を、「:書式指定子」には上で見た標準書式指定文字列あるいはカスタム書式指定文字列を指定できる（「文字列の幅」「書式指定子」のいずれも省略可能）。</p>
+<p>　例えば標準書式指定文字列の「F」（完全な日付と時刻のパターン。長い形式の時刻）を使用して、現在の時刻をコンソールに表示するには次のようにする。</p>
+<div class="box cmsBoxNoborder cmsBox">
+<div class="cmsBodyBox cmsBodyBoxBlue">
+<div class="cmsBodyBoxInner">
+<p><span class="cmsColorOrange">var</span> now = DateTime.Now;<br>Console.WriteLine(<span class="cmsColorGreen"><strong>$</strong></span><span class="cmsColorRed"><strong>&quot;{now:F}&quot;</strong></span>);</p>
+</div>
+</div>
+<div class="cmsBodyBox cmsBodyBoxGreen">
+<div class="cmsBodyBoxInner">
+<p><span class="cmsColorBlue">Dim</span> now = DateTime.Now<br>Console.WriteLine(<span class="cmsColorGreen"><strong>$</strong></span><span class="cmsColorRed"><strong>&quot;{now:F}&quot;</strong></span>)</p>
+</div>
+<div class="cmsBodyBoxCaption"><strong>標準書式指定文字列を使用したサンプル（上：C#、下：VB）</strong></div>
+</div>
+<br clear="all"><span></span></div>
+<p>　カスタム書式指定文字列を指定した場合の例は次のようになる。</p>
+<div class="box cmsBoxNoborder cmsBox">
+<div class="cmsBodyBox cmsBodyBoxBlue">
+<div class="cmsBodyBoxInner">
+<p><span class="cmsColorOrange">var</span> now = DateTime.Now;<br>Console.WriteLine(<span class="cmsColorGreen"><strong>$</strong></span><span class="cmsColorRed"><strong>&quot;{now:yyyyMMddHHmmss}&quot;</strong></span>);</p>
+</div>
+</div>
+<div class="cmsBodyBox cmsBodyBoxGreen">
+<div class="cmsBodyBoxInner">
+<p><span class="cmsColorBlue">Dim</span> now = DateTime.Now<br>Console.WriteLine(<span class="cmsColorGreen"><strong>$</strong></span><span class="cmsColorRed"><strong>&quot;{now:yyyyMMddHHmmss}&quot;</strong></span>)</p>
+</div>
+<div class="cmsBodyBoxCaption"><strong>標準書式指定文字列を使用したサンプル（上：C#、下：VB）</strong><br>これは「カスタム書式指定文字列による変換」の冒頭で見た書式指定子をそのまま使っている。</div>
+</div>
+<br clear="all"><span></span></div>
+<p>　よって、上のサンプルプログラムは次のように書き換えられる（なお、補間文字列を使用した場合、ToStringメソッドは不要になるので、上のサンプルプログラムと全く同じわけではないことに注意。書式指定文字列が異なるものだけをピックアップしてある）。</p>
+<div class="box cmsBoxNoborder cmsBox">
+<div class="cmsBodyBox cmsBodyBoxBlue">
+<div class="cmsBodyBoxInner">
+<p><span class="cmsColorGreen">// interpolateddate.cs</span><br><br><span class="cmsColorBlue">using</span> System;<br><br><span class="cmsColorBlue">public</span> <span class="cmsColorBlue">class</span> <span class="cmsColorOrange">CustomDateTime</span> {<br>&nbsp; <span class="cmsColorBlue">static</span> <span class="cmsColorBlue">void</span> Main() {<br><br>&nbsp;&nbsp;&nbsp; DateTime now = DateTime.Now;<br><br>&nbsp;&nbsp;&nbsp; Console.WriteLine(now); <span class="cmsColorGreen">// 出力例：2004/08/24 20:23:06</span><br><br>&nbsp;&nbsp;&nbsp; Console.WriteLine(now.ToString(<span class="cmsColorGreen">$</span><span class="cmsColorRed">&quot;{now:yyyy/MM/dd HH:mm:ss}&quot;</span>));<br>&nbsp;&nbsp;&nbsp; Console.WriteLine(now.ToString(<span class="cmsColorGreen">$</span><span class="cmsColorRed">&quot;{now:yyyyMMddHHmmss}&quot;</span>));<br>&nbsp;&nbsp;&nbsp; Console.WriteLine(now.ToString(<span class="cmsColorGreen">$</span><span class="cmsColorRed">&quot;{now:yy年MM月dd日(ddd)}&quot;</span>));<br>&nbsp;&nbsp;&nbsp; Console.WriteLine(now.ToString(<span class="cmsColorGreen">$</span><span class="cmsColorRed">&quot;{now:hh時mm分ss秒}&quot;</span>));<br>&nbsp;&nbsp;&nbsp; Console.WriteLine(<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="cmsColorGreen">$</span><span class="cmsColorRed">&quot;{now:yy年MM月dd日(dddd)} {now:hh時mm分ss秒}&quot;</span>);<br>&nbsp;&nbsp;&nbsp; <span class="cmsColorGreen">// 出力例：</span><br>&nbsp;&nbsp;&nbsp; <span class="cmsColorGreen">// 2004/08/24 20:23:06</span><br>&nbsp;&nbsp;&nbsp; <span class="cmsColorGreen">// 20040824202306</span><br>&nbsp;&nbsp;&nbsp; <span class="cmsColorGreen">// 04年08月24日(火)</span><br>&nbsp;&nbsp;&nbsp; <span class="cmsColorGreen">// 08時23分06秒</span><br>&nbsp;&nbsp;&nbsp; <span class="cmsColorGreen">// 04年08月24日(火曜日) 08時23分06秒</span><br>&nbsp; }<br>}<br><br><span class="cmsColorGreen">// コンパイル方法：csc interpolateddate.cs</span></p>
+</div>
+</div>
+<div class="cmsBodyBox cmsBodyBoxGreen">
+<div class="cmsBodyBoxInner">
+<p><span class="cmsColorGreen">&#39; interpolateddate.vb</span><br><br><span class="cmsColorBlue">Imports</span> System<br><br><span class="cmsColorBlue">Public</span> <span class="cmsColorBlue">Class</span> <span class="cmsColorOrange">CustomDateTime</span>&nbsp;<br>&nbsp; <span class="cmsColorBlue">Shared</span> <span class="cmsColorBlue">Sub</span> Main()<br><br>&nbsp;&nbsp;&nbsp; <span class="cmsColorBlue">Dim</span> now <span class="cmsColorBlue">As</span> DateTime = DateTime.Now<br><br>&nbsp;&nbsp;&nbsp; Console.WriteLine(now) <span class="cmsColorGreen">&#39; 出力例：2004/08/24 20:23:06</span><br><br>&nbsp;&nbsp;&nbsp; Console.WriteLine(now.ToString(<span class="cmsColorGreen">$</span><span class="cmsColorRed">&quot;{now:yyyy/MM/dd HH:mm:ss}&quot;</span>))<br>&nbsp;&nbsp;&nbsp; Console.WriteLine(now.ToString(<span class="cmsColorGreen">$</span><span class="cmsColorRed">&quot;{now:yyyyMMddHHmmss}&quot;</span>))<br>&nbsp;&nbsp;&nbsp; Console.WriteLine(now.ToString(<span class="cmsColorGreen">$</span><span class="cmsColorRed">&quot;{now:yy年MM月dd日(ddd)}&quot;</span>))<br>&nbsp;&nbsp;&nbsp; Console.WriteLine(now.ToString(<span class="cmsColorGreen">$</span><span class="cmsColorRed">&quot;{now:hh時mm分ss秒}&quot;</span>))<br>&nbsp;&nbsp;&nbsp; Console.WriteLine( _<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="cmsColorGreen">$</span><span class="cmsColorRed">&quot;{now:yy年MM月dd日(dddd)} {now:hh時mm分ss秒}&quot;</span>)<br>&nbsp;&nbsp;&nbsp; <span class="cmsColorGreen">&#39; 出力例：</span><br>&nbsp;&nbsp;&nbsp; <span class="cmsColorGreen">&#39; 2004/08/24 20:23:06</span><br>&nbsp;&nbsp;&nbsp; <span class="cmsColorGreen">&#39; 20040824202306</span><br>&nbsp;&nbsp;&nbsp; <span class="cmsColorGreen">&#39; 04年08月24日(火)</span><br>&nbsp;&nbsp;&nbsp; <span class="cmsColorGreen">&#39; 08時23分06秒</span><br>&nbsp;&nbsp;&nbsp; <span class="cmsColorGreen">&#39; 04年08月24日(火曜日) 08時23分06秒</span><br>&nbsp; <span class="cmsColorBlue">End</span> <span class="cmsColorBlue">Sub</span><br><span class="cmsColorBlue">End</span> <span class="cmsColorBlue">Class</span><br><br><span class="cmsColorGreen">&#39; コンパイル方法：vbc interpolateddate.vb</span></p>
+</div>
+<div class="cmsBodyBoxCaption"><strong>補間文字列を使用して書き直したコード（上：C#／下：VB）</strong><br>interpolateddate.csファイルのダウンロードは<A HREF="https://www.atmarkit.co.jp/ait/files/20040827/interpolateddate.cs">こちら</A>から。<br>interpolateddate.vbファイルのダウンロードは<A HREF="https://www.atmarkit.co.jp/ait/files/20040827/interpolateddate.vb">こちら</A>から。</div>
+</div>
+<br clear="all"><span></span></div>
+<p>　余談だが、上記のコードで変数nowに現在時刻を入れているが、補間文字列の補間式には次のように任意の式を記述してもよい（ただし、時間の扱いを厳密にするのであれば、上のサンプルコードのように一度変数に現在時刻を保存しておくべきである）。ここではコード例はC#のみとする。</p>
+<div class="box cmsBoxNoborder cmsBox">
+<div class="cmsBodyBox cmsBodyBoxBlue">
+<div class="cmsBodyBoxInner">
+<p>Console.WriteLine(<span class="cmsColorGreen">$</span><span class="cmsColorRed">&quot;{<strong>DateTime.Now</strong>:yyyy/MM/dd HH:mm:ss}&quot;</span>);</p>
+</div>
+<div class="cmsBodyBoxCaption"><strong>補間式には任意の式を記述できる</strong></div>
+</div>
+<br clear="all"><span></span></div>
+<div class="box cmsBox cmsBox cmsBoxGreen" id="green">
+<p><strong>カテゴリ：</strong>クラス・ライブラリ　<strong>処理対象：</strong>文字列<br><strong>カテゴリ：</strong>クラス・ライブラリ　<strong>処理対象：</strong>日付と時刻<br><strong>使用ライブラリ：</strong>DateTime構造体（System名前空間）<br><strong>関連TIPS：</strong><A HREF="https://www.atmarkit.co.jp/ait/articles/0409/03/news087.html">日付や時刻の文字列をDateTimeオブジェクトに変換するには？</A></p>
+<br clear="all"><span></span></div>
+<div class="box cmsBox cmsBox cmsBoxGreen" id="green">
+<p><strong>■更新履歴</strong></p>
+<p><strong>【2015/11/24】</strong>C# 6.0／VB（Visual Basic） 14の補間文字列に対応した記述を追加しました。</p>
+<p><strong>【2004/09/02】</strong>関連TIPSとして「TIPS：日付や時刻の文字列をDateTimeオブジェクトに変換するには？」についての記述を追加しました。</p>
+<p><strong>【2004/08/27】</strong>初版公開。</p>
+<br clear="all"><span></span></div>
+<div class="box cmsBox cmsBox cmsBox">
+<h3>■この記事と関連性の高い別の.NET TIPS</h3>
+<ul>
+<li><A HREF="https://www.atmarkit.co.jp/ait/articles/0401/30/news069.html">数値を右詰めや0埋めで文字列化するには？［C#、VB］</A></li>
+<li><A HREF="https://www.atmarkit.co.jp/ait/articles/0409/03/news087.html">日付や時刻の文字列をDateTime／DateTimeOffsetオブジェクトに変換するには？</A></li>
+<li><A HREF="//www.atmarkit.co.jp/fdotnet/dotnettips/899charstring/charstring.html">文字と文字列を変換するには？</A></li>
+<li><A HREF="https://www.atmarkit.co.jp/ait/articles/0711/15/news142.html">文字列から特定の文字列を取り除くには？</A></li>
+<li><A HREF="https://www.atmarkit.co.jp/ait/articles/0909/17/news134.html">数値を0埋めで文字列にするには？（ToString編）</A></li>
+</ul>
+<br clear="all"><span></span></div>
+<!--CAP-->
+<div id="col200l"><a name="backn2.gif"></a><a href="https://www.atmarkit.co.jp/ait/subtop/features/dotnet/dotnettips_index.html" class="imgLink" target="_blank"><img src="https://image.itmedia.co.jp/ait/files/20010101/backn2.gif" width="146" height="20" alt="「.NET TIPS」のインデックス"></a></div>
+<!--CAPEND-->
+<p>「<A HREF="https://www.atmarkit.co.jp/ait/subtop/features/dotnet/dotnettips_index.html">.NET TIPS</A>」</p>
+<div class="cmsBodyItmidSeriesButtonRegist"></div>
+
+<!-- cxenseparse_end -->
+
+<!-- cmsBodyMainEnd -->
+<div class="endlink" id="endlinkConnection">
+<h4>関連記事</h4>
+<ul id="art">
+<li class="endlink-art" id="endlink-art1"><a href="https://www.atmarkit.co.jp/ait/articles/0401/30/news069.html"><img src="https://image.itmedia.co.jp/ait/articles/0401/30/news069.png" width="80" height="60" alt="数値を右詰めや0埋めで文字列化するには？［C#、VB］" align="left">数値を右詰めや0埋めで文字列化するには？［C#、VB］</a><br>
+</li>
+<li class="endlink-art" id="endlink-art2"><a href="https://www.atmarkit.co.jp/ait/articles/0409/03/news087.html"><img src="https://image.itmedia.co.jp/ait/articles/0409/03/news087.png" width="80" height="60" alt="日付や時刻の文字列をDateTime／DateTimeOffsetオブジェクトに変換するには？" align="left">日付や時刻の文字列をDateTime／DateTimeOffsetオブジェクトに変換するには？</a><br>
+</li>
+<li class="endlink-art" id="endlink-art3"><a href="//www.atmarkit.co.jp/fdotnet/dotnettips/899charstring/charstring.html">文字と文字列を変換するには？</a><br>
+</li>
+<li class="endlink-art" id="endlink-art4"><a href="https://www.atmarkit.co.jp/ait/articles/0711/15/news142.html"><img src="https://image.itmedia.co.jp/ait/articles/0711/15/news142.png" width="80" height="60" alt="文字列から特定の文字列を取り除くには？" align="left">文字列から特定の文字列を取り除くには？</a><br>
+</li>
+<li class="endlink-art" id="endlink-art5"><a href="https://www.atmarkit.co.jp/ait/articles/0909/17/news134.html"><img src="https://image.itmedia.co.jp/ait/articles/0909/17/news134.png" width="80" height="60" alt="数値を0埋めで文字列にするには？（ToString編）" align="left">数値を0埋めで文字列にするには？（ToString編）</a><br>
+</li>
+</ul>
+</div>
+
+<!-- cmsBodyRelated -->
+
+<!-- cmsBodyCtrlBtm -->
+<div id="cmsCopyright"><p>Copyright&copy; Digital Advantage Corp. All Rights Reserved.</p>
+</div>
+
+
+<div id="ITIR"><script>adRequest({'position':'ITIR'});</script></div>
+
+<!-- topics 1707 eos 誘導枠 -->
+
+<div id="AITcmsHoleBodyEnd"></div>
+<script>
+(function(){
+	var d = document;
+	var elc = d.getElementById('endlinkConnection');
+	var target_node = d.getElementById('AITcmsHoleBodyEnd');
+	if(elc) {
+		window.addEventListener('DOMContentLoaded',function(){
+			target_node.parentNode.insertBefore(elc,target_node);
+		},false);
+	}
+})();
+</script>
+</div></div> 
+
+	
+		<div id="ISALCT"><script>adRequest({'position':'12ISALCT'});</script></div>
+		<div class="colBoxClear"></div>
+		<div class="colBox"><div class="colBoxOuter"><div class="colBoxInner">
+		<div class="colBoxL50"><div id="ITSB"><script>adRequest({'position':'ITSB'});</script></div></div>
+		<div class="colBoxR50"><div id="ITSB2"><script>adRequest({'position':'ITSB2'});</script></div></div>
+		<div class="colBoxClear"></div>
+		</div></div></div>
+	
+	<div class="colBoxClear"></div>
+	<div id="cx_article">
+
+<!-- Cxense content widget: ＠IT 記事下 誘導枠 -->
+<div id="cx_059ed995df8dcb125e5a15866d9432745356347e" style="display:none"></div>
+<!-- Cxense content widget: ＠IT 記事下 TechTarget 記事誘導 -->
+<div id="cx_c8713ce0e99b85eda19d62559ed07a10ee7be13c" style="display:none"></div>
+<div class="colBoxClear"></div>
+<div id="itikw2km_ait" class="colBox"></div>
+<script src="/js/ait/itikw2km_ait.js" defer></script><!-- ＠IT 記事下キーマンズ枠 -->
+<div style="width:637px;"><div id="adspaceISALC" style="display:none"></div></div><!-- cx_fd51909 -->
+<div class="colBoxClear h10px"></div>
+<!-- Cxense content widget: ＠IT PCV 記事下オススメ記事 -->
+<div id="cx_299483af7f703625fcc3388b66b0b211cd54c304" style="display:none"></div>
+</div>
+<script type="text/javascript" src="/js/ait/itikw_categories.js"></script>
+<script type="text/javascript">
+	var cX = cX || {}; cX.callQueue = cX.callQueue || [];
+	cX.CCE = cX.CCE || {}; cX.CCE.callQueue = cX.CCE.callQueue || [];
+
+	(function(){
+		var w = window;
+		var d = document;
+		var flag_widget= false;
+		var setid = d.getElementById('cx_article');
+		var setid_y = getElementXY(setid)['y'];
+		var scroll_y = 0;
+		var browser_h = getBrowserWH()['h'];
+		var threshold_y = setid_y - browser_h;
+		var cxInsertWidget, cxInsertWidget4WPDC, cxInsertWidget4WPDCflags;
+		var evt_scroll = function(){
+			scroll_y = (function(){
+				return d.documentElement.scrollTop || d.body.scrollTop;
+			})();
+			if(scroll_y > threshold_y && !flag_widget){
+				flag_widget = true;
+				w.removeEventListener('scroll',evt_scroll,false);
+				cxInsertWidget();
+			}
+		};
+		cxInsertWidget = function(){
+			cX.callQueue.push(['insertWidget',{
+			        widgetId: 'c8713ce0e99b85eda19d62559ed07a10ee7be13c',
+			        insertBeforeElementId: 'cx_c8713ce0e99b85eda19d62559ed07a10ee7be13c',
+			        width: 640, height: 209, renderTemplateUrl: 'auto'
+			}]);
+			cX.callQueue.push(['insertWidget',{
+				widgetId: '299483af7f703625fcc3388b66b0b211cd54c304',
+				insertBeforeElementId: 'cx_299483af7f703625fcc3388b66b0b211cd54c304',
+				width: 640, height: 164, renderTemplateUrl: 'auto'
+			}]);
+		};
+
+		// RM66568 PMメディアの記事下リード誘導枠作成 Start
+		var wpdcParams = {
+			targetElement: null,
+			setid_y: 0,
+			scroll_y: 0,
+			threshold_y: 0,
+			flag_widget: false,
+			beforeAfter: ''
+		};
+
+		var evt_scroll4WPDC = function(){
+			
+			wpdcParams.scroll_y = (function(){
+				return d.documentElement.scrollTop || d.body.scrollTop;
+			})();
+			
+			if(wpdcParams.scroll_y > wpdcParams.threshold_y && !wpdcParams.flag_widget){
+				wpdcParams.flag_widget = true;
+				w.removeEventListener('scroll',evt_scroll4WPDC,false);
+				cxInsertWidget4WPDC( cxInsertWidget4WPDCflags );
+			}
+		};
+
+		cxInsertWidget4WPDC = function( flags ) {
+			var flag_rel = flags.flag_rel;
+			var flag_series = flags.flag_series;
+			var flag_lnk = flags.flag_lnk;
+
+			var arrITIKeywords = itikw.split(',');
+
+			!!arrITIKeywords.length ? arrITIKeywords.pop() : false;
+
+			var CURRENT_ITIKW = arrITIKeywords[0] ? arrITIKeywords[0].replace(/／/g,'/') : '';
+
+			// ITIKWから大カテゴリを特定
+			var itikwKey, itikwResult;
+			for( itikwKey in ITI_KW_CATEGORIES ) {
+				var topCategory = ITI_KW_CATEGORIES[itikwKey];
+				topCategory.forEach(function(element){
+					var midCategory = element;
+					midCategory = midCategory.replace(/／/g,'/');
+					if( CURRENT_ITIKW === midCategory ) {
+						itikwResult = itikwKey;
+					}
+				});
+			}
+
+			cX.CCE.run({
+					widgetId: '059ed995df8dcb125e5a15866d9432745356347e',
+					targetElementId: 'cx_059ed995df8dcb125e5a15866d9432745356347e',
+				}
+				,
+				{
+					context: {
+						categories: {
+							// フルプロ会員フラグ
+							fullprofile: cx_segments.indexOf('8occl23hk919') > -1,
+							//確認用セグメント
+							debugprofile: cx_segments.indexOf('8nq6jmv47rap') > -1,
+							// ITIキーワードの大カテゴリを渡す
+							taxonomy: itikwResult
+						}
+					}
+				}
+			);
+
+			// DOM 移動関数
+			var move_dom = function(e,beforeafter){
+				//関連記事の有無
+				var rcm = document.querySelector('#cx_059ed995df8dcb125e5a15866d9432745356347e');
+
+				if(beforeafter == 'before'){
+					e.parentNode.insertBefore(rcm,e);
+				}else if(beforeafter == 'after'){
+					e.parentNode.insertBefore(rcm,e.nextElementSibling);
+				}
+				rcm.style.display = 'block';
+			};
+
+			move_dom( wpdcParams.targetElement, wpdcParams.beforeAfter );
+		}
+
+		d.addEventListener('moveCxRecommend', function(ev){
+			ev.currentTarget.removeEventListener( ev.type, arguments.callee );
+			cxInsertWidget4WPDCflags = ev.flags;
+
+			if( cxInsertWidget4WPDCflags.flag_rel ) {
+				// レコメンドを関連記事の最後に移動する
+				wpdcParams.targetElement = d.getElementById('cx_recommend_rm42673');
+				wpdcParams.beforeAfter = 'after';
+			} else {
+				// レコメンドを連載リストの次に移動する
+				if(cxInsertWidget4WPDCflags.flag_series){
+					wpdcParams.targetElement = d.getElementById('cx_recommend_rm40192');
+					wpdcParams.beforeAfter = 'after';
+
+				// レコメンドを関連リンクの前に移動する
+				}else if(cxInsertWidget4WPDCflags.flag_lnk){
+					wpdcParams.targetElement = d.getElementById('cx_recommend_rm40192');
+					wpdcParams.beforeAfter = 'after';
+
+				// レコメンドをコピーライトの前に移動する
+				}else{
+					wpdcParams.targetElement = d.getElementById('AITcmsHoleBodyEnd');
+					wpdcParams.beforeAfter = 'before';
+				}
+			}
+
+			wpdcParams.setid_y = getElementXY(wpdcParams.targetElement)['y'];
+			wpdcParams.threshold_y = wpdcParams.setid_y - browser_h;
+
+			evt_scroll4WPDC();
+			if(!wpdcParams.flag_widget) w.addEventListener('scroll',evt_scroll4WPDC,false);
+		});
+		// RM66568 PMメディアの記事下リード誘導枠作成 End
+
+		evt_scroll();
+		if(!flag_widget) w.addEventListener('scroll',evt_scroll,false);
+	})();
+
+	// Custom Event Polyfill for IE => 9 Start
+	(function () {
+		if ( typeof window.CustomEvent === "function" ) return false;
+			function CustomEvent ( event, params ) {
+				params = params || { bubbles: false, cancelable: false, detail: null };
+				var evt = document.createEvent( 'CustomEvent' );
+				evt.initCustomEvent( event, params.bubbles, params.cancelable, params.detail );
+			return evt;
+		}
+		window.CustomEvent = CustomEvent;
+	})();
+	// Custom Event Polyfill for IE => 9 End
+
+</script>
+<!-- End of Cxense content widget --><!-- cx TT枠 | htmlgen キーマンズ誘導枠 | cx オススメ記事  -->
+	<style>
+#cmsBody h4.testHeading {
+	font-weight:bold;
+	font-size:16px;
+	line-height:24px;
+	margin-bottom: 8px;
+	border-bottom: 3px solid rgb(64,140,179);
+}
+#cmsBody .endlink li a {
+	font-size: 16px;
+	line-height: 23px;
+	font-weight:bold;
+}
+</style>
+<div id="cx_recommend_rm40192">
+	<h4 class="testHeading" id="cx_recommend_rm40192_heading" style="display:none;"></h4>
+	<!-- Cxense content widget: ＠IT PCV 記事下（文脈） x 4 + AD × 2 （rm49592 fix） -->
+	<div id="cx_5403fb146bc5704cf89f2a426720ca888c9d22b7" style="display:none"></div>
+</div>
+<div id="cx_recommend_rm42673">
+	<!-- Cxense content widget: ＠IT PCV 記事下（文脈） AD のみ ×2 （rm49592） -->
+	<div id="cx_a49bed45d2fb56463e8cc55e43b185ed6c5e885e" style="display:none"></div>
+</div>
+
+<script>
+var cX = cX || {}; cX.callQueue = cX.callQueue || [];
+(function(){
+	var w = window;
+	var d = document;
+	var div = d.createElement('div');
+	var rcm; // DOM レコメンド
+	var rcm_head = d.getElementById('cx_recommend_rm40192_heading'); // DOM レコメンド見出し
+	var flag_rel = false; // bool 関連記事ありなし
+	var flag_lnk = false; // bool 関連リンクありなし
+	var flag_series = false; // bool 連載リストありなし
+	var flag_widget= false; // bool ウィジェットコール判定
+	var headingTxt = 'チェックしておきたい人気記事'; // string 関連記事見出し
+	var copyright = d.getElementById('cmsCopyright');
+	var copyright_y = getElementXY(copyright)['y'];
+	var scroll_y = 0; // num 縦スクロール量
+	var browser_h = getBrowserWH()['h']; // num ブラウザ高さ
+	var threshold_y = (copyright_y - browser_h) - 200;
+	var cxInsertWidget;
+	div.className = 'colBoxClear h15px';
+	// console.log('copyright : ' + copyright_y);
+	// console.log('ブラウザ高さ : ' + browser_h);
+	// console.log('しきい値 : ' + threshold_y);
+
+	if(d.getElementById('endlink-art1')){ // 関連記事あり
+		flag_rel = true;
+	}
+	if(d.getElementById('endlink-lnk1')){ // 関連リンクあり
+		flag_lnk = true;
+	}
+
+	// DOM 移動関数
+	var move_dom = function(e,rcm,beforeafter){
+		if(beforeafter == 'before'){
+			e.parentNode.insertBefore(rcm,e);
+		}else if(beforeafter == 'after'){
+			e.parentNode.insertBefore(rcm,e.nextElementSibling);
+		}
+	};
+
+	// スクロールイベント
+	var evt_scroll = function(){
+		scroll_y = (function(){
+			return d.documentElement.scrollTop || d.body.scrollTop;
+		})();
+		if(scroll_y > threshold_y && !flag_widget){
+			flag_widget = true;
+			console.log('レコメンド表示');
+			w.removeEventListener('scroll',evt_scroll,false);
+			cxInsertWidget();
+		}
+		// console.log(scroll_y);
+	};
+
+	// 関連記事あり処理
+	var evt_rel = function(){
+		// 関連記事 5 本目以降消す処理
+		var hide_rel5 = function(){
+			console.log('関連記事 5 本目以降非表示');
+			var art = d.getElementById('art');
+			var lis = art.getElementsByTagName('li');
+			console.log('関連記事 ' + lis.length + ' 本');
+			for(var i = 4; i < lis.length; i++){
+				lis[i].style.display = 'none';
+			}
+		};
+
+		// 関連記事 5 本目チェック
+		if(d.getElementById('endlink-art5')){
+			console.log('関連記事 5 本目あり');
+			hide_rel5();
+		}
+
+		// DOM レコメンド
+		rcm = d.getElementById('cx_recommend_rm42673');
+
+		// レコメンド発火関数
+		cxInsertWidget = function(){
+			cX.callQueue.push(['insertWidget', {
+			widgetId: 'a49bed45d2fb56463e8cc55e43b185ed6c5e885e',
+			insertBeforeElementId: 'cx_a49bed45d2fb56463e8cc55e43b185ed6c5e885e',
+			width: 640, height: 187, renderTemplateUrl: 'auto'
+			}]);
+		};
+		d.getElementById('endlinkConnection').getElementsByTagName('h4')[0].innerHTML = headingTxt; // 関連記事見出し書き換え
+
+		w.addEventListener('DOMContentLoaded',function(){
+			console.log('レコメンドを関連記事の最後に移動する');
+			rcm.style.marginTop = '-20px';
+			move_dom(d.getElementById('art'),rcm,'after');
+			move_dom(rcm,div,'after');
+			evt_scroll();
+
+			//RM66658との連携のためカスタムイベントの送出を追加 
+			var eventObj = new CustomEvent('moveCxRecommend');
+			eventObj.flags = { flag_rel: flag_rel, flag_series: flag_series, flag_lnk: flag_lnk };
+			document.dispatchEvent(eventObj);
+
+			if(!flag_widget) w.addEventListener('scroll',evt_scroll,false);
+		},false);
+	};
+
+	// 関連記事なし処理
+	var evt_norel = function(){
+
+		// DOM レコメンド
+		rcm = d.getElementById('cx_recommend_rm40192');
+
+		// レコメンド発火関数
+		cxInsertWidget = function(){
+			cX.callQueue.push(['insertWidget',{
+				widgetId: '5403fb146bc5704cf89f2a426720ca888c9d22b7',
+				insertBeforeElementId: 'cx_5403fb146bc5704cf89f2a426720ca888c9d22b7',
+				width: 640, height: 487, renderTemplateUrl: 'auto'
+			}]);
+		};
+
+		var main = function(){
+
+			if(d.getElementById('cmsSeriesList')){
+				if(d.getElementById('cmsSeriesList').innerHTML != ''){
+					flag_series = true;
+				}
+			}
+
+			// レコメンド見出し FIX
+			rcm_head.innerHTML = headingTxt;
+			rcm_head.style.display = 'block';
+			
+			// レコメンドを連載リストの次に移動する
+			if(flag_series){
+				console.log('レコメンドを連載リストの次に移動する');
+				move_dom(d.getElementById('cmsSeriesList'),rcm,'after');
+
+			// レコメンドを関連リンクの前に移動する
+			}else if(flag_lnk){
+				console.log('レコメンドを関連記事／リンクの前に移動する');
+				move_dom(d.getElementById('endlinkConnection'),rcm,'before');
+
+			// レコメンドをコピーライトの前に移動する
+			}else{
+				console.log('レコメンドをcmsHoleBodyEndの最下部に移動する');
+				move_dom(d.getElementById('AITcmsHoleBodyEnd'),rcm,'before');
+
+			}
+
+			move_dom(rcm,div,'after');
+
+			//RM66658との連携のためカスタムイベントの送出を追加 
+			var eventObj = new CustomEvent('moveCxRecommend');
+			eventObj.flags = { flag_rel: flag_rel, flag_series: flag_series, flag_lnk: flag_lnk };
+			document.dispatchEvent(eventObj);
+
+			evt_scroll();
+			if(!flag_widget) w.addEventListener('scroll',evt_scroll,false);
+		};
+		w.addEventListener('load',main,false);
+	};
+
+	// 関連記事あり
+	if(flag_rel){
+		console.log('関連記事あり');
+		evt_rel();
+
+	// 関連記事なし
+	}else{
+		console.log('関連記事なし');
+		evt_norel();
+	}
+
+})();
+</script>
+	<div class="colBoxClear h15px"></div>
+	<div id="masterSocialbuttonBtm" class="masterSocialbutton"><div class="msbOut" id="msbBtmOut"></div></div>
+
+
+	<!-- enterprise|news|ait|business|mn|ee|edn|smartjapan|bt|pcuser|mobile|lifestyle|hc|dc -->
+	<script>
+	msbBtn({
+	'pos':'btm',
+	'tag':'table',
+	'popup_pos':'under',
+	'base_color':'white',
+	'base_class':'minimal_count',
+	'line':[
+	[
+		{'name':'印刷','title':'この記事を印刷する','id':'printbutton'},
+		{'name':'通知','id':'itmid','data':[
+			{'name':'類似記事の掲載をメールで通知','id':'alertbutton'},
+			{'name':'連載「％」の新着をメールで通知','id':'alertseries'},
+		{}]},
+		{'name':'ツイート','id':'tweetbutton_minimal'},
+		{'name':'シェア','id':'sharebutton_minimal'},
+		{'name':'はてなブックマーク','id':'hatenabookmark_minimal'},
+		{'name':'Pocket Button','id':'pocket_minimal'},
+	{}],
+	[]]
+	});
+	</script>
+
+
+	<div class="colBoxClear h10px"></div>
+	
+	<div class="colBoxClear"></div>
+	<!-- Side Buttons : Print / Alert -->
+<div id="colBoxSideButtons"><div id="colBoxSideButtonsInner">
+<div id="colBoxSideButtonsPrint"></div>
+<div id="colBoxSideButtonsAlert"></div>
+</div></div>
+<script>
+(function(){
+	var d = document,
+			socialBtn = d.getElementById('masterSocialbuttonTop'),
+			socialBtn_print = d.getElementById('msbBtnPrintbuttonTop').getElementsByTagName('a')[0],
+			socialBtn_series,
+			sideBtn = d.getElementById('colBoxSideButtons'),
+			sideBtnPrint = d.getElementById('colBoxSideButtonsPrint'),
+			sideBtnAlert = d.getElementById('colBoxSideButtonsAlert'),
+			sideBtn_print,
+			sideBtn_alert,
+			sideBtn_series,
+			qaBtn,
+			qaExist = false;
+	/* ゲート有無確認＆class付与 */
+	if (d.getElementById('ITWL')) {
+		d.body.className += ' exist-ITWL';
+	}
+	/* プリントボタン生成 */
+	sideBtn_print = socialBtn_print.cloneNode(true);
+	sideBtn_print.id = 'colBoxSideButtonsPrintBtn';
+	sideBtnPrint.appendChild(sideBtn_print);
+	sideBtnPrint_msg = d.getElementById('colBoxSideButtonsPrint').getElementsByTagName('span')[0];
+	sideBtnPrint_msg.innerText = '印刷／保存';
+	/* 連載アラートボタン生成 */
+	if (d.getElementById('msbBtnAlertseriesTop')) {
+		socialBtn_series = d.getElementById('msbBtnAlertseriesTop').getElementsByTagName('a')[0];
+		sideBtn_series = socialBtn_series.cloneNode(true);
+		sideBtn_series.id = 'colBoxSideButtonsAlertSeriesBtn';
+		sideBtnAlert.appendChild(sideBtn_series);
+		sideBtnAlert_msg = d.getElementById('colBoxSideButtonsAlert').getElementsByTagName('span')[0];
+		sideBtnAlert_msg.innerText = '連載通知';
+	} else {
+		sideBtnAlert.parentNode.removeChild(sideBtnAlert);
+	}
+	/* スクロール時の処理 */
+	var browserH = getBrowserWH()['h']; // ブラウザ高さ
+	var scrollY = 0;
+	var scrolling = function(){
+		var socialBtnY = getElementXY(socialBtn)['y']; // ソーシャルボタン Y 位置
+		var socialBtnH = socialBtn.clientHeight; // ソーシャルボタン 高さ
+		var copyrightY = getElementXY(cmsCopyright)['y']; // 記事下コピーライト Y 位置
+		scrollY = getBrowserScrollXY()['y']; // スクロール量
+		if(copyrightY-browserH < scrollY){
+			sideBtn.style.opacity = 0;
+			sideBtn.style.visibility =  'hidden';
+		} else if(socialBtnY+socialBtnH < scrollY){	
+			sideBtn.style.opacity = 1;
+			sideBtn.style.visibility =  'visible';
+		} else {
+			sideBtn.style.opacity = 0;
+			sideBtn.style.visibility =  'hidden';
+		}
+		if (qaExist && qaBtn !== undefined) { 
+			if(socialBtnY+socialBtnH < scrollY){
+				qaBtn.style.opacity = 1;
+				qaBtn.style.visibility =  'visible';
+			} else {
+				qaBtn.style.opacity = 0;
+				qaBtn.style.visibility =  'hidden';
+			}
+		}
+	}
+	appendEventListener(window,'scroll',scrolling,false); // スクロールイベント
+})();
+</script>
+<!-- /Side Buttons -->
+
+
+
+
+
+	<!-- NewsArticles -->
+	
+<script>
+(function(){
+if(typeof(lgMembersEnquete) == "undefined" && typeof(itmidMembersEnquete) == "undefined"){
+	// 通常のマスク記事
+	var d = document;
+	var js = d.createElement('script');
+	js.src = '/js/mask_ait.js?202011241317';
+	d.head.appendChild(js);
+	js.addEventListener('load',function(){
+	ISLOGIN({
+		'isLoginURL':'//status.atmarkit.co.jp/isLoginAIT.cgi',
+		'sc':'0c1c43111448b131d65b3b380041de26f2edd6264ee1c371184f54d26ab53365',
+		'lc':'7d7179c146d0d6af4ebd304ab799a718fe949a8dcd660cd6d12fb97915f9ab0a',
+		'bc':2,
+		'heading':'<strong style="color:#F90;">会員登録（無料）</strong> が必要です',
+		'description':'続きを読むには、[続きを読む] ボタンを押して会員登録あるいはログインしてください。',
+		'eVer':'26',
+		'eVerStr':'id_ait_article-mask'
+	});
+	},false);
+} else if(typeof(lgMembersEnquete) == "undefined") {
+	// 簡易リードジェン
+	var d = document;
+	var js = d.createElement('script');
+	var css = d.createElement('link');
+	css.rel = 'stylesheet';
+	css.type = 'text/css';
+	css.href = '/css/members.css?201806191022';
+	d.head.appendChild(css);
+	js.src = '/js/mask_enq.js?201902191626';
+	d.head.appendChild(js);
+	js.addEventListener('load',function(){
+	ISLOGIN({
+		'isLoginURL':'//status.atmarkit.co.jp/isLoginAIT.cgi',
+		'sc':'00037f39cf870a1f49129f9c82d935665d352ffd25ea3296208f6f7b16fd654f',
+		'lc':'02abf8fa7d9c4db035df33acba2dcd495ae9af91152ea9a135533cb747eb3afc',
+		'bc':2,
+		'heading':'<strong style="color:#F90;">会員登録（無料）</strong> が必要です',
+		'description':'続きを読むには、[続きを読む] ボタンを押して会員登録あるいはログインしてください。',
+		'eVer':'26',
+		'eVerStr':'id_ait_article-mask'
+	});
+	},false);
+} else {
+	// lgMembersEnquete
+	var d = document;
+	// jQuery UI & lgMembersEnquete CSS
+	function openLgMembersEnqueteCssFile(href) {
+		var css = d.createElement('link');
+		css.rel = 'stylesheet';
+		css.type = 'text/css';
+		css.href = href;
+		d.head.appendChild(css);
+	}
+	openLgMembersEnqueteCssFile('//ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css');
+	openLgMembersEnqueteCssFile('/css/members_lgenq.css');
+	// jQuery UI, Multiselect, lgMembersEnquete JS
+	var sync_file = [
+		'//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js',
+		'//ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js',
+		'/js/lib/jquery.multiselect.min.js',
+		'/js/mask_lgenq.js?date=201908051033'
+	];
+	var count = 0;
+	var add_js = function(){
+		var js = d.createElement('script');
+		js.src = sync_file[count];
+		d.head.appendChild(js);
+		js.addEventListener('load',function(){
+			count++;
+			if (count < sync_file.length) {
+				add_js();
+			} else {
+				ISLOGIN({
+					'isLoginURL':'//status.atmarkit.co.jp/isLoginAIT.cgi',
+					'dcurl':'https://wp.techtarget.itmedia.co.jp/itm/callback?src_url=',
+					'sc':'8dfd13f4376053626e97eb7221d469013cae9bc031027e64f0db2ec114f8ffd9',
+					'lc':'084ae23e6996e701addeeb7dcf33696f32dcb4ab78c0ca2026f8f5dbbe5a81d0',
+					'bc':8,
+					'heading':'会員登録（無料）が必要です',
+					'description':'ログイン または 会員登録（無料）するとすべてご覧いただけます。',
+					'eVer':'26',
+					'eVerStr':'id_ait_article-mask'
+				});
+			}
+		});
+	};
+	add_js();
+}
+})();
+</script>
+
+	
+		<script>
+/*IMAGE MASK*/
+(function(d){
+	var _preview = d.domain.match(/(preview|broom|localhost)/);
+	window.addEventListener('load',function(){
+		// islLogin 呼出済|preview
+		if(d.getElementById('isLogin') || _preview){
+			mask_images({
+			sc:'0c1c43111448b131d65b3b380041de26f2edd6264ee1c371184f54d26ab53365',
+			lc:'7d7179c146d0d6af4ebd304ab799a718fe949a8dcd660cd6d12fb97915f9ab0a',
+			ac:'1a599d548ac1cb9a50f16ce3ba121520c8ab7e05d54e097bfa5b82cb5a328a0f',
+			cr:'2c93f81754142e105c8bca17824745d14c8c4d69e9d7ede513e5530546e97641',
+			bc:2
+			});
+		// islLogin なし
+		}else{
+			var js = mask_images.setISLOGIN('//status.atmarkit.co.jp/isLoginAIT.cgi','0c1c43111448b131d65b3b380041de26f2edd6264ee1c371184f54d26ab53365');
+			js.addEventListener('load',function(){
+				mask_images({
+				sc:'0c1c43111448b131d65b3b380041de26f2edd6264ee1c371184f54d26ab53365',
+				lc:'7d7179c146d0d6af4ebd304ab799a718fe949a8dcd660cd6d12fb97915f9ab0a',
+				ac:'1a599d548ac1cb9a50f16ce3ba121520c8ab7e05d54e097bfa5b82cb5a328a0f',
+				cr:'2c93f81754142e105c8bca17824745d14c8c4d69e9d7ede513e5530546e97641',
+				bc:2
+				});
+			});
+		}
+	});
+})(document);
+</script>
+
+	
+
+
+<div id="cmsPrcredit"><div class="inner"></div></div>
+<!--EDIT START-->
+
+
+
+
+<div id="body_insert_ad" class="cxenseignore" style="clear:both;"></div>
+<script>
+/* debug
+--------------------------------------------------------*/
+function set_line(_y,_color){
+	if(!location.hash.match('adline')) return false;
+	var d = document;
+	var line = d.createElement('div');
+	line.style.position = 'absolute';
+	line.style.top = _y + 'px';
+	line.style.left = '0';
+	line.style.width = '100%';
+	line.style.height = '1px';
+	line.style.background = _color;
+	d.body.appendChild(line);
+};
+(function(d,_threshold,_maxrange){
+	var adid = 0;
+	var render = 0;
+	var dlv_pos = 0;
+	var g_id = 0;
+	var ad_type = 'cx';
+	var ad_float_fix = 0;
+	if(location.pathname.match(/^\/ait\//)){
+		ad_type = 'cx';
+		adid = '0000000164657642';
+		render = '//cdn.cxpublic.com/articleCenterInBody_20190703.html';
+	}else if(location.pathname.match(/^\/(enterprise|im|bizid)\//)){
+		ad_type = 'cx';
+		adid = '000000016471ce35';
+		render = '//cdn.cxpublic.com/articleCenterInBody_20190703.html';
+	}else if(location.pathname.match(/^\/(mobile|pcuser|business)\//)){
+		ad_type = 'dlv';
+		dlv_pos = 'ISALM';
+	}else if(location.pathname.match(/^\/nl\//)){
+		ad_type = 'google';
+		g_id = 'div-gpt-ad-1551176482959-0';
+		ad_float_fix = 1;
+	}else{
+		return false;
+	}
+	var e_body = d.getElementById('cmsBody').getElementsByClassName('inner')[0];
+	var e_dlv = d.getElementById('body_insert_ad');
+	var set_dlv = function(){
+		if(ad_type === 'cx'){
+			var html = '<div><div>';
+			html += '<div id="insertAdSpaceBeforeThis_' + adid + '" style="display:none;"></div>';
+			html += '</div></div>';
+			e_dlv.innerHTML = html;
+			cX = cX || {};
+			cX.callQueue = cX.callQueue || []; 
+			cX.callQueue.push([
+			'insertAdSpace',
+			{
+			adSpaceId:adid,
+			width:'100%',
+			height:190,
+			initialHorizontalAdUnits:1,
+			initialVerticalAdUnits:1,
+			resizeToContentSize:true,
+			renderTemplateUrl:render
+			}
+			]);
+		}else if(ad_type === 'dlv'){
+			var html = '<div id="' + dlv_pos + '"></div>';
+			e_dlv.innerHTML = html;
+			adRequest({position:dlv_pos,dom:true});
+		}else if(ad_type === 'google'){
+			var html = '<div id="' + g_id + '" style="float:left;margin:0 20px 20px 0;"></div>';
+			e_dlv.innerHTML = html;
+			googletag.cmd.push(function(){
+			var slot8 = googletag.defineSlot('/43042345/nlab_artinsert_RT',[[336,280],[300,250],'fluid'],'div-gpt-ad-1551176482959-0').addService(googletag.pubads());
+			googletag.pubads().enableSingleRequest();
+			googletag.enableServices();
+			googletag.display('div-gpt-ad-1551176482959-0');
+			googletag.pubads().refresh([slot8]);
+			});
+		}
+	};
+	var insert_ok = function(_target,_str){
+		var clearfix = d.createElement('div');
+		clearfix.className = 'colBoxClear';
+		if(ad_float_fix){
+			e_body.insertBefore(e_dlv,_target);
+			e_body.insertBefore(clearfix,_target.nextElementSibling);
+		}else{
+			e_body.insertBefore(e_dlv,_target);
+		}
+		set_dlv();
+	};
+	var insert_ng = function(_str){
+		e_dlv.style.display = 'none';
+	};
+	var main = function(){
+		var e_nodes = e_body.childNodes; // BODY 直下子要素
+		var e_tags = []; // BODY 直下タグ
+		var p_num = []; // BODY 直下 P タグ位置
+		var p_target_num; // 枠挿入基準位置
+		var o_float = {}; // 回り込み要素
+		var o_this = {}; // アクティブタグ
+		var o_next = {}; // アクティブタグの次のタグ
+		var flag_insert = 0; // 挿入フラグ
+		// 回り込み要素チェック
+		var check_float = function(_e){
+			var e = 0;
+			if(_e.id.match(/^col\d{3}(l|r)$/)){
+				e = _e;
+			}
+			return e;
+		};
+		// 要素の Y 座標と高さの合計値
+		var get_element_y = function(_e){
+			var ey = 0;
+			var eh = _e.offsetHeight;
+			while(_e){
+				ey += _e.offsetTop;
+				_e = _e.offsetParent;
+			}
+			return ey + eh;
+		};
+		var check_ptag = function(_e){
+			var e = 0;
+			if(_e.tagName && _e.tagName === 'P'){
+				e = _e;
+			}
+			return e;
+		};
+		var try_insert = function(){
+			p_target_num = Math.floor(p_num.length / 2) - 1;
+			if(p_target_num >= _maxrange) p_target_num = _maxrange;
+			for(var i = p_num[p_target_num]; i < e_tags.length; i++){
+				o_this.e = check_ptag(e_tags[i]);
+				if(o_this.e){
+					o_next.e = check_ptag(e_tags[i + 1]);
+					if(o_next.e){
+						if(!o_float.e || check_float(e_tags[i - 1])){
+							o_float.e = check_float(e_tags[i - 1]);
+						}
+						if(o_float.e){
+							o_float.y = get_element_y(o_float.e);
+							o_this.y = get_element_y(o_this.e);
+							set_line(o_float.y,'red');
+							set_line(o_this.y,'blue');
+							if(o_float.y < o_this.y){
+								flag_insert = 1;
+								insert_ok(o_next.e,_threshold + ' パラ以上回り込みあり');
+								break;
+							}
+						}else{
+							flag_insert = 1;
+							insert_ok(o_next.e,_threshold + ' パラ以上回り込みなし');
+							break;
+						}
+					}
+				}else{
+					o_float = {};
+				}
+			}
+			if(!flag_insert){
+				insert_ng('挿入位置なし');
+			}
+		};
+		// 全子要素からタグのみ配列に入れる
+		for(var i = 0; i < e_nodes.length; i++){
+			if(e_nodes[i].tagName){
+				e_tags.push(e_nodes[i]);
+			}
+		}
+		// 全タグから P タグ位置を配列に入れる
+		for(var i = 0; i < e_tags.length; i++){
+			if(e_tags[i].tagName === 'P') p_num.push(i);
+			// 最初の回り込み要素を格納
+			if(!o_float.e){
+				o_float.e = check_float(e_tags[i]);
+				o_float.y = get_element_y(o_float.e);
+			}
+		}
+		if(p_num.length >= _threshold){
+			try_insert();
+		}else{
+			insert_ng('P タグ ' + _threshold + ' 以下');
+		}
+	};
+	if(e_body){
+		main();
+	}else{
+		insert_ng('記事本文なし');
+	}
+})(document,4,5);
+</script>
+
+
+
+
+
+
+
+	<!-- cmsSeriesList : SeriesID_Flag == 1 -->
+	
+		<!-- SeriesID ne 962 -->
+		<div id="cmsSeriesList" style="padding:10px 0;"></div>
+<script src="/js/cmsSeriesList.js"></script>
+<script>
+cmsSeriesList.makeIndex_pattern = 1;
+</script>
+<script src="/include/series/1591/list.json" defer></script>
+<style>
+#cmsSeriesList.cmsSeriesList1 .colBoxHead {
+border-bottom:3px solid rgb(64,140,179);
+margin-bottom:8px;
+}
+#cmsSeriesList.cmsSeriesList1 .colBoxHead h1 {
+display:block;
+}
+#cmsSeriesList.cmsSeriesList1 .colBoxHead h2 {
+display:none;
+}
+#cmsSeriesList.cmsSeriesList1 .colBoxHead .seriesBoxIcon {
+display:none;
+}
+#cmsSeriesList.cmsSeriesList1 #seriesBoxRegistbutton {
+border:none;
+background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAUJJREFUeNpi/P//P8NAAiaGAQajDhh1AItj75b7A+oAIFYY2VFAQP4DEJcC8R0yzZcA4n4oTbQDWoC4BsoWgBqQCsQrSLTcBYvlC6DiMviioBaII4H4C5TPA8TLgXg2lE1MqLYD8XYky/8AcSEQJ0LZBNMAyLe2QPwASSwFiI8DsQ4ey0E+2w/EFUih+waIPYF4AqmJ8AIQmwLxHiQxHagjMrCoDwDi80BsQ8AMknIBzPVTkMRA0TAdGi08UJ+C4no9EIsgqVuDJRRJzgWw+MsF4rNQizmg4hFAbALNKSZo6huhiZnibMiAloJvQH0KS1wqaGq+QBPwFloVRCeA2BBKo4Mb0PjeQs2CCBt4AY3bbiA2gIo9gEbTF2qXhPjSReFoe4BWlZEDje3kIOSA/SMuCh4MpAMYR3tGow4Y8Q4ACDAAwpdAPjRbCagAAAAASUVORK5CYII=) no-repeat left center;
+background-size:14px 14px;
+padding:0 0 0 20px;
+margin-left:0;
+}
+#cmsSeriesList.cmsSeriesList1 #seriesBoxRegistbutton:hover {
+background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAUJJREFUeNpi/P//P8NAAiaGAQajDhh1AItj75b7A+oAIFYY2VFAQP4DEJcC8R0yzZcA4n4oTbQDWoC4BsoWgBqQCsQrSLTcBYvlC6DiMviioBaII4H4C5TPA8TLgXg2lE1MqLYD8XYky/8AcSEQJ0LZBNMAyLe2QPwASSwFiI8DsQ4ey0E+2w/EFUih+waIPYF4AqmJ8AIQmwLxHiQxHagjMrCoDwDi80BsQ8AMknIBzPVTkMRA0TAdGi08UJ+C4no9EIsgqVuDJRRJzgWw+MsF4rNQizmg4hFAbALNKSZo6huhiZnibMiAloJvQH0KS1wqaGq+QBPwFloVRCeA2BBKo4Mb0PjeQs2CCBt4AY3bbiA2gIo9gEbTF2qXhPjSReFoe4BWlZEDje3kIOSA/SMuCh4MpAMYR3tGow4Y8Q4ACDAAwpdAPjRbCagAAAAASUVORK5CYII=) no-repeat left center;
+background-size:14px 14px;
+text-decoration:underline;
+}
+#cmsSeriesList.cmsSeriesList1 .colBoxIndex {
+display:table;
+width:100%;
+padding:5px 0;
+border-bottom:1px solid #DDD;
+}
+#cmsSeriesList.cmsSeriesList1 .colBoxIndex .colBoxLeft {
+float:none;
+display:table-cell;
+width:90px;
+}
+#cmsSeriesList.cmsSeriesList1 .colBoxIndex .colBoxLeft.N-1 {
+width:5em;
+}
+#cmsSeriesList.cmsSeriesList1 .colBoxIndex .colBoxLeft.N-2 {
+width:5.5em;
+}
+#cmsSeriesList.cmsSeriesList1 .colBoxIndex .colBoxLeft.N-3 {
+width:6em;
+}
+#cmsSeriesList.cmsSeriesList1 .colBoxIndex .colBoxNumber {
+float:none;
+width:auto;
+height:auto;
+margin:0;
+font-size:14px;
+line-height:22px;
+background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAOxJREFUeNpi/P//P8NAAiaGAQajDhh1wKgDWBx7t8QAaWc62nkXiPcA8QmwA4B4BRDbA3EKHR3RDMRTgDgX5IA/QJwKxDeBuB3qKHqAHFBoIKeBHiAOBeIvdAyJdPREuAGIHYH4BZ0coIEtF5wBYkMgvjCQ2RAUArZAvGUgywFQWgiEptYBK4hAOUKCpgURHjkRIF4PxDYD4QAFIN4OSqUDkQZMgPg4PSzH5gAfIN5P63hHAg+QHZACjXMeOpaES5iQKofZdKwHGKBlTCML1OeglH6AThbfAeK90FqYgXG0XzDqgFEHjHgHAAQYALRSKFudz7MAAAAAAElFTkSuQmCC) no-repeat left center;
+background-size:14px 14px;
+padding:0 0 0 20px;
+}
+#cmsSeriesList.cmsSeriesList1 .colBoxIndex .colBoxNumber:before {
+content:'第';
+}
+#cmsSeriesList.cmsSeriesList1 .colBoxIndex .colBoxNumber:after {
+content:'回';
+}
+#cmsSeriesList.cmsSeriesList1 .colBoxIndex .colBoxRight {
+display:table-cell;
+}
+#cmsSeriesList.cmsSeriesList1 .mycolBoxIndex {
+padding:5px 0;
+border:none;
+border-bottom:1px solid #DDD;
+}
+#cmsSeriesList.cmsSeriesList1 .mycolBoxIndex::before {
+content:'';
+background:none;
+padding:0;
+}
+#cmsSeriesList.cmsSeriesList1 .colBoxHgroup {
+display:inline;
+}
+#cmsSeriesList.cmsSeriesList1 .colBoxTitle {
+display:inline;
+margin:0;
+}
+#cmsSeriesList.cmsSeriesList1 .colBoxTitle h1 {
+display:inline;
+font-size:14px;
+line-height:22px;
+}
+#cmsSeriesList.cmsSeriesList1 .mycolBoxIndex,
+#cmsSeriesList.cmsSeriesList1 .mycolBoxIndex .colBoxTitle h1 {
+font-weight:bold;
+}
+#cmsSeriesList.cmsSeriesList1 .colBoxButton {
+text-align:left;
+}
+#cmsSeriesList.cmsSeriesList1 .colBoxButton a {
+display:inline-block;
+padding:5px 10px 4px 36px;
+background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADASURBVFhH7da9DcIwEAVgn2tKBmEEUtFSMAAr0DECEkOwRjoYIW02SMkEhnf2QwpVUuSwhO6TLN9TilycPwfnapOU0o11JiI9xoXRnLyAdYb4iDE2jAENXjEdSjKgDYzhhHceynSFeMjE5AognzF2jIvTBo6sM+QBDbSMzpmb8xbsMW1KMqANjP36OxB5nmrm3II1plVJzi1PH8It648nNiQda3PVf8fVP0STK4AGTLdkuin9umLo0MCJtXP/LoQ3Kba7jLLWJT0AAAAASUVORK5CYII=) no-repeat 10px center #DDD;
+background-size:16px 16px;
+border:none;
+font-size:12px;
+}
+#cmsSeriesList.cmsSeriesList1 .colBoxButton a:hover {
+background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADASURBVFhH7da9DcIwEAVgn2tKBmEEUtFSMAAr0DECEkOwRjoYIW02SMkEhnf2QwpVUuSwhO6TLN9TilycPwfnapOU0o11JiI9xoXRnLyAdYb4iDE2jAENXjEdSjKgDYzhhHceynSFeMjE5AognzF2jIvTBo6sM+QBDbSMzpmb8xbsMW1KMqANjP36OxB5nmrm3II1plVJzi1PH8It648nNiQda3PVf8fVP0STK4AGTLdkuin9umLo0MCJtXP/LoQ3Kba7jLLWJT0AAAAASUVORK5CYII=) no-repeat 10px center rgb(64,140,179);
+background-size:16px 16px;
+color:#FFF !important;
+}
+</style>
+
+	
+
+
+<script type="text/javascript">
+(function () {
+	if(!document.getElementById('endlinkConnection')) return false;
+	if(!document.getElementById('endlink-art1')) return false;
+	if(!document.getElementById('prev') || !document.getElementById('numb') || !document.getElementById('next') || document.getElementById('end')) {
+		var endlinks = document.getElementById('endlink-art1').parentNode.getElementsByTagName('li');
+		for(var i = 0; i < endlinks.length; i++){
+		endlinks[i].innerHTML = endlinks[i].innerHTML.replace(/<(br|BR)>(\n)?.+/,'');
+		}
+		return false;
+	} else {
+		return false;
+	}
+})()
+</script>
+
+
+<!--EDIT END-->
+</div></div>
+
+
+<script>endlinkAll();</script>
+
+
+
+</div>
+
+	
+	<div id="masterSub">
+	
+		<!-- News -->
+	
+		<!-- サーチツール（PC）ここから -->
+<script src="//scdn.cxense.com/cx.js"></script>
+<script src="/js/lib/cx_search.js"></script>
+<script>
+	(function(d){
+		var css = d.createElement("link");
+		css.rel = "stylesheet";
+		css.type = "text/css";
+		css.href = "/css/lib/cx_search_pc.css";
+		d.getElementsByTagName("head")[0].appendChild(css);
+		css.addEventListener('load', function() {
+			d.getElementById("new_globalHeaderSearch").style.display = "block";
+		});
+	})(document);
+</script>
+<style type="text/css">
+#searchBoxField {
+height: calc(98vh - 40px);
+padding: 1rem 2rem;
+}
+#new_globalHeaderSearch {
+margin: 4px 2px 10px 0;
+}
+#localPankuzu #new_globalHeaderSearch{
+float: right;
+}
+#new_globalHeaderSearch .serch_circle {
+width: 0.4rem;
+height: 0.4rem;
+}
+#new_globalHeaderSearch .serch_bar{
+height: 0.4rem;
+}
+#new_globalHeaderSearch .searchQuery {
+width:286px;
+}
+#searchBoxField .resultBox{
+margin-bottom: 1.25rem;
+}
+#searchBoxField .resultTitle {
+font-size: 1.13rem;
+line-height: 1.3rem;
+}
+#searchBoxField .resultUrl {
+font-size: 0.6rem;
+line-height: 1rem;
+padding-bottom: 0.6rem;
+}
+#searchBoxField .resultAbs{
+font-size: 0.94rem;
+line-height: 1.6rem;
+}
+#searchBoxField .dataStat{
+padding: 0.6rem 0;
+font-size: 0.6rem;
+line-height: 1rem;
+float:left;
+}
+#searchBoxField .dataSort{
+padding: 0.6rem 0;
+font-size: 0.6rem;
+line-height: 1rem;
+float:right;
+}
+#searchBoxField .urlBox {
+width: 752px;
+height: 1.8rem;
+font-size: 0.94rem;
+line-height: 1.8rem;
+padding: 0 0 0 1rem;
+}
+#searchBoxField .frameDelete {
+width: 1.8rem;
+height: 1.8rem;
+right: 2rem;
+}
+#searchBoxField .frameDelete a {
+line-height: 1.8rem;
+height: 1.8rem;
+}
+#searchBoxField .searchBar {
+height: 3.8rem;
+}
+#searchBoxField .clac {
+width: 1.8rem;
+height: 2rem;
+position: absolute;
+top: -2rem;
+right: -1.3rem;
+}
+#searchBoxField .serch_circle {
+width: 0.5rem;
+height: 0.5rem;
+top: -1.6rem;
+right: -0.6rem;
+}
+#searchBoxField .serch_bar {
+height: 0.5rem;
+top: -1.1rem;
+right: -0.7rem;
+}
+</style>
+<div id="new_globalHeaderSearch" style="display:none;">
+	<form name="serchForm" class="cx">
+		<div class="searchBar">
+			<input type="text" name="q" id="searchQuery" class="searchQuery" placeholder="検索">
+			<div class="dataSelect">
+				<div class="serch_circle"></div>
+				<div class="serch_bar"></div>
+				<button class="clac" onclick="GetSearchText('1','pcv','1127153793923352357'); return false;">検索</button>
+			</div>
+		</div>
+	</form>
+</div>
+<div id="outputFrame" class="outputFrame"></div>
+<!-- サーチツール（PC）ここまで -->
+
+		<div id="LOGOAD"><script>adRequest({'position':'10LOGOAD'});</script></div>
+		
+		
+<div class="colBox colBoxAitEbook">
+<div class="colBoxOuter">
+<div class="colBoxHead"><h2>＠IT eBook</h2></div>
+<div class="colBoxInner">
+<div class="colBoxIndex">
+<div class="colBoxIcon"><a href="https://www.atmarkit.co.jp/ait/articles/2102/24/news021.html#utm_medium=rightcol_ebook&utm_content=imglink1"><img src="//image.itmedia.co.jp/ait/images/htmlgen/parts_top_rightAitEbook1__1_1614156828.gif" width="80" height="60"></a></div>
+<div class="colBoxTitle"><h3><a href="https://www.atmarkit.co.jp/ait/articles/2102/24/news021.html#utm_medium=rightcol_ebook&utm_content=textlink1">作って試そう！　ディープラーニング工作室</a></h3></div>
+<div class="colBoxDescription"><p></p></div>
+<div class="colBoxClear"></div>
+</div>
+<div class="colBoxIndex">
+<div class="colBoxIcon"><a href="https://www.atmarkit.co.jp/ait/articles/2101/25/news010.html#utm_medium=rightcol_ebook&utm_content=imglink2"><img src="//image.itmedia.co.jp/ait/images/htmlgen/parts_top_rightAitEbook1__1_1611305239.gif" width="80" height="60"></a></div>
+<div class="colBoxTitle"><h3><a href="https://www.atmarkit.co.jp/ait/articles/2101/25/news010.html#utm_medium=rightcol_ebook&utm_content=textlink2">コンサルは見た！　与信管理システム構築に潜む黒い野望</a></h3></div>
+<div class="colBoxDescription"><p></p></div>
+<div class="colBoxClear"></div>
+</div>
+<div class="colBoxIndex">
+<div class="colBoxIcon"><a href="https://www.atmarkit.co.jp/ait/articles/2012/21/news013.html#utm_medium=rightcol_ebook&utm_content=imglink3"><img src="//image.itmedia.co.jp/ait/images/htmlgen/parts_top_rightAitEbook1__1_1608541837.gif" width="80" height="60"></a></div>
+<div class="colBoxTitle"><h3><a href="https://www.atmarkit.co.jp/ait/articles/2012/21/news013.html#utm_medium=rightcol_ebook&utm_content=textlink3">WSL（Windows Subsystem for Linux） 2入門　</a></h3></div>
+<div class="colBoxDescription"><p></p></div>
+<div class="colBoxClear"></div>
+</div>
+<div class="colBoxIndex">
+<div class="colBoxIcon"><a href="https://www.atmarkit.co.jp/ait/articles/2011/24/news016.html#utm_medium=rightcol_ebook&utm_content=imglink4"><img src="//image.itmedia.co.jp/ait/images/htmlgen/parts_top_rightAitEbook1__1_1605859669.gif" width="80" height="60"></a></div>
+<div class="colBoxTitle"><h3><a href="https://www.atmarkit.co.jp/ait/articles/2011/24/news016.html#utm_medium=rightcol_ebook&utm_content=textlink4">非デザイナーも知っておきたいデザインの話</a></h3></div>
+<div class="colBoxDescription"><p></p></div>
+<div class="colBoxClear"></div>
+</div>
+</div>
+<div class="colBoxPageLink">&#187; <a href="http://www.atmarkit.co.jp/ait/series/1567/#utm_medium=rightcol_ebook&utm_content=toindex">一覧ページへ</a></div>
+</div>
+</div>
+<!-- ＠IT eBook -->
+		<div id="ITR"><script>adRequest({'position':'ITR'});</script></div><!-- レクタングル -->
+		
+		<div id="ITTI"><script>adRequest({'position':'2ITTI'});</script></div><!-- スポンサーからのお知らせ -->
+		<div id="MSITTI">
+			<div class="colBox colBoxMSITTI"><div class="colBoxOuter"><div class="colBoxInner"><div class="colBoxIndex"><div class="colBoxUlist"><ul>
+				<script>adRequest({'position':'2MSITTI'});</script>
+			</ul></div></div></div></div></div>
+		</div>
+	
+	
+		<div id="cxensereRectangle">
+		<div id="insertAdSpaceBeforeThis_000000016223692d" style="display:none"></div>
+		<script type="text/javascript"> (function() { try { var scriptEl = document.createElement('script'); scriptEl.type = 'text/javascript'; scriptEl.async = 'async'; scriptEl.src = ('https:' == document.location.protocol) ? 'https://scdn.cxense.com/cx.js' : 'http://cdn.cxense.com/cx.js'; var targetEl = document.getElementsByTagName('script')[0]; targetEl.parentNode.insertBefore(scriptEl, targetEl); } catch (e) {}; })(); </script>
+		<script type="text/javascript"> var cX = cX || {}; cX.callQueue = cX.callQueue || []; cX.callQueue.push(['insertAdSpace', { adSpaceId:'000000016223692d', width:300, height:320, initialHorizontalAdUnits:1, initialVerticalAdUnits:1, 'lf-am': '0 0 15px 0', resizeToContentSize: true, renderTemplateUrl: '/ait/files/20150815/rendertemplate_ver_right.html',k:cx_k_param } ]); </script>
+		</div><!-- cxensere -->
+		
+			<div id="ISALR"><script>adRequest({'position':'10ISALR'});</script></div>
+		
+	
+	<!-- htmlgen -->
+<!-- /htmlgen -->
+<!-- 特別誘導枠 -->
+	<div class="colBox colBoxArticleRanking" id="colBoxArticleRanking"></div><!-- フォーラムランキング -->
+	<div id="specialInduction"></div>
+	<script src="/include/ait/parts_specialinduction.js"></script>
+	<script src="/include/ait/parts_specialinductiondata.js" defer></script>
+	<!-- fd51909 -->
+<div style="margin-top:-26px;"><div id="adspaceISALR" style="display:none"></div></div>
+<style>
+#colBoxISALR {
+margin-bottom:14px!important;
+}
+#colBoxISALR .colBoxPageLink {
+display:none;
+}
+</style>
+<script type="text/javascript">
+var setIdName = 'ISALR';
+var beforeIdName = 'colBoxArticleRanking';
+
+	(function(){
+		var w = window;
+		var d = document;
+		var flag_widget= false;
+		var setid = d.getElementById(setIdName);
+		var setid_y = getElementXY(setid)['y'];
+		var scroll_y = 0;
+		var browser_h = getBrowserWH()['h'];
+		var threshold_y = setid_y - browser_h;
+		var cxInsertWidget;
+		var evt_scroll = function(){
+			scroll_y = (function(){
+				return d.documentElement.scrollTop || d.body.scrollTop;
+			})();
+			if(scroll_y > threshold_y && !flag_widget){
+				flag_widget = true;
+				w.removeEventListener('scroll',evt_scroll,false);
+				cxInsertWidget();
+			}
+		};
+		cxInsertWidget = function(){
+			cX.callQueue.push([
+				'insertAdSpace',{
+					adSpaceId:'000000016644f4f7',
+					adUnitWidth:300,
+					Height:300,
+					initialHorizontalAdUnits:1,
+					initialVerticalAdUnits:1,
+					clickTargetFrame:'_blank',
+					resizeToContentSize: true,
+					renderTemplateUrl: '//cdn.cxpublic.com/20191203_sidelink.html',
+					insertBeforeElementId: beforeIdName
+				}
+			]);
+		};
+		evt_scroll();
+		if(!flag_widget) w.addEventListener('scroll',evt_scroll,false);
+	})();
+	(function(){
+		var w = window;
+		var d = document;
+		var flag_widget= false;
+		var setid = d.getElementById('colBoxArticleRanking');
+		var setid_y = getElementXY(setid)['y'];
+		var scroll_y = 0;
+		var browser_h = getBrowserWH()['h'];
+		var threshold_y = setid_y - browser_h;
+		var cxInsertWidget;
+		var evt_scroll = function(){
+			scroll_y = (function(){
+				return d.documentElement.scrollTop || d.body.scrollTop;
+			})();
+			if(scroll_y > threshold_y && !flag_widget){
+				flag_widget = true;
+				w.removeEventListener('scroll',evt_scroll,false);
+				cxInsertWidget();
+			}
+		};
+		cxInsertWidget = function(){
+			cX.callQueue.push([
+				'insertAdSpace',{
+					adSpaceId:'0000000164ae25e7',
+					adUnitWidth:300,
+					Height:300,
+					initialHorizontalAdUnits:1,
+					initialVerticalAdUnits:1,
+					clickTargetFrame:'_blank',
+					resizeToContentSize: true,
+					renderTemplateUrl: '//cdn.cxpublic.com/articleRight2.html',
+					insertBeforeElementId: 'adspaceISALR'
+				}
+			]);
+		};
+		evt_scroll();
+		if(!flag_widget) w.addEventListener('scroll',evt_scroll,false);
+	})();
+	(function(){
+		var w = window;
+		var d = document;
+		var flag_widget= false;
+		var setid = d.getElementById('ITSB');
+		var setid_y = getElementXY(setid)['y'];
+		var scroll_y = 0;
+		var browser_h = getBrowserWH()['h'];
+		var threshold_y = setid_y - browser_h;
+		var cxInsertWidget;
+		var evt_scroll = function(){
+			scroll_y = (function(){
+				return d.documentElement.scrollTop || d.body.scrollTop;
+			})();
+			if(scroll_y > threshold_y && !flag_widget){
+				flag_widget = true;
+				w.removeEventListener('scroll',evt_scroll,false);
+				cxInsertWidget();
+			}
+		};
+		cxInsertWidget = function(){
+			cX.callQueue.push([
+				'insertAdSpace',{
+					adSpaceId:'000000016644f508',
+					adUnitWidth:637,
+					Height:300,
+					initialHorizontalAdUnits:1,
+					initialVerticalAdUnits:1,
+					clickTargetFrame:'_blank',
+					resizeToContentSize: true,
+					renderTemplateUrl: '//cdn.cxpublic.com/20191204_centerbottom.html',
+					insertBeforeElementId: 'adspaceISALC'
+				}
+			]);
+		};
+		evt_scroll();
+		if(!flag_widget) w.addEventListener('scroll',evt_scroll,false);
+	})();
+</script>
+<!-- /fd51909 -->
+<!-- fd51909 Cxense Ad マルチクリエイティブ誘導枠 -->
+	
+<div class="colBox colBoxTensyoku" id="colBoxTensyoku">
+<div class="colBoxOuter">
+<div class="colBoxHead"><p>転職／派遣情報を探す</p></div>
+<div class="colBoxInner">
+<div class="colBoxIndex">
+<div class="colBoxIcon"><a href="http://job.atmarkit.co.jp/" title="年収６００万円！エンジニア向けの求人満載。転職希望者必見"><IMG SRC="//image.itmedia.co.jp/ait/images/htmlgen/top_dokusyacolumn_icon1_1_1456451890.png"></a></div>
+<div class="colBoxTitle"><p><a href="http://job.atmarkit.co.jp/" title="年収６００万円！エンジニア向けの求人満載。転職希望者必見">年収６００万円！エンジニア向けの求人満載。転職希望者必見</a></p></div>
+<div class="colBoxClear h10px"></div>
+</div>
+<div class="colBoxIndex">
+<div class="colBoxIcon"><a href="http://job.atmarkit.co.jp/" title="若手エンジニアのキャリアや技術力向上に役立つ情報をお届け【@ITキャリア】"><IMG SRC="//image.itmedia.co.jp/ait/images/htmlgen/top_dokusyacolumn_icon2_1_1591258018.jpg"></a></div>
+<div class="colBoxTitle"><p><a href="http://job.atmarkit.co.jp/" title="若手エンジニアのキャリアや技術力向上に役立つ情報をお届け【@ITキャリア】">若手エンジニアのキャリアや技術力向上に役立つ情報をお届け【@ITキャリア】</a></p></div>
+<div class="colBoxClear h10px"></div>
+</div>
+<div class="colBoxClear"></div>
+</div>
+</div>
+</div>
+<!-- 転職／派遣情報を探す -->
+	<!-- Cxense content widget: ＠IT TTプレミアムコンテンツ誘導枠 -->
+<div id="tt_premiumcontents">
+<div id="cx_a8b6eaa23e62da9fb7a469aa981c2d39877da134" style="display:none"></div>
+</div>
+<script type="text/javascript">
+var cX = cX || {}; cX.callQueue = cX.callQueue || [];
+(function(){
+	var w = window;
+	var d = document;
+	var flag_widget= false;
+	var browser_h = getBrowserWH()['h'];
+	var setid = d.getElementById('tt_premiumcontents');
+	var setid_y;
+	var scroll_y;
+	var threshold_y;
+	var cxInsertWidget;
+	var evt_scroll = function(){
+		scroll_y = (function(){
+			return d.documentElement.scrollTop || d.body.scrollTop;
+		})();
+		setid_y = getElementXY(setid)['y'];
+		threshold_y = setid_y - browser_h;
+		if(scroll_y > threshold_y && !flag_widget){
+			flag_widget = true;
+			w.removeEventListener('scroll',evt_scroll,false);
+			cX.callQueue.push(['insertWidget', {
+				widgetId: 'a8b6eaa23e62da9fb7a469aa981c2d39877da134',
+				insertBeforeElementId: 'cx_a8b6eaa23e62da9fb7a469aa981c2d39877da134',
+				width: 300, height: 300, renderTemplateUrl: 'auto'
+			}]);
+		}
+	};
+	evt_scroll();
+	if(!flag_widget) w.addEventListener('scroll',evt_scroll,false);
+})();
+</script>
+<!-- End of Cxense content widget -->
+<!-- TechTarget プレミアムコンテンツ Cxense Widget -->
+	<div id="teemasiteBanner">
+<script defer>
+(function(){
+	var data = {
+		'name':'注目のテーマ',
+		'list':[
+				{'url':'https://www.atmarkit.co.jp/ait/subtop/features/security/sase.html','img':'/ait/images/htmlgen/rc_teemasitebanner_1_1612487613.gif','forum':'top,smartandsocial,designhack,html5plusux,serverandstorage,windowsserverinsider,businessappinsider,insiderdotnet,systeminsider,railshub,codingedge,javaagile,databaseexpert,linuxandoss,masterofipnetwork,securityandtrust,systemdesign,testandtools,ljibun,lcareer,lskill,jibun'},
+				{'url':'https://www.atmarkit.co.jp/ait/subtop/features/jibun/smodernization.html','img':'/ait/images/htmlgen/rc_teemasitebanner_1_1612142478.jpg','forum':'top,smartandsocial,designhack,html5plusux,serverandstorage,windowsserverinsider,businessappinsider,insiderdotnet,systeminsider,railshub,codingedge,javaagile,databaseexpert,linuxandoss,masterofipnetwork,securityandtrust,systemdesign,testandtools,ljibun,lcareer,lskill,jibun'},
+				{'url':'/ait/subtop/features/server/ms_win_2021.html','img':'/ait/images/htmlgen/rc_teemasitebanner_1_1605493208.jpg','forum':'top,smartandsocial,designhack,html5plusux,serverandstorage,windowsserverinsider,businessappinsider,insiderdotnet,systeminsider,railshub,codingedge,javaagile,databaseexpert,linuxandoss,masterofipnetwork,securityandtrust,systemdesign,testandtools,ljibun,lcareer,lskill,jibun'},
+				{'url':'/ait/subtop/features/security/cloud_sec.html','img':'/ait/images/htmlgen/rc_teemasitebanner_2_1604031203.jpg','forum':'top,smartandsocial,designhack,html5plusux,serverandstorage,windowsserverinsider,businessappinsider,insiderdotnet,systeminsider,railshub,codingedge,javaagile,databaseexpert,linuxandoss,masterofipnetwork,securityandtrust,systemdesign,testandtools,ljibun,lcareer,lskill,jibun'},
+				{'url':'https://www.atmarkit.co.jp/ait/subtop/features/linux/opensource_manners.html','img':'/ait/images/htmlgen/rc_teemasitebanner_3_1598948342.jpg','forum':'top,smartandsocial,designhack,html5plusux,serverandstorage,windowsserverinsider,businessappinsider,insiderdotnet,systeminsider,railshub,codingedge,javaagile,databaseexpert,linuxandoss,masterofipnetwork,securityandtrust,systemdesign,testandtools,ljibun,lcareer,lskill,jibun'},
+		{}
+		]
+	};
+	var list = data.list;
+	if(list.length <=1) return false;
+	var bannerList = document.getElementById('teemasiteBanner');
+	if(!bannerList) return false;
+	var html = '';
+	var listhtml = '';
+	var extraid = '';
+	var adpath = '';
+	if(getMETA('extraid')){
+		extraid = getMETA('extraid').getAttribute('content');
+	} else {
+		extraid = 'at-series	ao-dotnet	kw-insiderdotnet';
+	}
+	if(getMETA('adpath')){
+		adpath = getMETA('adpath').getAttribute('content');
+	}
+	for(var i=0;i<list.length-1;i++) {
+		if(!list[i]['forum']) continue;
+		var forumtest = list[i]['forum'].split(',');
+		for(var j=0;j<forumtest.length;j++) {
+			if(!forumtest[j]) continue;
+			if((forumtest[j] == 'top') && (adpath == 'root/ITmedia/ait/top')) {
+				listhtml += '<div class="colBoxIndex"><div class="colBoxBanner"><a href="' + list[i]['url'] + '"><img src="' + imgSrv() + list[i]['img'] + '"></a></div></div>\n';
+			} else if(!extraid) {
+				continue;
+			} else if(extraid.match('kw-' + forumtest[j])) {
+				listhtml += '<div class="colBoxIndex"><div class="colBoxBanner"><a href="' + list[i]['url'] + '"><img src="' + imgSrv() + list[i]['img'] + '"></a></div></div>\n';
+				break;
+			} else {
+				continue;
+			}
+		}
+	}
+	if(!listhtml) return false;
+	html += '<div class="colBox colBoxteemasitebanner"><div class="colBoxOuter">';
+	html += '<div class="colBoxHead"><p>' + data['name'] + '</p></div>';
+	html += '<div class="colBoxInner">';
+	html += listhtml;
+	html += '</div>';
+	html += '</div></div>';
+	html += '<div class="colBoxClear"></div>';
+	bannerList.innerHTML = html;
+})();
+</script>
+</div>
+<!-- 注目のテーマ -->
+	
+		<div id="ISALRU"><script>adRequest({'position':'20ISALRU'});</script></div><!-- フレッシュサマリ -->
+	
+	
+<div id="hnaviList"></div>
+<script type="text/javascript">
+(function(){
+	var data = {
+		'name':'システム開発ノウハウ 【発注ナビ】',
+		'displayed':'3',
+		'list':[
+
+{'url':'https://hnavi.co.jp/knowledge/blog/agile_system_companies/?argument=bzcUT99h&dmai=a5ed4ce11373b7','title':'アジャイル開発でおすすめのシステム開発会社10社','ngforum':'','icon':'/ait/images/htmlgen/parts_hnavilisticon_1_1591005212.jpg'},
+{'url':'https://hnavi.co.jp/knowledge/blog/tokyo_system_companies/?argument=bzcUT99h&dmai=a5ed4ceec002fa','title':'東京で厳選！おすすめのシステム開発会社12社','ngforum':'','icon':'/ait/images/htmlgen/parts_hnavilisticon_2_1591005212.jpg'},
+{'url':'https://hnavi.co.jp/knowledge/blog/python/?argument=bzcUT99h&dmai=at-59','title':'今さら聞けないPython　その特徴と活用方法','ngforum':'','icon':'/ait/images/htmlgen/parts_hnavilisticon_3_1578386195.jpg'},
+{'url':'https://hnavi.co.jp/knowledge/blog/kintone_companies/?argument=bzcUT99h&dmai=a5ed4cf9dc7a5a','title':'kintone開発で実績豊富な開発会社7社【最新版】','ngforum':'','icon':'/ait/images/htmlgen/parts_hnavilisticon_4_1591005212.jpg'},
+{'url':'https://ac.ebis.ne.jp/tr_set.php?argument=bzcUT99h&ai=at-56','title':'SESの一歩先へ　受託案件を増やしたいシステム開発会社が取るべき行動は？','ngforum':'','icon':'/ait/images/htmlgen/parts_hnavilisticon_5_1552872350.jpg'},
+{'url':'https://hnavi.co.jp/knowledge/blog/offshore_companies/?argument=bzcUT99h&dmai=a5ed4d00c87762','title':'オフショア開発で失敗しないためのポイントとは？','ngforum':'','icon':'/ait/images/htmlgen/parts_hnavilisticon_6_1591005212.jpg'},
+{'url':'https://hnavi.co.jp/knowledge/blog/enterprise_system_companies/?argument=bzcUT99h&dmai=at-53','title':'基幹システムの開発でおすすめのシステム開発会社10社','ngforum':'','icon':'/ait/images/htmlgen/parts_hnavilisticon_7_1560822745.jpg'},
+{'url':'https://hnavi.co.jp/ad/?argument=bzcUT99h&dmai=at-52','title':'エンジニア稼働率100％を目指す。受託開発ビジネスの最適解','ngforum':'','icon':'/ait/images/htmlgen/parts_hnavilisticon_8_1554426337.gif'},
+{'url':'https://hnavi.co.jp/knowledge/interview/hilltop_acceluniverse/?argument=bzcUT99h&dmai=a5f9016e4e5adc','title':'実現不可能な機械学習を活用した「受注入力自動化システム」 開発会社が導き出した答えとは','ngforum':'','icon':'/ait/images/htmlgen/parts_hnavilisticon_9_1605148484.jpg'},
+{'url':'https://hnavi.co.jp/knowledge/blog/rpa_companies/?argument=bzcUT99h&dmai=at-54','title':'RPAの導入をサポート！おすすめのシステム開発会社 7社','ngforum':'','icon':'/ait/images/htmlgen/parts_hnavilisticon_11_1560830622.jpg'},
+{'url':'https://hnavi.co.jp/knowledge/blog/python_companies/?argument=bzcUT99h&dmai=at-58','title':'Pythonによるシステム開発でおすすめの開発会社7社','ngforum':'','icon':'/ait/images/htmlgen/parts_hnavilisticon_13_1568794770.jpg'},
+// data
+
+		{}
+		]
+	};
+	var list = data.list;
+	if(list.length <=1) return false;
+	var hnaviList = document.getElementById('hnaviList');
+	if(!hnaviList) return false;
+	var html = '';
+	var listhtml = '';
+	var extraid = '';
+	var count = data.displayed;
+	var listcount = 1;
+	if(getMETA('extraid')){
+		extraid = getMETA('extraid').getAttribute('content').split('\t');
+	}
+	for (var i=list.length-2;i>=0;i--) {
+		var listshuffle = Math.floor((i+1)*Math.random());
+		var liststorage = list[i];
+		list[i] = list[listshuffle];
+		list[listshuffle] = liststorage;
+	}
+	for(var i=0;i<count;i++) {
+		if(i+1 > list.length-1) break;
+		if((list[i]['ngforum'])&&(extraid)) {
+			var extraidcheck = '';
+			var ngforumcheck = -1;
+			var ngforum = list[i]['ngforum'].split(',')
+			for(var j=0;j<ngforum.length;j++) {
+				extraidcheck = 'kw-' + ngforum[j];
+				ngforumcheck = jQuery.inArray(extraidcheck, extraid);
+				if(ngforumcheck > -1) break;
+			}
+		}
+		if(ngforumcheck > -1) {
+			count++;
+			ngforumcheck = -1;
+		} else {
+			listhtml += '<div class="colBoxIndex listnum' + i + '">\n';
+			if(list[i]['icon']) {
+				listhtml += '<div class="colBoxIcon"><a href="' + list[i]['url'] + '" target="_blank"><img src="' + imgSrv() + list[i]['icon'] + '" style="width:60px;height:45px;"></a></div>\n';
+			}
+			listhtml += '<div class="colBoxTitle"><p><a href="' + list[i]['url'] + '" target="_blank">' + list[i]['title'] + '</a></p></div>\n';
+			listhtml += '<div class="colBoxClear"></div>\n';
+			listhtml += '</div>\n';
+			listcount++;
+		}
+	}
+	if(!listhtml) return false;
+	html += '<div class="colBox colBoxhnavi"><div class="colBoxOuter">';
+	html += '<div class="colBoxHead"><p>' + data['name'] + '</p>';
+	html += '<span class="colBoxHeadSubtxt">- PR -</span></div>';
+	html += '<div class="colBoxInner">';
+	html += listhtml;
+	html += '</div>';
+	html += '</div></div>';
+	html += '<div class="colBoxClear h10px"></div>';
+	hnaviList.innerHTML = html;
+})();
+</script>
+<!-- 発注ナビ誘導枠 -->
+	
+		<div id="ITR3"><script>adRequest({'position':'ITR3'});</script></div><!-- サードレクタングル -->
+	
+	<script type="text/javascript">setForumRankingMonthAndDay();</script>
+	
+	<div class="fb-page" data-href="https://www.facebook.com/atmarkit/" data-tabs="timeline" data-width="300" data-height="280" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/atmarkit/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/atmarkit/">＠IT</a></blockquote></div>
+	<div class="colBoxClear h30px"></div>
+	
+	<!-- 編集部からのおしらせ -->
+	
+</div>
+	
+
+<div class="colBoxClear"></div>
+</div></div>
+<div id="mediaFooter">
+<div id="mediaFooterBgArea"></div>
+<div class="mediaFooterMediaList">
+
+<div class="colBoxIndex colBoxAit">
+<div class="colBoxTitle"><p>@ITについて</p></div>
+<div class="colBoxUlist">
+<ul>
+<li><a href="http://www.atmarkit.co.jp/aboutus/contact_us/contact_us.html" title="お問い合わせ">お問い合わせ</a></li>
+<li><a href="http://www.atmarkit.co.jp/aboutus/termofuse/termofuse.html" title="利用規約">利用規約</a></li>
+<li><a href="http://www.atmarkit.co.jp/aboutus/copyright/copyright.html" title="著作権・リンク・免責事項">著作権・リンク・免責事項</a></li>
+<li><a href="http://www.atmarkit.co.jp/info/sitemap/sitemap.html" title="サイトマップ">サイトマップ</a></li>
+</ul>
+</div>
+<div class="colBoxClear"></div>
+</div>
+<div class="colBoxIndex colBoxRSS">
+<div class="colBoxTitle"><p>RSSについて</p></div>
+<div class="colBoxUlist">
+<ul>
+<li><a href="https://corp.itmedia.co.jp/media/rss_list/" title="＠ITのRSS一覧">＠ITのRSS一覧</a></li>
+</ul>
+</div>
+<div class="colBoxClear"></div>
+</div>
+<div class="colBoxIndex colBoxID">
+<div class="colBoxTitle"><p>アイティメディアIDについて</p></div>
+<div class="colBoxUlist">
+<ul>
+<li><a href="http://id.itmedia.jp/info/campaign/all_id.html" title="アイティメディアIDとは">アイティメディアIDとは</a></li>
+</ul>
+</div>
+<div class="colBoxClear"></div>
+</div>
+
+<div id="_popIn_recommend"></div>
+<script type="text/javascript">
+(function() {
+var pa = document.createElement('script'); pa.type = 'text/javascript'; pa.charset = "utf-8"; pa.async = true;
+pa.src = window.location.protocol + "//api.popin.cc/searchbox/atmarkit.js";
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(pa, s);
+})(); 
+</script>
+
+<!-- メディアフッター -->
+<div class="colBoxIndex colBoxMailmagazine">
+<div class="colBoxTitle"><p>メールマガジン登録</p></div>
+<div class="colBoxDescription"><p>
+＠ITのメールマガジンは、 もちろん、すべて無料です。ぜひメールマガジンをご購読ください。
+</p>
+<div id="registerButton">
+<a href="http://www.atmarkit.co.jp/ait/subtop/info/lp/ait_new.html">申し込みページへ</a>
+</div>
+</div>
+</div>
+<div class="colBoxClear"></div>
+</div>
+</div>
+
+
+
+
+
+<div id="masterFooter">
+	<div id="globalFooter">
+		<div id="footerBgArea"></div>
+
+
+<!-- GLOBALFOOTER -->
+
+<!-- masterChannel == ait|mn|ee|edn|tf|tt -->
+
+
+<style>
+#globalFooterCorp{
+border:none;
+}
+</style>
+<div id="globalFooterCorp">
+	<div id="globalFooterCorpIn">
+		<p id="globalFooterCorpLogo"><a href="https://corp.itmedia.co.jp/"><img src="//image.itmedia.co.jp/images/logo/170_itmedia_bgw.gif" width="170" height="28"></a>ITmediaはアイティメディア株式会社の登録商標です。</p>
+		<p id="globalFooterCorpLink"><a href="https://corp.itmedia.co.jp/media/">メディア一覧</a> | <a href="https://corp.itmedia.co.jp/media/sns/">公式SNS</a> | <a href="https://corp.itmedia.co.jp/ad/">広告案内</a> | <a href="https://corp.itmedia.co.jp/corp/inquiry/">お問い合わせ</a> | <a href="https://corp.itmedia.co.jp/corp/privacy/">プライバシーポリシー</a> | <a href="https://corp.itmedia.co.jp/media/rss_list/">RSS</a> | <a href="https://corp.itmedia.co.jp/">運営会社</a> | <a href="https://corp.itmedia.co.jp/recruit/">採用情報</a></p>
+	</div>
+</div>
+
+<!-- /#globalFooterCorp -->
+
+	</div>
+</div>
+
+
+
+</div><!--/masterBodyInner-->
+</div><!--/masterBodyOuter-->
+</div><!--/masterBodyIn-->
+</div><!--/masterBodyOut-->
+</div><!--/masterBody-->
+
+<script src="/js/masterBodyEnd.js?202102041641" defer></script><!-- window.onload -->
+<script src="/js/itmid/smartPhoneHeadLink.js"></script><!-- Smart Phone Large Button-->
+<!--BEACON-->
+
+    
+	    <div id="BEACON"><div id="N">
+			<!-- SiteCatalyst code version: H.2.
+Copyright 1997-2005 Omniture, Inc. More info available at
+http://www.omniture.com -->
+<script language="JavaScript" src="/include/sc/s_code.js?20170501"></script>
+<script language="JavaScript"><!--
+/* You may give each page an identifying name, server, and channel on
+the next lines. */
+function $() {
+  var elements = new Array();
+  for (var i = 0; i < arguments.length; i++) {
+    var element = arguments[i];
+    if (typeof element == 'string')
+      element = document.getElementById(element);
+    if (arguments.length == 1)
+      return element;
+    elements.push(element);
+  }
+  return elements;
+}
+
+// 旧 AIT とドメインパスを一致させる
+// meta adpath
+var adpath = getMetaContent({'keywords':'adpath','encode':'no'}).split('/');
+adpath[3] = adpath[3].replace('article','articles');
+if(adpath[4]) adpath[4] = adpath[4].replace(/^win$/,'windows').replace(/^sys$/,'system').replace(/^ux$/,'wcr');
+var dp = [];
+dp.push('root');
+dp.push('atmarkit');
+dp.push('atit');
+for(var i = 4; i < adpath.length; i++){
+	dp.push(adpath[i]);
+}
+dp.push('cont');
+dp.push(adpath[3]);
+
+var path = {};
+path['hier1'] = dp.join(',');
+path['hier2'] = dp.join(',').replace(dp[0] + ',','');
+path['hier3'] = dp.join(',').replace(dp[0] + ',','').replace(dp[1] + ',','');
+
+var channelname = '＠IT';
+
+s.pageName=document.URL.replace( /(\?|#).*$/, '' );
+s.server="www.atmarkit.co.jp"
+s.channel=channelname + ' ' + dp[3]
+s.pageType=""
+s.hier1=path['hier1']
+s.hier2=path['hier2']
+s.hier3=path['hier3']
+s.prop1=document.URL.replace( /(\?|#).*$/, '' );
+s.prop2=path['hier1']
+if ( $('update') == undefined )
+  s.prop3='';
+else
+  s.prop3=$('update').innerHTML.replace(/\d+分\s更新/,"");
+if ( $('byline') == undefined )
+  s.prop4=''
+else
+  s.prop4=$('byline').innerHTML.replace(/<b>|<\/b>/ig,'').replace(/\[|\]/g,'');
+/* s.prop5 : ad link name reserves */
+s.prop5=""
+s.prop6=dp[2]
+s.prop7=dp[2] + ',' + dp[3]
+s.prop8=document.title
+s.prop9=navigator.userAgent
+s.prop10=document.URL.replace( /(\?|#).*$/, '' );
+/* s.prop13 : document.URL reserves */
+/* E-commerce Variables */
+s.campaign=""
+s.state=""
+s.zip=""
+s.events="event3"
+s.products=""
+s.purchaseID=""
+s.eVar1=""
+s.eVar2=""
+s.eVar3=""
+s.eVar4=""
+s.eVar5=""
+s.prop20=channelname
+
+/* AIT ARTICLE ONLY */
+/*=========================*/
+var key1 = ['sp_DBinsider'];
+var metatags = document.getElementsByTagName('head')[0].getElementsByTagName('meta');
+var meta_key = '';
+for(var i = 0; i < metatags.length; i++){
+	if(metatags[i].name == 'keywords'){
+		meta_key = metatags[i].content;
+		break;
+	}
+}
+if(meta_key != ''){
+	s.prop23 = '';
+	var meta_key_split = meta_key.split(',');
+	for(var i = 0; i < meta_key_split.length; i++){
+		for(var j = 0; j < key1.length; j++){
+			if(meta_key_split[i] == key1[j]){
+				s.prop23 = key1[j];
+				break;
+			}
+		}
+	}
+}
+/*=========================*/
+
+// FB AD
+if(location.hash.indexOf('#FB_') != -1){
+	s.prop41 = location.hash.replace('#','');
+}
+/*=========================*/
+s.prop58= (typeof dcl_start === 'undefined')? "": resTime();
+/************* DO NOT ALTER ANYTHING BELOW THIS LINE ! **************/
+var s_code=s.t();if(s_code)document.write(s_code)//--></script>
+<script language="JavaScript"><!--
+if(navigator.appVersion.indexOf('MSIE')>=0)document.write(unescape('%3C')+'\!-'+'-')
+//--></script><!--/DO NOT REMOVE/-->
+<!-- End SiteCatalyst code version: H.2. -->
+
+			<!-- itmdp start -->
+			<script src="/js/itmdp_code.js"></script>
+			<script>
+			itmdp.sc2itmdp();
+			var itm_pageview = itmdp.pageview();
+			</script>
+			<!-- itmdp end -->
+		</div></div>
+    
+
+<!--/BEACON-->
+
+<!-- Treasure Data -->
+<script>
+(function(){
+!function(t,e){if(void 0===e[t]){e[t]=function(){e[t].clients.push(this),this._init=[Array.prototype.slice.call(arguments)]},e[t].clients=[];for(var r=function(t){return function(){return this["_"+t]=this["_"+t]||[],this["_"+t].push(Array.prototype.slice.call(arguments)),this}},s=["addRecord","set","trackEvent","trackPageview","trackClicks","ready","fetchGlobalID","fetchUserSegments"],a=0;a<s.length;a++){var c=s[a];e[t].prototype[c]=r(c)}var n=document.createElement("script");n.type="text/javascript",n.async=!0,n.src=("https:"===document.location.protocol?"https:":"http:")+"//cdn.treasuredata.com/sdk/1.9.2/td.min.js";var i=document.getElementsByTagName("script")[0];i.parentNode.insertBefore(n,i)}}("Treasure",this);
+// img tag for Logly
+var successCallback = function() {
+    var el = document.createElement('img');
+    el.src = (('https:' == document.location.protocol) ? 'https://' : 'http://')
+           + 'sync.logly.co.jp/sync/sync.gif?ssp_id=618'
+    el.width=1;el.height=1;el.style.display='none';
+    document.body.appendChild(el);
+};
+var getCookie = function(k){
+var cs=document.cookie;
+if(cs){
+var acs=cs.split('; ');
+for(var i=0;i<acs.length;i++){
+var cs=acs[i].split('=');
+if(cs[0]===k){
+return cs[1];
+}
+}
+}
+return '';
+};
+var cX_P=getCookie('cX_P');
+var cX_S=getCookie('cX_S');
+var cX_G=getCookie('cX_G');
+var cX_T=getCookie('cX_T');
+var persisted='cb7d056175548a32fb7b049f5488d3e994880237'; // 他社（フリークアウト／Facebook）広告サーバ用
+var td=new Treasure({host:'in.treasuredata.com',writeKey:'10074/f8a32fad2e11b3499ae935d855ff3bb51cbc592c',database:'cx_segments'});
+var cx_seg=(typeof cx_segments !== 'undefined')?cx_segments:''; // ad 用にで定義済（nl のように空でおりてくる場合がある）
+var push_data = function(cx_seg){
+	td.set('pageviews',{cx_cookie_p:cX_P,cx_cookie_s:cX_S,cx_cookie_g:cX_G,cx_cookie_t:cX_T,'cx_segments':cx_seg,'itm_masterChannel':'ait'});
+	td.set('$global','td_global_id','td_global_id');
+	td.trackPageview('pageviews',successCallback);
+};
+if(cx_seg === ''){ // 空でおりてきた場合に備える
+	var js=addJS('//scdn.cxense.com/cx.js');
+	js.addEventListener('load',function(){
+		cx_seg = cX.getUserSegmentIds({persistedQueryId:persisted});
+		push_data(cx_seg);
+	});
+}else{
+	cx_seg = cX.getUserSegmentIds({persistedQueryId:persisted});
+	push_data(cx_seg);
+}
+})();
+</script>
+<!-- /Treasure Data -->
+
+<!-- User Insight PCDF Code Start : itmedia.co.jp -->
+<script type="text/javascript">
+var _uic = _uic ||{};
+var _uih = _uih ||{};
+	
+_uih['id'] = 52351; // 技術
+	
+_uih['lg_id'] = (function(cookie_name){
+	var str = '';
+	var val = '';
+	var cookies = '';
+	if(cookie_name){
+		cookies = document.cookie.split('; ');
+		for(var i = 0; i < cookies.length; i++){
+			val = cookies[i].split('=');
+			if(val[0] != cookie_name) continue;
+			str = unescape(val[1].slice(0,40));
+		}
+	}
+	return str;
+})('iitt');
+_uih['fb_id'] = '';
+_uih['tw_id'] = '';
+_uih['uigr_1'] = (function(){ // ドメインパス
+	var str = '';
+	if(typeof itmdp !== 'undefined'){
+		str = itmdp.x_dp;
+	}
+	return str;
+})();
+_uih['uigr_2'] = (function(){ // 著者名
+	var e = document.getElementById('byline');
+	var str = '';
+	if(e){
+		str = e.innerHTML.replace(/<(".*?"|'.*?'|[^'"])*?>/g,'').replace(/(\[|\])/g,'');
+	}
+	return str;
+})();
+_uih['uigr_3'] = '';
+_uih['uigr_4'] = '';
+_uih['uigr_5'] = '';
+_uih['uigr_6'] = '';
+_uih['uigr_7'] = '';
+_uih['uigr_8'] = '';
+_uih['uigr_9'] = '';
+_uih['uigr_10'] = '';
+
+/* DO NOT ALTER BELOW THIS LINE */
+/* WITH FIRST PARTY COOKIE */
+(function() {
+var bi = document.createElement('script');bi.type = 'text/javascript'; bi.async = true;
+bi.src = '//cs.nakanohito.jp/b3/bi.js';
+var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(bi, s);
+})();
+</script>
+<!-- User Insight PCDF Code End : itmedia.co.jp -->
+
+
+<!-- Facebook Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','//connect.facebook.net/en_US/fbevents.js');
+fbq('init', '185005748502834');
+fbq('track', "PageView");
+var cX = cX || {}; cX.callQueue = cX.callQueue || [];
+cX.callQueue.push(['invoke',function(){
+	var cx_fb_segments = cX.getUserSegmentIds({persistedQueryId:'8b5a5e7f2de4247858bf30431c9972d3cdf7682e'});
+	if(cx_segments.length || cx_fb_segments.length){
+		fbq('trackCustom','itm_custom',{'cx_seg':cx_segments,'cx_fb_seg':cx_fb_segments});
+	}
+}]);
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=185005748502834&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Facebook Pixel Code -->
+
+<!-- Twitter Tracking Code -->
+
+
+<!-- /Twitter Tracking Code -->
+
+<!-- Pardot -->
+
+<!-- masterChannel == top|news|business|enterprise|executive|mm|ait|tt|tf|kn|mn|ee|edn|smartjapan|bt -->
+
+<!-- prFlag ne PR && masterType ne special -->
+<script>
+/*
+piAId = '292242';
+piCId = '1454';
+(function() {
+function async_load(){
+var s = document.createElement('script'); s.type = 'text/javascript';
+s.src = ('https:' == document.location.protocol ? 'https://pi' : 'http://cdn') + '.pardot.com/pd.js';
+var c = document.getElementsByTagName('script')[0]; c.parentNode.insertBefore(s, c);
+}
+if(window.attachEvent) { window.attachEvent('onload', async_load); }
+else { window.addEventListener('load', async_load, false); }
+})();
+*/
+</script>
+
+
+<!-- /Pardot -->
+
+<!-- Global site tag (gtag.js) - Google Ads: 1032582312 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-1032582312"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js',new Date());
+gtag('config','AW-1032582312');
+</script>
+<script>
+(function(){
+var addJS = function(_src,_id){
+	var d = document;
+	var js = d.createElement('script');
+	js.src = _src;
+	if(_id) js.id = _id;
+	d.head.appendChild(js);
+	return js;
+};
+var js=addJS('//scdn.cxense.com/cx.js');
+js.addEventListener('load',function(){
+	cx_seg = cX.getUserSegmentIds({persistedQueryId:'c2d933a3f076195cf38c2ac1d2ba2a879bb2a9a2'});
+	gtag('event','page_view',{'send_to':'AW-1032582312','cx_segments':cx_seg});
+});
+})();
+</script>
+<!-- Yahoo Code for your Target List -->
+<script>
+/* <![CDATA[ */
+var cX = cX || {}; cX.callQueue = cX.callQueue || [];
+var cxSegments;
+var yahoo_retargeting_label;
+var yahoo_retargeting_id = 'JLJRRBL49G';
+var yahoo_retargeting_page_type = 'Cxense';
+var yahoo_retargeting_items = [{item_id:'',category_id:'',price:'',quantity:''}];
+cX.callQueue.push(['invoke',function(){
+cxSegments = cX.getUserSegmentIds({persistedQueryId:'c2d933a3f076195cf38c2ac1d2ba2a879bb2a9a2'});
+if(cxSegments.length >= 7) cxSegments.splice(7,cxSegments.length);
+yahoo_retargeting_label = cxSegments.toString();
+}]);
+cX.callQueue.push(["loadScript","https://b92.yahoo.co.jp/js/s_retargeting.js"])
+/* ]]> */
+</script>
+
+
+<script src="/js/v6_survey.js?date=202002061432" async></script>
+</body></html>
+
