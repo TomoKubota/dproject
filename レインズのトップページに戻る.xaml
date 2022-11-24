@@ -2,7 +2,7 @@
   <x:Members>
     <x:Property Name="location" Type="InArgument(x:String)" />
   </x:Members>
-  <sap:VirtualizedContainerService.HintSize>794,822.666666666667</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1404,989</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="32">
@@ -85,7 +85,7 @@
             </sap:WorkflowViewStateService.ViewState>
             <ui:WaitUiElementAppear FoundElement="{x:Null}" WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="要素を探す 'push button  Close'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_1">
               <ui:WaitUiElementAppear.Target>
-                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="5cbdee9b-9af0-4af1-946d-5f4ee4a073f2" InformativeScreenshot="599d87a595dda58a5933ea3b2d5ce511" Selector="&lt;html app='msedge.exe' title='REINS IP' /&gt;&lt;webctrl tag='H1' aaname='売買検索結果一覧*' /&gt;">
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="5cbdee9b-9af0-4af1-946d-5f4ee4a073f2" InformativeScreenshot="599d87a595dda58a5933ea3b2d5ce511" Selector="&lt;html app='msedge.exe' title='REINS IP' /&gt;&lt;webctrl tag='H1' aaname='*検索結果一覧*' /&gt;">
                   <ui:Target.TimeoutMS>
                     <InArgument x:TypeArguments="x:Int32" />
                   </ui:Target.TimeoutMS>

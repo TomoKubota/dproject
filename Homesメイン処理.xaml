@@ -5,7 +5,7 @@
     <x:Property Name="property_type" Type="InArgument(x:String)" />
     <x:Property Name="argument1" Type="InArgument(x:String)" />
   </x:Members>
-  <sap:VirtualizedContainerService.HintSize>1371,3160</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1410,3803</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="32">
@@ -71,14 +71,10 @@
       <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="シーケンス" sap:VirtualizedContainerService.HintSize="1343,3095" sap2010:WorkflowViewState.IdRef="Sequence_3">
+  <Sequence DisplayName="シーケンス" sap:VirtualizedContainerService.HintSize="1420,3738" sap2010:WorkflowViewState.IdRef="Sequence_3">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="prefecture_short_name" />
-      <Variable x:TypeArguments="s:String[]" Name="kanagawa_district_data">
-        <Variable.Default>
-          <mva:VisualBasicValue x:TypeArguments="s:String[]" ExpressionText="{}{&quot;横浜市港北区&quot;,&quot;横浜市鶴見区&quot;,&quot;横浜市神奈川区&quot;,&quot;横浜市西区&quot;,&quot;横浜市中区&quot;,&quot;横浜市南区&quot;,&quot;横浜市保土ケ谷区&quot;,&quot;横浜市磯子区&quot;,&quot;横浜市金沢区&quot;,&quot;横浜市戸塚区&quot;,&quot;横浜市港南区&quot;,&quot;横浜市旭区&quot;,&quot;横浜市緑区&quot;,&quot;横浜市瀬谷区&quot;,&quot;横浜市栄区&quot;,&quot;横浜市泉区&quot;,&quot;横浜市青葉区&quot;,&quot;横浜市都筑区&quot;,&quot;川崎市川崎区&quot;,&quot;川崎市幸区&quot;,&quot;川崎市中原区&quot;,&quot;川崎市高津区&quot;,&quot;川崎市多摩区&quot;,&quot;川崎市宮前&quot;,&quot;川崎市宮前&quot;,&quot;川崎市麻生区&quot;,&quot;相模原市緑区&quot;,&quot;相模原市緑区&quot;,&quot;相模原市中央区&quot;,&quot;相模原市南区&quot;,&quot;横須賀市&quot;,&quot;平塚市&quot;,&quot;鎌倉市&quot;,&quot;藤沢市&quot;,&quot;小田原市&quot;,&quot;茅ヶ崎市&quot;,&quot;逗子市&quot;,&quot;三浦市&quot;,&quot;秦野市&quot;,&quot;厚木市&quot;,&quot;大和市&quot;,&quot;伊勢原市&quot;,&quot;海老名市&quot;,&quot;座間市&quot;,&quot;南足柄市&quot;,&quot;綾瀬市&quot;,&quot;三浦郡葉山町&quot;,&quot;高座郡寒川町&quot;,&quot;中郡大磯町&quot;,&quot;中郡二宮町&quot;,&quot;足柄上郡中井町&quot;,&quot;足柄上郡大井町&quot;,&quot;足柄上郡松田町&quot;,&quot;足柄上郡山北町&quot;,&quot;足柄上郡開成町&quot;,&quot;足柄下郡箱根町&quot;,&quot;足柄下郡真鶴町&quot;,&quot;足柄下郡湯河原町&quot;,&quot;愛甲郡愛川町&quot;,&quot;愛甲郡清川村&quot;}" />
-        </Variable.Default>
-      </Variable>
+      <Variable x:TypeArguments="s:String[]" Default="[{&quot;横浜市港北区&quot;,&quot;横浜市鶴見区&quot;,&quot;横浜市神奈川区&quot;,&quot;横浜市西区&quot;,&quot;横浜市中区&quot;,&quot;横浜市南区&quot;,&quot;横浜市保土ケ谷区&quot;,&quot;横浜市磯子区&quot;,&quot;横浜市金沢区&quot;,&quot;横浜市戸塚区&quot;,&quot;横浜市港南区&quot;,&quot;横浜市旭区&quot;,&quot;横浜市緑区&quot;,&quot;横浜市瀬谷区&quot;,&quot;横浜市栄区&quot;,&quot;横浜市泉区&quot;,&quot;横浜市青葉区&quot;,&quot;横浜市都筑区&quot;,&quot;川崎市川崎区&quot;,&quot;川崎市幸区&quot;,&quot;川崎市中原区&quot;,&quot;川崎市高津区&quot;,&quot;川崎市多摩区&quot;,&quot;川崎市宮前&quot;,&quot;川崎市宮前&quot;,&quot;川崎市麻生区&quot;,&quot;相模原市緑区&quot;,&quot;相模原市緑区&quot;,&quot;相模原市中央区&quot;,&quot;相模原市南区&quot;,&quot;横須賀市&quot;,&quot;平塚市&quot;,&quot;鎌倉市&quot;,&quot;藤沢市&quot;,&quot;小田原市&quot;,&quot;茅ヶ崎市&quot;,&quot;逗子市&quot;,&quot;三浦市&quot;,&quot;秦野市&quot;,&quot;厚木市&quot;,&quot;大和市&quot;,&quot;伊勢原市&quot;,&quot;海老名市&quot;,&quot;座間市&quot;,&quot;南足柄市&quot;,&quot;綾瀬市&quot;,&quot;三浦郡葉山町&quot;,&quot;高座郡寒川町&quot;,&quot;中郡大磯町&quot;,&quot;中郡二宮町&quot;,&quot;足柄上郡中井町&quot;,&quot;足柄上郡大井町&quot;,&quot;足柄上郡松田町&quot;,&quot;足柄上郡山北町&quot;,&quot;足柄上郡開成町&quot;,&quot;足柄下郡箱根町&quot;,&quot;足柄下郡真鶴町&quot;,&quot;足柄下郡湯河原町&quot;,&quot;愛甲郡愛川町&quot;,&quot;愛甲郡清川村&quot;}]" Name="kanagawa_district_data" />
       <Variable x:TypeArguments="x:String" Name="kanagawa_district_name" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
@@ -86,33 +82,29 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence DisplayName="対象物件リストに移動" sap:VirtualizedContainerService.HintSize="1301,3003" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence DisplayName="対象物件リストに移動" sap:VirtualizedContainerService.HintSize="1378,3646" sap2010:WorkflowViewState.IdRef="Sequence_2">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="ブラウザーにアタッチ '          Page'" sap:VirtualizedContainerService.HintSize="1259,2911" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="202cafbb65313592c5d714e7780446a1" Selector="&lt;html app='chrome.exe' title='【ホームズ】*' /&gt;">
+      <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="ブラウザーにアタッチ '          Page'" sap:VirtualizedContainerService.HintSize="1336,3554" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="202cafbb65313592c5d714e7780446a1" Selector="&lt;html app='chrome.exe' title='【ホームズ】*' /&gt;">
         <ui:BrowserScope.Body>
           <ActivityAction x:TypeArguments="x:Object">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1225,2765" sap2010:WorkflowViewState.IdRef="Sequence_1">
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1302,3408" sap2010:WorkflowViewState.IdRef="Sequence_1">
               <Sequence.Variables>
                 <Variable x:TypeArguments="x:Boolean" Default="False" Name="next_button_exists" />
-                <Variable x:TypeArguments="scg:Dictionary(x:String, s:String[])" Name="municipal_data_without_chiba_saitama">
-                  <Variable.Default>
-                    <mva:VisualBasicValue x:TypeArguments="scg:Dictionary(x:String, s:String[])" ExpressionText="New Dictionary( Of String, String()) From{&#xD;&#xA;&#x9;{&quot;東京都&quot;, {&quot;千代田区&quot;,&quot;中央区&quot;,&quot;港区&quot;,&quot;新宿区&quot;,&quot;文京区&quot;,&quot;台東区&quot;,&quot;墨田区&quot;,&quot;江東区&quot;,&quot;品川区&quot;,&quot;目黒区&quot;,&quot;大田区&quot;,&quot;世田谷区&quot;,&quot;渋谷区&quot;,&quot;中野区&quot;,&quot;杉並区&quot;,&quot;豊島区&quot;,&quot;北区&quot;,&quot;荒川区&quot;,&quot;板橋区&quot;,&quot;練馬区&quot;,&quot;足立区&quot;,&quot;葛飾区&quot;,&quot;江戸川区&quot;,&quot;八王子市&quot;,&quot;立川市&quot;,&quot;武蔵野市&quot;,&quot;三鷹市&quot;,&quot;青梅市&quot;,&quot;府中市&quot;,&quot;昭島市&quot;,&quot;調布市&quot;,&quot;町田市&quot;,&quot;小金井市&quot;,&quot;小平市&quot;,&quot;日野市&quot;,&quot;東村山市&quot;,&quot;国分寺市&quot;,&quot;国立市&quot;,&quot;福生市&quot;,&quot;狛江市&quot;,&quot;東大和市&quot;,&quot;清瀬市&quot;,&quot;東久留米市&quot;,&quot;武蔵村山市&quot;,&quot;多摩市&quot;,&quot;稲城市&quot;,&quot;羽村市&quot;,&quot;あきる野市&quot;,&quot;西東京市&quot;,&quot;西多摩郡&quot;}},&#xD;&#xA;&#x9;{&quot;神奈川県&quot;,{&quot;横浜市&quot;, &quot;川崎市&quot;, &quot;相模原市&quot;,&quot;横須賀市&quot;,&quot;平塚市&quot;,&quot;鎌倉市&quot;,&quot;藤沢市&quot;,&quot;小田原市&quot;,&quot;茅ヶ崎市&quot;,&quot;逗子市&quot;,&quot;三浦市&quot;,&quot;秦野市&quot;,&quot;厚木市&quot;,&quot;大和市&quot;,&quot;伊勢原市&quot;,&quot;海老名市&quot;,&quot;座間市&quot;,&quot;南足柄市&quot;,&quot;綾瀬市&quot;,&quot;三浦郡&quot;,&quot;高座郡&quot;,&quot;中郡&quot;,&quot;足柄上郡&quot;,&quot;足柄下郡&quot;,&quot;愛甲郡&quot;}}&#xD;&#xA;}" />
-                  </Variable.Default>
-                </Variable>
+                <Variable x:TypeArguments="scg:Dictionary(x:String, s:String[])" Default="[New Dictionary( Of String, String()) From{&#xA;&#x9;{&quot;東京都&quot;, {&quot;千代田区&quot;,&quot;中央区&quot;,&quot;港区&quot;,&quot;新宿区&quot;,&quot;文京区&quot;,&quot;台東区&quot;,&quot;墨田区&quot;,&quot;江東区&quot;,&quot;品川区&quot;,&quot;目黒区&quot;,&quot;大田区&quot;,&quot;世田谷区&quot;,&quot;渋谷区&quot;,&quot;中野区&quot;,&quot;杉並区&quot;,&quot;豊島区&quot;,&quot;北区&quot;,&quot;荒川区&quot;,&quot;板橋区&quot;,&quot;練馬区&quot;,&quot;足立区&quot;,&quot;葛飾区&quot;,&quot;江戸川区&quot;,&quot;八王子市&quot;,&quot;立川市&quot;,&quot;武蔵野市&quot;,&quot;三鷹市&quot;,&quot;青梅市&quot;,&quot;府中市&quot;,&quot;昭島市&quot;,&quot;調布市&quot;,&quot;町田市&quot;,&quot;小金井市&quot;,&quot;小平市&quot;,&quot;日野市&quot;,&quot;東村山市&quot;,&quot;国分寺市&quot;,&quot;国立市&quot;,&quot;福生市&quot;,&quot;狛江市&quot;,&quot;東大和市&quot;,&quot;清瀬市&quot;,&quot;東久留米市&quot;,&quot;武蔵村山市&quot;,&quot;多摩市&quot;,&quot;稲城市&quot;,&quot;羽村市&quot;,&quot;あきる野市&quot;,&quot;西東京市&quot;,&quot;西多摩郡&quot;}},&#xA;&#x9;{&quot;神奈川県&quot;,{&quot;横浜市&quot;, &quot;川崎市&quot;, &quot;相模原市&quot;,&quot;横須賀市&quot;,&quot;平塚市&quot;,&quot;鎌倉市&quot;,&quot;藤沢市&quot;,&quot;小田原市&quot;,&quot;茅ヶ崎市&quot;,&quot;逗子市&quot;,&quot;三浦市&quot;,&quot;秦野市&quot;,&quot;厚木市&quot;,&quot;大和市&quot;,&quot;伊勢原市&quot;,&quot;海老名市&quot;,&quot;座間市&quot;,&quot;南足柄市&quot;,&quot;綾瀬市&quot;,&quot;三浦郡&quot;,&quot;高座郡&quot;,&quot;中郡&quot;,&quot;足柄上郡&quot;,&quot;足柄下郡&quot;,&quot;愛甲郡&quot;}}&#xA;}]" Name="municipal_data_without_chiba_saitama" />
               </Sequence.Variables>
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="クリック 'IMG'" sap:VirtualizedContainerService.HintSize="1183,106" sap2010:WorkflowViewState.IdRef="Click_10" KeyModifiers="None" MouseButton="BTN_LEFT">
+              <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="クリック 'IMG'" sap:VirtualizedContainerService.HintSize="1260,106" sap2010:WorkflowViewState.IdRef="Click_10" KeyModifiers="None" MouseButton="BTN_LEFT">
                 <ui:Click.CursorPosition>
                   <ui:CursorPosition Position="Center">
                     <ui:CursorPosition.OffsetX>
@@ -134,8 +126,8 @@
                   </ui:Target>
                 </ui:Click.Target>
               </ui:Click>
-              <ui:LogMessage DisplayName="メッセージをログ" sap:VirtualizedContainerService.HintSize="1183,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Warn" Message="[property_type &amp; &quot;_&quot; &amp; prefecture &amp; &quot;の処理を開始しました&quot;]" />
-              <If Condition="[prefecture = &quot;東京都&quot;]" DisplayName="条件分岐" sap:VirtualizedContainerService.HintSize="1183,531" sap2010:WorkflowViewState.IdRef="If_3">
+              <ui:LogMessage DisplayName="メッセージをログ" sap:VirtualizedContainerService.HintSize="1260,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Warn" Message="[property_type &amp; &quot;_&quot; &amp; prefecture &amp; &quot;の処理を開始しました&quot;]" />
+              <If Condition="[prefecture = &quot;東京都&quot;]" DisplayName="条件分岐" sap:VirtualizedContainerService.HintSize="1260,531" sap2010:WorkflowViewState.IdRef="If_3">
                 <If.Then>
                   <Assign DisplayName="代入" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_1">
                     <Assign.To>
@@ -185,7 +177,7 @@
                   </If>
                 </If.Else>
               </If>
-              <If Condition="[property_type = &quot;賃貸&quot;]" DisplayName="条件分岐" sap:VirtualizedContainerService.HintSize="1183,1825" sap2010:WorkflowViewState.IdRef="If_7">
+              <If Condition="[property_type = &quot;賃貸&quot;]" DisplayName="条件分岐" sap:VirtualizedContainerService.HintSize="1260,2468" sap2010:WorkflowViewState.IdRef="If_7">
                 <If.Then>
                   <Sequence DisplayName="シーケンス" sap:VirtualizedContainerService.HintSize="376,788" sap2010:WorkflowViewState.IdRef="Sequence_7">
                     <sap:WorkflowViewStateService.ViewState>
@@ -259,86 +251,21 @@
                   </Sequence>
                 </If.Then>
                 <If.Else>
-                  <Sequence DisplayName="シーケンス" sap:VirtualizedContainerService.HintSize="526,1668" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                  <Sequence DisplayName="シーケンス" sap:VirtualizedContainerService.HintSize="839,2311" sap2010:WorkflowViewState.IdRef="Sequence_14">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="クリック 'A  https://www.homes.co...'" sap:VirtualizedContainerService.HintSize="484,106" sap2010:WorkflowViewState.IdRef="Click_4" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="True">
-                      <ui:Click.CursorPosition>
-                        <ui:CursorPosition OffsetX="22" OffsetY="13" Position="TopLeft" />
-                      </ui:Click.CursorPosition>
-                      <ui:Click.Target>
-                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="8c392544-ea9a-46d1-9715-d76f1bc10d77" InformativeScreenshot="49f6df2ad9e0b25a053342dfab093620" Selector="&lt;webctrl aaname='{{property_type}}' omit:parentid='prg-searchTypeList' tag='A' /&gt;" WaitForReady="COMPLETE">
-                          <ui:Target.TimeoutMS>
-                            <InArgument x:TypeArguments="x:Int32" />
-                          </ui:Target.TimeoutMS>
-                        </ui:Target>
-                      </ui:Click.Target>
-                    </ui:Click>
-                    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="クリック 'A  https://www.homes.co...'" sap:VirtualizedContainerService.HintSize="484,106" sap2010:WorkflowViewState.IdRef="Click_5" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="True">
-                      <ui:Click.CursorPosition>
-                        <ui:CursorPosition OffsetX="27" OffsetY="7" Position="TopLeft" />
-                      </ui:Click.CursorPosition>
-                      <ui:Click.Target>
-                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="6bafafd6-a63d-4c24-95a0-db73c338d6ed" InformativeScreenshot="51cd41b47b8966de965896adb8e7c109" Selector="&lt;webctrl aaname='{{prefecture_short_name}}' omit:parentid='selectArea' tag='A' /&gt;" WaitForReady="COMPLETE">
-                          <ui:Target.TimeoutMS>
-                            <InArgument x:TypeArguments="x:Int32" />
-                          </ui:Target.TimeoutMS>
-                        </ui:Target>
-                      </ui:Click.Target>
-                    </ui:Click>
-                    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="クリック 'A  https://www.homes.co...'" sap:VirtualizedContainerService.HintSize="484,106" sap2010:WorkflowViewState.IdRef="Click_15" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="True">
-                      <ui:Click.CursorPosition>
-                        <ui:CursorPosition OffsetX="103" OffsetY="8" Position="TopLeft" />
-                      </ui:Click.CursorPosition>
-                      <ui:Click.Target>
-                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="730a5fe4-6d32-4ca7-9e6e-30d54b080108" InformativeScreenshot="46b9c4db3daae5fac0a0a8620f4ae4be" Selector="&lt;webctrl aaname='{{prefecture}}のすべての物件を見る' parentid='prg-flowform' tag='A' /&gt;" WaitForReady="COMPLETE">
-                          <ui:Target.TimeoutMS>
-                            <InArgument x:TypeArguments="x:Int32" />
-                          </ui:Target.TimeoutMS>
-                        </ui:Target>
-                      </ui:Click.Target>
-                    </ui:Click>
-                    <ui:SelectItem AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayAfter="4000" DisplayName="項目を選択 'SELECT  cond_newdate'" sap:VirtualizedContainerService.HintSize="484,134" sap2010:WorkflowViewState.IdRef="SelectItem_3" Item="本日">
-                      <ui:SelectItem.Items>
-                        <scg:List x:TypeArguments="x:String" Capacity="4">
-                          <x:String>指定なし</x:String>
-                          <x:String>本日</x:String>
-                          <x:String>3日以内</x:String>
-                          <x:String>7日以内</x:String>
-                        </scg:List>
-                      </ui:SelectItem.Items>
-                      <ui:SelectItem.Target>
-                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="a3fda147-36c3-4231-8f49-85d73aa9b9f1" InformativeScreenshot="665353b5fc3e39fc7b91695adc706e0b" Selector="&lt;webctrl id='cond_newdate' tag='SELECT' /&gt;">
-                          <ui:Target.TimeoutMS>
-                            <InArgument x:TypeArguments="x:Int32" />
-                          </ui:Target.TimeoutMS>
-                          <ui:Target.WaitForReady>
-                            <InArgument x:TypeArguments="ui:WaitForReady" />
-                          </ui:Target.WaitForReady>
-                        </ui:Target>
-                      </ui:SelectItem.Target>
-                    </ui:SelectItem>
-                    <ui:UiElementExists DisplayName="要素の存在を確認 'A  https://www.homes.co...'" Exists="[next_button_exists]" sap:VirtualizedContainerService.HintSize="484,106" sap2010:WorkflowViewState.IdRef="UiElementExists_3">
-                      <ui:UiElementExists.Target>
-                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="29075674-2996-4261-b854-d8597565a7ee" InformativeScreenshot="4f154c63cbd6ea13ed555762ef319e2b" Selector="&lt;webctrl aaname='次ヘ' idx='1' parentid='searchResult' tag='A' /&gt;" TimeoutMS="2000">
-                          <ui:Target.WaitForReady>
-                            <InArgument x:TypeArguments="ui:WaitForReady" />
-                          </ui:Target.WaitForReady>
-                        </ui:Target>
-                      </ui:UiElementExists.Target>
-                    </ui:UiElementExists>
-                    <If Condition="[next_button_exists]" DisplayName="条件分岐" sap:VirtualizedContainerService.HintSize="484,666" sap2010:WorkflowViewState.IdRef="If_9">
+                    <If Condition="[property_type = &quot;貸店舗&quot;]" DisplayName="条件分岐" sap:VirtualizedContainerService.HintSize="797,647" sap2010:WorkflowViewState.IdRef="If_10">
                       <If.Then>
-                        <Sequence DisplayName="シーケンス" sap:VirtualizedContainerService.HintSize="376,490" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                        <Sequence sap:VirtualizedContainerService.HintSize="376,490" sap2010:WorkflowViewState.IdRef="Sequence_12">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <ui:Click AlterIfDisabled="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DelayBefore="2000" DelayMS="2000" DisplayName="クリック 'A  https://www.homes.co...'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_18" KeyModifiers="None" MouseButton="BTN_LEFT">
+                          <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DelayMS="1000" DisplayName="クリック 'A  https://www.homes.co...'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_20" KeyModifiers="None" MouseButton="BTN_LEFT">
                             <ui:Click.CursorPosition>
                               <ui:CursorPosition Position="Center">
                                 <ui:CursorPosition.OffsetX>
@@ -350,7 +277,7 @@
                               </ui:CursorPosition>
                             </ui:Click.CursorPosition>
                             <ui:Click.Target>
-                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="40af531a-dbb3-4808-a760-6576cebed3c1" InformativeScreenshot="4f154c63cbd6ea13ed555762ef319e2b" Selector="&lt;webctrl aaname='次ヘ' idx='1' parentid='searchResult' tag='A' /&gt;">
+                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="90623cee-7d5a-4052-9d95-847f16d0779f" InformativeScreenshot="65b00b61e3ddfaa5f8b5cca7638daeaf" Selector="&lt;webctrl aaname='賃貸' parentid='prg-searchTypeList' tag='A' /&gt;">
                                 <ui:Target.TimeoutMS>
                                   <InArgument x:TypeArguments="x:Int32" />
                                 </ui:Target.TimeoutMS>
@@ -360,19 +287,7 @@
                               </ui:Target>
                             </ui:Click.Target>
                           </ui:Click>
-                          <ui:WaitUiElementAppear FoundElement="{x:Null}" WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="要素を探す 'A  https://www.homes.co...'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_2">
-                            <ui:WaitUiElementAppear.Target>
-                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="0581fa28-b06c-47c2-8217-118cef2d8811" InformativeScreenshot="0a6142f28b22abd34c88bf007bacbf2f" Selector="&lt;webctrl aaname='1' idx='1' parentid='searchResult' tag='A' /&gt;">
-                                <ui:Target.TimeoutMS>
-                                  <InArgument x:TypeArguments="x:Int32" />
-                                </ui:Target.TimeoutMS>
-                                <ui:Target.WaitForReady>
-                                  <InArgument x:TypeArguments="ui:WaitForReady" />
-                                </ui:Target.WaitForReady>
-                              </ui:Target>
-                            </ui:WaitUiElementAppear.Target>
-                          </ui:WaitUiElementAppear>
-                          <ui:Click AlterIfDisabled="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DelayBefore="2000" DelayMS="2000" DisplayName="クリック 'A  https://www.homes.co...'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_19" KeyModifiers="None" MouseButton="BTN_LEFT">
+                          <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DelayMS="1000" DisplayName="クリック 'A  https://www.homes.co...'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_21" KeyModifiers="None" MouseButton="BTN_LEFT">
                             <ui:Click.CursorPosition>
                               <ui:CursorPosition Position="Center">
                                 <ui:CursorPosition.OffsetX>
@@ -384,7 +299,29 @@
                               </ui:CursorPosition>
                             </ui:Click.CursorPosition>
                             <ui:Click.Target>
-                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="815ec011-250f-4158-adfa-57f51cbc0432" InformativeScreenshot="0a6142f28b22abd34c88bf007bacbf2f" Selector="&lt;webctrl aaname='1' idx='1' parentid='searchResult' tag='A' /&gt;">
+                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="90623cee-7d5a-4052-9d95-847f16d0779f" InformativeScreenshot="7e138408064c7f1461c105761dd6c8bb" Selector="&lt;webctrl aaname='貸店舗' idx='1' parentid='contents' tag='A' /&gt;">
+                                <ui:Target.TimeoutMS>
+                                  <InArgument x:TypeArguments="x:Int32" />
+                                </ui:Target.TimeoutMS>
+                                <ui:Target.WaitForReady>
+                                  <InArgument x:TypeArguments="ui:WaitForReady" />
+                                </ui:Target.WaitForReady>
+                              </ui:Target>
+                            </ui:Click.Target>
+                          </ui:Click>
+                          <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DelayMS="2000" DisplayName="クリック 'A  https://www.homes.co...'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_22" KeyModifiers="None" MouseButton="BTN_LEFT">
+                            <ui:Click.CursorPosition>
+                              <ui:CursorPosition Position="Center">
+                                <ui:CursorPosition.OffsetX>
+                                  <InArgument x:TypeArguments="x:Int32" />
+                                </ui:CursorPosition.OffsetX>
+                                <ui:CursorPosition.OffsetY>
+                                  <InArgument x:TypeArguments="x:Int32" />
+                                </ui:CursorPosition.OffsetY>
+                              </ui:CursorPosition>
+                            </ui:Click.CursorPosition>
+                            <ui:Click.Target>
+                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="90623cee-7d5a-4052-9d95-847f16d0779f" InformativeScreenshot="994c1ac18dc0051194bb812eb9e3db5e" Selector="&lt;webctrl id='prg-areaMenuButton' tag='A' /&gt;">
                                 <ui:Target.TimeoutMS>
                                   <InArgument x:TypeArguments="x:Int32" />
                                 </ui:Target.TimeoutMS>
@@ -396,13 +333,169 @@
                           </ui:Click>
                         </Sequence>
                       </If.Then>
+                      <If.Else>
+                        <Sequence DisplayName="シーケンス" sap:VirtualizedContainerService.HintSize="376,198" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="クリック 'A  https://www.homes.co...'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_4" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="True">
+                            <ui:Click.CursorPosition>
+                              <ui:CursorPosition OffsetX="22" OffsetY="13" Position="TopLeft" />
+                            </ui:Click.CursorPosition>
+                            <ui:Click.Target>
+                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="8c392544-ea9a-46d1-9715-d76f1bc10d77" InformativeScreenshot="49f6df2ad9e0b25a053342dfab093620" Selector="&lt;webctrl aaname='{{property_type}}' omit:parentid='prg-searchTypeList' tag='A' /&gt;" WaitForReady="COMPLETE">
+                                <ui:Target.TimeoutMS>
+                                  <InArgument x:TypeArguments="x:Int32" />
+                                </ui:Target.TimeoutMS>
+                              </ui:Target>
+                            </ui:Click.Target>
+                          </ui:Click>
+                        </Sequence>
+                      </If.Else>
                     </If>
-                    <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke すべてのページの物件を登録 workflow" sap:VirtualizedContainerService.HintSize="484,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="すべてのページの物件を登録.xaml">
-                      <ui:InvokeWorkflowFile.Arguments>
-                        <OutArgument x:TypeArguments="x:String" x:Key="txt_html">[txt_html]</OutArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="site_name">【ホームズ】</InArgument>
-                      </ui:InvokeWorkflowFile.Arguments>
-                    </ui:InvokeWorkflowFile>
+                    <Sequence DisplayName="シーケンス" sap:VirtualizedContainerService.HintSize="797,1532" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="クリック 'A  https://www.homes.co...'" sap:VirtualizedContainerService.HintSize="484,106" sap2010:WorkflowViewState.IdRef="Click_5" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="True">
+                        <ui:Click.CursorPosition>
+                          <ui:CursorPosition OffsetX="27" OffsetY="7" Position="TopLeft" />
+                        </ui:Click.CursorPosition>
+                        <ui:Click.Target>
+                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="6bafafd6-a63d-4c24-95a0-db73c338d6ed" InformativeScreenshot="51cd41b47b8966de965896adb8e7c109" Selector="&lt;webctrl aaname='{{prefecture_short_name}}' parentid='selectArea' tag='A' /&gt;" WaitForReady="COMPLETE">
+                            <ui:Target.TimeoutMS>
+                              <InArgument x:TypeArguments="x:Int32" />
+                            </ui:Target.TimeoutMS>
+                          </ui:Target>
+                        </ui:Click.Target>
+                      </ui:Click>
+                      <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="クリック 'A  https://www.homes.co...'" sap:VirtualizedContainerService.HintSize="484,106" sap2010:WorkflowViewState.IdRef="Click_15" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="True">
+                        <ui:Click.CursorPosition>
+                          <ui:CursorPosition OffsetX="103" OffsetY="8" Position="TopLeft" />
+                        </ui:Click.CursorPosition>
+                        <ui:Click.Target>
+                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="730a5fe4-6d32-4ca7-9e6e-30d54b080108" InformativeScreenshot="46b9c4db3daae5fac0a0a8620f4ae4be" Selector="&lt;webctrl aaname='{{prefecture}}のすべての物件を見る' parentid='prg-flowform' tag='A' /&gt;" WaitForReady="COMPLETE">
+                            <ui:Target.TimeoutMS>
+                              <InArgument x:TypeArguments="x:Int32" />
+                            </ui:Target.TimeoutMS>
+                          </ui:Target>
+                        </ui:Click.Target>
+                      </ui:Click>
+                      <ui:SelectItem AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayAfter="4000" DisplayName="項目を選択 'SELECT  cond_newdate'" sap:VirtualizedContainerService.HintSize="484,134" sap2010:WorkflowViewState.IdRef="SelectItem_3" Item="本日">
+                        <ui:SelectItem.Items>
+                          <scg:List x:TypeArguments="x:String" Capacity="4">
+                            <x:String>指定なし</x:String>
+                            <x:String>本日</x:String>
+                            <x:String>3日以内</x:String>
+                            <x:String>7日以内</x:String>
+                          </scg:List>
+                        </ui:SelectItem.Items>
+                        <ui:SelectItem.Target>
+                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="a3fda147-36c3-4231-8f49-85d73aa9b9f1" InformativeScreenshot="665353b5fc3e39fc7b91695adc706e0b" Selector="&lt;webctrl id='cond_newdate' tag='SELECT' /&gt;">
+                            <ui:Target.TimeoutMS>
+                              <InArgument x:TypeArguments="x:Int32" />
+                            </ui:Target.TimeoutMS>
+                            <ui:Target.WaitForReady>
+                              <InArgument x:TypeArguments="ui:WaitForReady" />
+                            </ui:Target.WaitForReady>
+                          </ui:Target>
+                        </ui:SelectItem.Target>
+                      </ui:SelectItem>
+                      <ui:UiElementExists DisplayName="要素の存在を確認 'A  https://www.homes.co...'" Exists="[next_button_exists]" sap:VirtualizedContainerService.HintSize="484,106" sap2010:WorkflowViewState.IdRef="UiElementExists_3">
+                        <ui:UiElementExists.Target>
+                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="29075674-2996-4261-b854-d8597565a7ee" InformativeScreenshot="4f154c63cbd6ea13ed555762ef319e2b" Selector="&lt;webctrl aaname='次ヘ' idx='1' parentid='searchResult' tag='A' /&gt;" TimeoutMS="2000">
+                            <ui:Target.WaitForReady>
+                              <InArgument x:TypeArguments="ui:WaitForReady" />
+                            </ui:Target.WaitForReady>
+                          </ui:Target>
+                        </ui:UiElementExists.Target>
+                      </ui:UiElementExists>
+                      <If Condition="[next_button_exists]" DisplayName="条件分岐" sap:VirtualizedContainerService.HintSize="484,676" sap2010:WorkflowViewState.IdRef="If_9">
+                        <If.Then>
+                          <Sequence DisplayName="シーケンス" sap:VirtualizedContainerService.HintSize="376,490" sap2010:WorkflowViewState.IdRef="Sequence_11">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <ui:Click AlterIfDisabled="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DelayBefore="2000" DelayMS="2000" DisplayName="クリック 'A  https://www.homes.co...'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_18" KeyModifiers="None" MouseButton="BTN_LEFT">
+                              <ui:Click.CursorPosition>
+                                <ui:CursorPosition Position="Center">
+                                  <ui:CursorPosition.OffsetX>
+                                    <InArgument x:TypeArguments="x:Int32" />
+                                  </ui:CursorPosition.OffsetX>
+                                  <ui:CursorPosition.OffsetY>
+                                    <InArgument x:TypeArguments="x:Int32" />
+                                  </ui:CursorPosition.OffsetY>
+                                </ui:CursorPosition>
+                              </ui:Click.CursorPosition>
+                              <ui:Click.Target>
+                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="40af531a-dbb3-4808-a760-6576cebed3c1" InformativeScreenshot="4f154c63cbd6ea13ed555762ef319e2b" Selector="&lt;webctrl aaname='次ヘ' idx='1' parentid='searchResult' tag='A' /&gt;">
+                                  <ui:Target.TimeoutMS>
+                                    <InArgument x:TypeArguments="x:Int32" />
+                                  </ui:Target.TimeoutMS>
+                                  <ui:Target.WaitForReady>
+                                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                                  </ui:Target.WaitForReady>
+                                </ui:Target>
+                              </ui:Click.Target>
+                            </ui:Click>
+                            <ui:WaitUiElementAppear FoundElement="{x:Null}" WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="要素を探す 'A  https://www.homes.co...'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_2">
+                              <ui:WaitUiElementAppear.Target>
+                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="0581fa28-b06c-47c2-8217-118cef2d8811" InformativeScreenshot="0a6142f28b22abd34c88bf007bacbf2f" Selector="&lt;webctrl aaname='1' idx='1' parentid='searchResult' tag='A' /&gt;">
+                                  <ui:Target.TimeoutMS>
+                                    <InArgument x:TypeArguments="x:Int32" />
+                                  </ui:Target.TimeoutMS>
+                                  <ui:Target.WaitForReady>
+                                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                                  </ui:Target.WaitForReady>
+                                </ui:Target>
+                              </ui:WaitUiElementAppear.Target>
+                            </ui:WaitUiElementAppear>
+                            <ui:Click AlterIfDisabled="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DelayBefore="2000" DelayMS="2000" DisplayName="クリック 'A  https://www.homes.co...'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_19" KeyModifiers="None" MouseButton="BTN_LEFT">
+                              <ui:Click.CursorPosition>
+                                <ui:CursorPosition Position="Center">
+                                  <ui:CursorPosition.OffsetX>
+                                    <InArgument x:TypeArguments="x:Int32" />
+                                  </ui:CursorPosition.OffsetX>
+                                  <ui:CursorPosition.OffsetY>
+                                    <InArgument x:TypeArguments="x:Int32" />
+                                  </ui:CursorPosition.OffsetY>
+                                </ui:CursorPosition>
+                              </ui:Click.CursorPosition>
+                              <ui:Click.Target>
+                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="815ec011-250f-4158-adfa-57f51cbc0432" InformativeScreenshot="0a6142f28b22abd34c88bf007bacbf2f" Selector="&lt;webctrl aaname='1' idx='1' parentid='searchResult' tag='A' /&gt;">
+                                  <ui:Target.TimeoutMS>
+                                    <InArgument x:TypeArguments="x:Int32" />
+                                  </ui:Target.TimeoutMS>
+                                  <ui:Target.WaitForReady>
+                                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                                  </ui:Target.WaitForReady>
+                                </ui:Target>
+                              </ui:Click.Target>
+                            </ui:Click>
+                          </Sequence>
+                        </If.Then>
+                      </If>
+                      <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke すべてのページの物件を登録 workflow" sap:VirtualizedContainerService.HintSize="484,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="すべてのページの物件を登録.xaml">
+                        <ui:InvokeWorkflowFile.Arguments>
+                          <OutArgument x:TypeArguments="x:String" x:Key="txt_html">
+                            <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="txt_html" />
+                          </OutArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="site_name">
+                            <Literal x:TypeArguments="x:String">【ホームズ】</Literal>
+                          </InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="property_type" />
+                          <InArgument x:TypeArguments="x:Int32" x:Key="number_of_target_pages">
+                            <Literal x:TypeArguments="x:Int32" Value="130" />
+                          </InArgument>
+                        </ui:InvokeWorkflowFile.Arguments>
+                      </ui:InvokeWorkflowFile>
+                    </Sequence>
                   </Sequence>
                 </If.Else>
               </If>

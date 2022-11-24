@@ -9,7 +9,7 @@
     <x:Property Name="property_type" Type="InArgument(x:String)" />
     <x:Property Name="municipal_data_not_processed" Type="OutArgument(scg:Dictionary(x:String, s:String[]))" />
   </x:Members>
-  <sap:VirtualizedContainerService.HintSize>794,1001.33333333333</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1404,1243</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="32">
@@ -71,9 +71,10 @@
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
       <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
       <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="シーケンス" sap:VirtualizedContainerService.HintSize="471.333333333333,896.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_360">
+  <Sequence DisplayName="シーケンス" sap:VirtualizedContainerService.HintSize="472,882" sap2010:WorkflowViewState.IdRef="Sequence_360">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Boolean" Name="variable1" />
     </Sequence.Variables>
@@ -82,13 +83,13 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="繰り返し (コレクションの各要素)" sap:VirtualizedContainerService.HintSize="429.333333333333,804.666666666667" sap2010:WorkflowViewState.IdRef="ForEach`1_11" Values="[municipal_data.Keys]">
+    <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="繰り返し (コレクションの各要素)" sap:VirtualizedContainerService.HintSize="430,790" sap2010:WorkflowViewState.IdRef="ForEach`1_11" Values="[municipal_data.Keys]">
       <ui:ForEach.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="item" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="シーケンス" sap:VirtualizedContainerService.HintSize="376,666" sap2010:WorkflowViewState.IdRef="Sequence_363">
+          <Sequence DisplayName="シーケンス" sap:VirtualizedContainerService.HintSize="376,656" sap2010:WorkflowViewState.IdRef="Sequence_363">
             <Sequence.Variables>
               <Variable x:TypeArguments="s:String[]" Name="municipal_list" />
             </Sequence.Variables>
@@ -97,7 +98,7 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <Assign DisplayName="代入" sap:VirtualizedContainerService.HintSize="334,62" sap2010:WorkflowViewState.IdRef="Assign_9">
+            <Assign DisplayName="代入" sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_9">
               <Assign.To>
                 <OutArgument x:TypeArguments="scg:Dictionary(x:String, s:String[])">[municipal_data_not_processed]</OutArgument>
               </Assign.To>
@@ -105,7 +106,7 @@
                 <InArgument x:TypeArguments="scg:Dictionary(x:String, s:String[])">[municipal_data]</InArgument>
               </Assign.Value>
             </Assign>
-            <Assign DisplayName="代入" sap:VirtualizedContainerService.HintSize="334,62" sap2010:WorkflowViewState.IdRef="Assign_7">
+            <Assign DisplayName="代入" sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_7">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:String">[prefecture]</OutArgument>
               </Assign.To>
@@ -113,7 +114,7 @@
                 <InArgument x:TypeArguments="x:String">[item.ToString]</InArgument>
               </Assign.Value>
             </Assign>
-            <Assign DisplayName="代入" sap:VirtualizedContainerService.HintSize="334,62" sap2010:WorkflowViewState.IdRef="Assign_8">
+            <Assign DisplayName="代入" sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_8">
               <Assign.To>
                 <OutArgument x:TypeArguments="s:String[]">[municipal_list]</OutArgument>
               </Assign.To>
@@ -121,7 +122,7 @@
                 <InArgument x:TypeArguments="s:String[]">[municipal_data(prefecture)]</InArgument>
               </Assign.Value>
             </Assign>
-            <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="ワークフロー ファイルを呼び出し" sap:VirtualizedContainerService.HintSize="334,114" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_156" UnSafe="False" WorkflowFileName="レインズ_繰り返し.xaml">
+            <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="ワークフロー ファイルを呼び出し" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_156" UnSafe="False" WorkflowFileName="レインズ_繰り返し.xaml">
               <ui:InvokeWorkflowFile.Arguments>
                 <InArgument x:TypeArguments="s:String[]" x:Key="array_location">[municipal_list]</InArgument>
                 <OutArgument x:TypeArguments="x:String" x:Key="id">[id]</OutArgument>
@@ -133,7 +134,7 @@
                 <InOutArgument x:TypeArguments="x:Int32" x:Key="counter">[counter]</InOutArgument>
               </ui:InvokeWorkflowFile.Arguments>
             </ui:InvokeWorkflowFile>
-            <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="ワークフロー ファイルを呼び出し" sap:VirtualizedContainerService.HintSize="334,114" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_157" UnSafe="False" WorkflowFileName="レインズトップページに戻る.xaml">
+            <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="ワークフロー ファイルを呼び出し" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_157" UnSafe="False" WorkflowFileName="レインズトップページに戻る.xaml">
               <ui:InvokeWorkflowFile.Arguments>
                 <scg:Dictionary x:TypeArguments="x:String, Argument" />
               </ui:InvokeWorkflowFile.Arguments>

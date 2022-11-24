@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="繰り返しコレクションの各要素" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="繰り返しコレクションの各要素" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="property_list" Type="InArgument(s:String[])" />
     <x:Property Name="counter_for_property" Type="InOutArgument(x:Int32)" />
@@ -7,8 +7,9 @@
     <x:Property Name="counter_for_prefecture" Type="InOutArgument(x:Int32)" />
     <x:Property Name="prefecture_list_not_processed" Type="InOutArgument(s:String[])" />
     <x:Property Name="txt_html" Type="OutArgument(x:String)" />
+    <x:Property Name="number_of_target_pages" Type="InArgument(x:Int32)" />
   </x:Members>
-  <sap:VirtualizedContainerService.HintSize>390,77.6666666666667</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1404,1933</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="32">
@@ -74,21 +75,22 @@
       <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
       <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
       <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="繰り返し (コレクションの各要素)" sap:VirtualizedContainerService.HintSize="200,52.6666666666667" sap2010:WorkflowViewState.IdRef="ForEach`1_7" Values="[property_list]">
+  <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="繰り返し (コレクションの各要素)" sap:VirtualizedContainerService.HintSize="1114,1828" sap2010:WorkflowViewState.IdRef="ForEach`1_7" Values="[property_list]">
     <ui:ForEach.Body>
       <ActivityAction x:TypeArguments="x:Object">
         <ActivityAction.Argument>
           <DelegateInArgument x:TypeArguments="x:Object" Name="property_type" />
         </ActivityAction.Argument>
-        <Sequence DisplayName="本文" sap:VirtualizedContainerService.HintSize="1080.66666666667,1654.66666666667" sap2010:WorkflowViewState.IdRef="Sequence_347">
+        <Sequence DisplayName="本文" sap:VirtualizedContainerService.HintSize="1078,1654" sap2010:WorkflowViewState.IdRef="Sequence_347">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <Assign DisplayName="代入" sap:VirtualizedContainerService.HintSize="1038.66666666667,62" sap2010:WorkflowViewState.IdRef="Assign_15">
+          <Assign DisplayName="代入" sap:VirtualizedContainerService.HintSize="1036,60" sap2010:WorkflowViewState.IdRef="Assign_15">
             <Assign.To>
               <OutArgument x:TypeArguments="x:Int32">[counter_for_property]</OutArgument>
             </Assign.To>
@@ -96,15 +98,15 @@
               <InArgument x:TypeArguments="x:Int32">[counter_for_property + 1]</InArgument>
             </Assign.Value>
           </Assign>
-          <If Condition="[counter_for_property = 1]" DisplayName="条件分岐" sap:VirtualizedContainerService.HintSize="1038.66666666667,410" sap2010:WorkflowViewState.IdRef="If_49">
+          <If Condition="[counter_for_property = 1]" DisplayName="条件分岐" sap:VirtualizedContainerService.HintSize="1036,410" sap2010:WorkflowViewState.IdRef="If_49">
             <If.Then>
-              <Sequence DisplayName="シーケンス" sap:VirtualizedContainerService.HintSize="304,256" sap2010:WorkflowViewState.IdRef="Sequence_359">
+              <Sequence DisplayName="シーケンス" sap:VirtualizedContainerService.HintSize="304,252" sap2010:WorkflowViewState.IdRef="Sequence_359">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <Assign DisplayName="代入" sap:VirtualizedContainerService.HintSize="262,62" sap2010:WorkflowViewState.IdRef="Assign_16">
+                <Assign DisplayName="代入" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_16">
                   <Assign.To>
                     <OutArgument x:TypeArguments="s:String[]">[property_list_not_processed]</OutArgument>
                   </Assign.To>
@@ -112,7 +114,7 @@
                     <InArgument x:TypeArguments="s:String[]">[property_list]</InArgument>
                   </Assign.Value>
                 </Assign>
-                <Assign DisplayName="代入" sap:VirtualizedContainerService.HintSize="262,62" sap2010:WorkflowViewState.IdRef="Assign_17">
+                <Assign DisplayName="代入" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_17">
                   <Assign.To>
                     <OutArgument x:TypeArguments="s:String[]">[prefecture_list]</OutArgument>
                   </Assign.To>
@@ -123,7 +125,7 @@
               </Sequence>
             </If.Then>
             <If.Else>
-              <Assign DisplayName="代入" sap:VirtualizedContainerService.HintSize="262,62" sap2010:WorkflowViewState.IdRef="Assign_18">
+              <Assign DisplayName="代入" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_18">
                 <Assign.To>
                   <OutArgument x:TypeArguments="s:String[]">[property_list_not_processed]</OutArgument>
                 </Assign.To>
@@ -133,19 +135,19 @@
               </Assign>
             </If.Else>
           </If>
-          <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="繰り返し (コレクションの各要素)" sap:VirtualizedContainerService.HintSize="1038.66666666667,1010.66666666667" sap2010:WorkflowViewState.IdRef="ForEach`1_6" Values="[prefecture_list]">
+          <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="繰り返し (コレクションの各要素)" sap:VirtualizedContainerService.HintSize="1036,1012" sap2010:WorkflowViewState.IdRef="ForEach`1_6" Values="[prefecture_list]">
             <ui:ForEach.Body>
               <ActivityAction x:TypeArguments="x:Object">
                 <ActivityAction.Argument>
                   <DelegateInArgument x:TypeArguments="x:Object" Name="item" />
                 </ActivityAction.Argument>
-                <Sequence DisplayName="本文" sap:VirtualizedContainerService.HintSize="1002,872" sap2010:WorkflowViewState.IdRef="Sequence_346">
+                <Sequence DisplayName="本文" sap:VirtualizedContainerService.HintSize="1000,878" sap2010:WorkflowViewState.IdRef="Sequence_346">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <Assign DisplayName="代入" sap:VirtualizedContainerService.HintSize="960,62" sap2010:WorkflowViewState.IdRef="Assign_12">
+                  <Assign DisplayName="代入" sap:VirtualizedContainerService.HintSize="958,60" sap2010:WorkflowViewState.IdRef="Assign_12">
                     <Assign.To>
                       <OutArgument x:TypeArguments="x:Int32">[counter_for_prefecture]</OutArgument>
                     </Assign.To>
@@ -153,9 +155,9 @@
                       <InArgument x:TypeArguments="x:Int32">[counter_for_prefecture + 1]</InArgument>
                     </Assign.Value>
                   </Assign>
-                  <If Condition="[counter_for_prefecture = 1]" DisplayName="条件分岐" sap:VirtualizedContainerService.HintSize="960,216" sap2010:WorkflowViewState.IdRef="If_48">
+                  <If Condition="[counter_for_prefecture = 1]" DisplayName="条件分岐" sap:VirtualizedContainerService.HintSize="958,218" sap2010:WorkflowViewState.IdRef="If_48">
                     <If.Then>
-                      <Assign DisplayName="代入" sap:VirtualizedContainerService.HintSize="262,62" sap2010:WorkflowViewState.IdRef="Assign_13">
+                      <Assign DisplayName="代入" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_13">
                         <Assign.To>
                           <OutArgument x:TypeArguments="s:String[]">[prefecture_list_not_processed]</OutArgument>
                         </Assign.To>
@@ -165,7 +167,7 @@
                       </Assign>
                     </If.Then>
                     <If.Else>
-                      <Assign DisplayName="代入" sap:VirtualizedContainerService.HintSize="262,62" sap2010:WorkflowViewState.IdRef="Assign_14">
+                      <Assign DisplayName="代入" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_14">
                         <Assign.To>
                           <OutArgument x:TypeArguments="s:String[]">[prefecture_list_not_processed]</OutArgument>
                         </Assign.To>
@@ -175,29 +177,47 @@
                       </Assign>
                     </If.Else>
                   </If>
-                  <If Condition="[item.ToString = &quot;東京都&quot;]" DisplayName="東京都の賃貸を除外" sap:VirtualizedContainerService.HintSize="960,422" sap2010:WorkflowViewState.IdRef="If_51">
+                  <If Condition="[item.ToString = &quot;東京都&quot;]" DisplayName="東京都の賃貸を除外" sap:VirtualizedContainerService.HintSize="958,428" sap2010:WorkflowViewState.IdRef="If_51">
                     <If.Then>
-                      <If Condition="[property_type.ToString = &quot;賃貸&quot;]" DisplayName="条件分岐" sap:VirtualizedContainerService.HintSize="580,268" sap2010:WorkflowViewState.IdRef="If_50">
+                      <If Condition="[property_type.ToString = &quot;賃貸&quot;]" DisplayName="条件分岐" sap:VirtualizedContainerService.HintSize="579,270" sap2010:WorkflowViewState.IdRef="If_50">
                         <If.Then>
                           <ui:Break DisplayName="繰り返しをブレーク" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="Break_1" />
                         </If.Then>
                         <If.Else>
-                          <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke atHome_メイン処理 workflow" sap:VirtualizedContainerService.HintSize="334,114" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_175" UnSafe="False" WorkflowFileName="atHome_メイン処理.xaml">
+                          <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke atHome_メイン処理 workflow" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_175" UnSafe="False" WorkflowFileName="atHome_メイン処理.xaml">
                             <ui:InvokeWorkflowFile.Arguments>
-                              <OutArgument x:TypeArguments="x:String" x:Key="txt_html">[txt_html]</OutArgument>
-                              <InArgument x:TypeArguments="x:String" x:Key="prefecture">[item.ToString]</InArgument>
-                              <InArgument x:TypeArguments="x:String" x:Key="property_type">[property_type.ToString]</InArgument>
+                              <OutArgument x:TypeArguments="x:String" x:Key="txt_html">
+                                <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="txt_html" />
+                              </OutArgument>
+                              <InArgument x:TypeArguments="x:String" x:Key="prefecture">
+                                <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="item.ToString" />
+                              </InArgument>
+                              <InArgument x:TypeArguments="x:String" x:Key="property_type">
+                                <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="property_type.ToString" />
+                              </InArgument>
+                              <InArgument x:TypeArguments="x:Int32" x:Key="number_of_target_pages">
+                                <mva:VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="number_of_target_pages" />
+                              </InArgument>
                             </ui:InvokeWorkflowFile.Arguments>
                           </ui:InvokeWorkflowFile>
                         </If.Else>
                       </If>
                     </If.Then>
                     <If.Else>
-                      <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke atHome_メイン処理 workflow" sap:VirtualizedContainerService.HintSize="334,114" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_176" UnSafe="False" WorkflowFileName="atHome_メイン処理.xaml">
+                      <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke atHome_メイン処理 workflow" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_176" UnSafe="False" WorkflowFileName="atHome_メイン処理.xaml">
                         <ui:InvokeWorkflowFile.Arguments>
-                          <OutArgument x:TypeArguments="x:String" x:Key="txt_html">[txt_html]</OutArgument>
-                          <InArgument x:TypeArguments="x:String" x:Key="prefecture">[item.ToString]</InArgument>
-                          <InArgument x:TypeArguments="x:String" x:Key="property_type">[property_type.ToString]</InArgument>
+                          <OutArgument x:TypeArguments="x:String" x:Key="txt_html">
+                            <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="txt_html" />
+                          </OutArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="prefecture">
+                            <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="item.ToString" />
+                          </InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="property_type">
+                            <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="property_type.ToString" />
+                          </InArgument>
+                          <InArgument x:TypeArguments="x:Int32" x:Key="number_of_target_pages">
+                            <mva:VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="number_of_target_pages" />
+                          </InArgument>
                         </ui:InvokeWorkflowFile.Arguments>
                       </ui:InvokeWorkflowFile>
                     </If.Else>

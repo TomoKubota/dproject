@@ -1,10 +1,10 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="SUUMOメイン処理" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="SUUMOメイン処理" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="txt_html" Type="OutArgument(x:String)" />
     <x:Property Name="property_type" Type="InArgument(x:String)" />
     <x:Property Name="prefecture" Type="InArgument(x:String)" />
   </x:Members>
-  <sap:VirtualizedContainerService.HintSize>1371,2340</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1404,2350</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="32">
@@ -66,28 +66,29 @@
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
       <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
       <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="シーケンス" sap:VirtualizedContainerService.HintSize="644,2275" sap2010:WorkflowViewState.IdRef="Sequence_284">
+  <Sequence DisplayName="シーケンス" sap:VirtualizedContainerService.HintSize="644,2285" sap2010:WorkflowViewState.IdRef="Sequence_284">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <ui:LogMessage DisplayName="メッセージをログ" sap:VirtualizedContainerService.HintSize="602,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Warn" Message="[property_type &amp; &quot;_&quot; &amp; prefecture &amp; &quot;の処理を開始しました&quot;]" />
-    <Sequence DisplayName="対象物件リストに移動" sap:VirtualizedContainerService.HintSize="602,1900" sap2010:WorkflowViewState.IdRef="Sequence_279">
+    <Sequence DisplayName="対象物件リストに移動" sap:VirtualizedContainerService.HintSize="602,1910" sap2010:WorkflowViewState.IdRef="Sequence_279">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="ブラウザーにアタッチ '          Page'" sap:VirtualizedContainerService.HintSize="560,1808" sap2010:WorkflowViewState.IdRef="BrowserScope_119" InformativeScreenshot="69808f3677b1bcf8fb8d832ec7e72ad1" Selector="&lt;html app='chrome.exe' title='*【SUUMO】*' /&gt;">
+      <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="ブラウザーにアタッチ '          Page'" sap:VirtualizedContainerService.HintSize="560,1818" sap2010:WorkflowViewState.IdRef="BrowserScope_119" InformativeScreenshot="69808f3677b1bcf8fb8d832ec7e72ad1" Selector="&lt;html app='chrome.exe' title='*【SUUMO】*' /&gt;">
         <ui:BrowserScope.Body>
           <ActivityAction x:TypeArguments="x:Object">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="526,1662" sap2010:WorkflowViewState.IdRef="Sequence_278">
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="526,1672" sap2010:WorkflowViewState.IdRef="Sequence_278">
               <Sequence.Variables>
                 <Variable x:TypeArguments="x:Boolean" Default="False" Name="next_button_exists" />
               </Sequence.Variables>
@@ -194,7 +195,7 @@
                   </ui:Target>
                 </ui:UiElementExists.Target>
               </ui:UiElementExists>
-              <If Condition="[next_button_exists = True]" DisplayName="条件分岐" sap:VirtualizedContainerService.HintSize="484,666" sap2010:WorkflowViewState.IdRef="If_1">
+              <If Condition="[next_button_exists = True]" DisplayName="条件分岐" sap:VirtualizedContainerService.HintSize="484,676" sap2010:WorkflowViewState.IdRef="If_1">
                 <If.Then>
                   <Sequence DisplayName="シーケンス" sap:VirtualizedContainerService.HintSize="376,490" sap2010:WorkflowViewState.IdRef="Sequence_285">
                     <sap:WorkflowViewStateService.ViewState>
@@ -268,9 +269,16 @@
     </Sequence>
     <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="ワークフロー ファイルを呼び出し" sap:VirtualizedContainerService.HintSize="602,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="すべてのページの物件を登録.xaml">
       <ui:InvokeWorkflowFile.Arguments>
-        <OutArgument x:TypeArguments="x:String" x:Key="txt_html">[txt_html]</OutArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="site_name">【SUUMO】</InArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="txt_html">
+          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="txt_html" />
+        </OutArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="site_name">
+          <Literal x:TypeArguments="x:String">【SUUMO】</Literal>
+        </InArgument>
         <InArgument x:TypeArguments="x:String" x:Key="property_type" />
+        <InArgument x:TypeArguments="x:Int32" x:Key="number_of_target_pages">
+          <Literal x:TypeArguments="x:Int32" Value="130" />
+        </InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
   </Sequence>
