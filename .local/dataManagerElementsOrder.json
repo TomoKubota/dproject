@@ -1,0 +1,216 @@
+{
+  "Workflows": [
+    {
+      "Path": null,
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Main.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "text_body&Flowchart_2",
+        "id&Flowchart_2",
+        "second_district&Flowchart_2",
+        "counter_for_prefecture&Flowchart_2",
+        "txt_html&Flowchart_2",
+        "prefecture_list&Flowchart_2",
+        "property_list&Flowchart_2",
+        "prefecture&Flowchart_2",
+        "municipal_data&Flowchart_2",
+        "property_type&Flowchart_2",
+        "prefecture_list_not_processed&Flowchart_2",
+        "counter_for_property&Flowchart_2",
+        "property_list_not_processed&Flowchart_2",
+        "municipal_data_without_chiba_saitama&Flowchart_2",
+        "rains&Flowchart_2",
+        "athome&Flowchart_2",
+        "homes&Flowchart_2",
+        "suumo&Flowchart_2",
+        "arrayFileName&Sequence_378",
+        "path_txt_html_file_folder&Sequence_378",
+        "full_path_txt_html_file_folder&Sequence_378",
+        "user_name&Sequence_378",
+        "reins_special_element_exists&Sequence_395",
+        "test&Sequence_404",
+        "test_html&Sequence_404"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "site_id",
+        "number_of_target_pages"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "atHome登録処理全行程.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "property_list",
+        "txt_html",
+        "prefecture_list_not_processed",
+        "counter_for_prefecture",
+        "property_list_not_processed",
+        "prefecture_list",
+        "counter_for_property"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "登録前処理.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "site_url"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "TeamViewerのダイアログを閉じる.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "teamviewer_dialog_exists&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "物件登録サイトの起動edge.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "required_basic_authentication&Sequence_382",
+        "refresh_button_exist&Sequence_382"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "繰り返しコレクションの各要素.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "property_list",
+        "counter_for_property",
+        "prefecture_list",
+        "property_list_not_processed",
+        "counter_for_prefecture",
+        "prefecture_list_not_processed",
+        "txt_html",
+        "number_of_target_pages"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "atHome_メイン処理.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "parentid&Sequence_79"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "txt_html",
+        "prefecture",
+        "property_type",
+        "number_of_target_pages"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "atHome_物件・県指定.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "parentid",
+        "property_type",
+        "prefecture"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Homes繰り返し.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "property_list",
+        "prefecture_list",
+        "prefecture",
+        "txt_html"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Homesメイン処理.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "prefecture_short_name&Sequence_3",
+        "kanagawa_district_data&Sequence_3",
+        "kanagawa_district_name&Sequence_3",
+        "next_button_exists&Sequence_1",
+        "municipal_data_without_chiba_saitama&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "txt_html",
+        "prefecture",
+        "property_type",
+        "argument1"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Homes登録処理全行程.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "property_list",
+        "prefecture_list",
+        "prefecture",
+        "txt_html"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "すべてのページの物件を登録.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "elementExists&Sequence_146",
+        "counter&Sequence_146",
+        "not_first_page&Sequence_165",
+        "coming_to_naviga_page&Sequence_151"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "txt_html",
+        "site_name",
+        "property_type",
+        "number_of_target_pages"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "サイトソースを取得.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "datetime&Sequence_151"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "txt_html",
+        "site_name"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    }
+  ]
+}
