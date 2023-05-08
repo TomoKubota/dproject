@@ -48,22 +48,10 @@
   "arguments": {
     "input": [
       {
-        "name": "site_id",
-        "type": "System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
+        "name": "argument1",
+        "type": "System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
         "required": false,
-        "hasDefault": true
-      },
-      {
-        "name": "number_of_target_pages",
-        "type": "System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
-        "required": false,
-        "hasDefault": true
-      },
-      {
-        "name": "district_id",
-        "type": "System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
-        "required": false,
-        "hasDefault": true
+        "hasDefault": false
       }
     ],
     "output": []
@@ -75,22 +63,10 @@
       "uniqueId": "d347415d-ddb8-4ab4-b206-a22a7b2a25cb",
       "input": [
         {
-          "name": "site_id",
-          "type": "System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
+          "name": "argument1",
+          "type": "System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
           "required": false,
-          "hasDefault": true
-        },
-        {
-          "name": "number_of_target_pages",
-          "type": "System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
-          "required": false,
-          "hasDefault": true
-        },
-        {
-          "name": "district_id",
-          "type": "System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
-          "required": false,
-          "hasDefault": true
+          "hasDefault": false
         }
       ],
       "output": []

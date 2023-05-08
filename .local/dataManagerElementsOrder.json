@@ -30,6 +30,8 @@
         "athome&Flowchart_2",
         "homes&Flowchart_2",
         "suumo&Flowchart_2",
+        "municipal_data_without_tokyo_kanagawa&Flowchart_2",
+        "municipal_data_to_proceed&Flowchart_2",
         "arrayFileName&Sequence_378",
         "path_txt_html_file_folder&Sequence_378",
         "full_path_txt_html_file_folder&Sequence_378",
@@ -39,6 +41,7 @@
         "test_html&Sequence_404"
       ],
       "ArgumentsSectionElementsOrder": [
+        "district_id",
         "site_id",
         "number_of_target_pages"
       ],
@@ -50,6 +53,7 @@
       "SortBy": 0,
       "VariablesSectionElementsOrder": [],
       "ArgumentsSectionElementsOrder": [
+        "district_id",
         "property_list",
         "txt_html",
         "prefecture_list_not_processed",
@@ -66,6 +70,7 @@
       "SortBy": 0,
       "VariablesSectionElementsOrder": [],
       "ArgumentsSectionElementsOrder": [
+        "district_id",
         "site_url"
       ],
       "ConstantsSectionElementsOrder": null,
@@ -85,10 +90,14 @@
       "Path": "物件登録サイトの起動edge.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "required_basic_authentication&Sequence_389",
+        "refresh_button_exist&Sequence_389",
         "required_basic_authentication&Sequence_382",
         "refresh_button_exist&Sequence_382"
       ],
-      "ArgumentsSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "district_id"
+      ],
       "ConstantsSectionElementsOrder": null,
       "AddedNamespaces": null
     },
@@ -97,6 +106,7 @@
       "SortBy": 0,
       "VariablesSectionElementsOrder": [],
       "ArgumentsSectionElementsOrder": [
+        "district_id",
         "property_list",
         "counter_for_property",
         "prefecture_list",
@@ -116,6 +126,7 @@
         "parentid&Sequence_79"
       ],
       "ArgumentsSectionElementsOrder": [
+        "district_id",
         "txt_html",
         "prefecture",
         "property_type",
@@ -141,6 +152,7 @@
       "SortBy": 0,
       "VariablesSectionElementsOrder": [],
       "ArgumentsSectionElementsOrder": [
+        "district_id",
         "property_list",
         "prefecture_list",
         "prefecture",
@@ -160,6 +172,7 @@
         "municipal_data_without_chiba_saitama&Sequence_1"
       ],
       "ArgumentsSectionElementsOrder": [
+        "district_id",
         "txt_html",
         "prefecture",
         "property_type",
@@ -173,6 +186,7 @@
       "SortBy": 0,
       "VariablesSectionElementsOrder": [],
       "ArgumentsSectionElementsOrder": [
+        "district_id",
         "property_list",
         "prefecture_list",
         "prefecture",
@@ -191,6 +205,7 @@
         "coming_to_naviga_page&Sequence_151"
       ],
       "ArgumentsSectionElementsOrder": [
+        "district_id",
         "txt_html",
         "site_name",
         "property_type",
@@ -203,11 +218,183 @@
       "Path": "サイトソースを取得.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "datetime&Sequence_165",
         "datetime&Sequence_151"
       ],
       "ArgumentsSectionElementsOrder": [
         "txt_html",
         "site_name"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "レインズ_body要素テキストをクリップボードに貼り付け.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "text_body"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "レインズのトップページに戻る.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "location"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "レインズ_東京・神奈川・千葉・埼玉.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "variable1&Sequence_360",
+        "municipal_list&Sequence_363"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "district_id",
+        "municipal_data",
+        "prefecture",
+        "counter",
+        "second_district",
+        "text_body",
+        "id",
+        "property_type",
+        "municipal_data_not_processed"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "レインズ_繰り返し.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "location&Sequence_362",
+        "elementExists&Sequence_371",
+        "id&Sequence_368",
+        "location&Sequence_350",
+        "elementExists&Sequence_349",
+        "id&Sequence_345"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "district_id",
+        "array_location",
+        "id",
+        "property_type",
+        "text_body",
+        "first_district",
+        "second_district",
+        "counter_for_workflow",
+        "counter"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "FourList登録処理繰り返し版.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "loop_counter&Sequence_372",
+        "uielement&Sequence_372",
+        "no_err_flg_recieved&Sequence_372",
+        "browser_type&Sequence_377",
+        "browser_name&Sequence_377"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "district_id"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "登録処理.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "no_err_flg_recieved&Sequence_371",
+        "browser_type_recieved&Sequence_371"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "no_err_flg_result",
+        "browser_type",
+        "browser_name",
+        "browser_name_recieved"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "エラー対応_登録サイトの再起動.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "login_required&Sequence_16",
+        "login_required&Sequence_15"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "district_id",
+        "loop_counter",
+        "browser_type"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "登録実行.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "browser_type"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "登録結果判定.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "bool_regstration_succeed&Sequence_6",
+        "bool_no_data_exists_1st&Sequence_6",
+        "uielement&Sequence_6",
+        "elementExists&Sequence_6",
+        "bool_no_data_exists_2nd&Sequence_6",
+        "login_required&Sequence_6"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "no_err_flg",
+        "browser_type"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "SUUMO.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "district_id",
+        "property_list",
+        "property_type",
+        "prefecture_list",
+        "prefecture",
+        "txt_html"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "SUUMOメイン処理.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "next_button_exists&Sequence_278"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "district_id",
+        "txt_html",
+        "property_type",
+        "prefecture"
       ],
       "ConstantsSectionElementsOrder": null,
       "AddedNamespaces": null
