@@ -1,7 +1,8 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" this:Main.site_id="31" this:Main.number_of_target_pages="150" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" this:Main.site_id="1" this:Main.number_of_target_pages="150" this:Main.district_id="2" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="site_id" Type="InArgument(x:Int32)" />
     <x:Property Name="number_of_target_pages" Type="InArgument(x:Int32)" />
+    <x:Property Name="district_id" Type="InArgument(x:Int32)" />
   </x:Members>
   <mva:VisualBasic.Settings>
     <x:Null />
@@ -85,6 +86,7 @@
       <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
       <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
       <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <Flowchart DisplayName="フローチャート" sap:VirtualizedContainerService.HintSize="1164,2831" sap2010:WorkflowViewState.IdRef="Flowchart_2">
@@ -97,7 +99,11 @@
       <Variable x:TypeArguments="s:String[]" Default="[{&quot;神奈川県&quot;,&quot;東京都&quot;}]" Name="prefecture_list" />
       <Variable x:TypeArguments="s:String[]" Default="[{&quot;貸店舗&quot;,&quot;売土地&quot;,&quot;中古戸建&quot;,&quot;中古マンション&quot;}]" Name="property_list" />
       <Variable x:TypeArguments="x:String" Name="prefecture" />
-      <Variable x:TypeArguments="scg:Dictionary(x:String, s:String[])" Default="[New Dictionary( Of String, String()) From{&#xA;&#x9;{&quot;東京都&quot;, {&quot;千代田区&quot;,&quot;中央区&quot;,&quot;港区&quot;,&quot;新宿区&quot;,&quot;文京区&quot;,&quot;台東区&quot;,&quot;墨田区&quot;,&quot;江東区&quot;,&quot;品川区&quot;,&quot;目黒区&quot;,&quot;大田区&quot;,&quot;世田谷区&quot;,&quot;渋谷区&quot;,&quot;中野区&quot;,&quot;杉並区&quot;,&quot;豊島区&quot;,&quot;北区&quot;,&quot;荒川区&quot;,&quot;板橋区&quot;,&quot;練馬区&quot;,&quot;足立区&quot;,&quot;葛飾区&quot;,&quot;江戸川区&quot;,&quot;八王子市&quot;,&quot;立川市&quot;,&quot;武蔵野市&quot;,&quot;三鷹市&quot;,&quot;青梅市&quot;,&quot;府中市&quot;,&quot;昭島市&quot;,&quot;調布市&quot;,&quot;町田市&quot;,&quot;小金井市&quot;,&quot;小平市&quot;,&quot;日野市&quot;,&quot;東村山市&quot;,&quot;国分寺市&quot;,&quot;国立市&quot;,&quot;福生市&quot;,&quot;狛江市&quot;,&quot;東大和市&quot;,&quot;清瀬市&quot;,&quot;東久留米市&quot;,&quot;武蔵村山市&quot;,&quot;多摩市&quot;,&quot;稲城市&quot;,&quot;羽村市&quot;,&quot;あきる野市&quot;,&quot;西東京市&quot;,&quot;西多摩郡&quot;}},&#xA;&#x9;{&quot;神奈川県&quot;,{&quot;横浜市&quot;, &quot;川崎市&quot;, &quot;相模原市&quot;,&quot;横須賀市&quot;,&quot;平塚市&quot;,&quot;鎌倉市&quot;,&quot;藤沢市&quot;,&quot;小田原市&quot;,&quot;茅ヶ崎市&quot;,&quot;大和市&quot;,&quot;逗子市&quot;,&quot;三浦市&quot;,&quot;秦野市&quot;,&quot;厚木市&quot;,&quot;海老名市&quot;,&quot;座間市&quot;,&quot;南足柄市&quot;,&quot;綾瀬市&quot;,&quot;三浦郡&quot;,&quot;高座郡&quot;,&quot;中郡&quot;,&quot;足柄上郡&quot;,&quot;足柄下郡&quot;,&quot;愛甲郡&quot;}},&#xA;&#x9;{&quot;千葉県&quot;,{&quot;千葉市&quot;,&quot;銚子市&quot;,&quot;市川市&quot;,&quot;船橋市&quot;,&quot;館山市&quot;,&quot;木更津市&quot;,&quot;松戸市&quot;,&quot;野田市&quot;,&quot;茂原市&quot;,&quot;成田市&quot;,&quot;佐倉市&quot;,&quot;東金市&quot;,&quot;旭市&quot;,&quot;習志野市&quot;,&quot;柏市&quot;,&quot;勝浦市&quot;,&quot;市原市&quot;,&quot;流山市&quot;,&quot;八千代市&quot;,&quot;我孫子市&quot;,&quot;鴨川市&quot;,&quot;鎌ケ谷市&quot;,&quot;君津市&quot;,&quot;富津市&quot;,&quot;四街道市&quot;,&quot;袖ケ浦市&quot;,&quot;八街市&quot;,&quot;印西市&quot;,&quot;白井市&quot;,&quot;富里市&quot;,&quot;南房総市&quot;,&quot;匝瑳市&quot;,&quot;香取市&quot;,&quot;山武市&quot;,&quot;いすみ市&quot;,&quot;大網白里市&quot;,&quot;印旛郡&quot;,&quot;香取郡&quot;,&quot;山武郡&quot;,&quot;長生郡&quot;,&quot;夷隅郡&quot;,&quot;安房郡&quot;}},&#xA;&#x9;{&quot;埼玉県&quot;,{&quot;さいたま市&quot;,&quot;川越市&quot;,&quot;熊谷市&quot;,&quot;川口市&quot;,&quot;行田市&quot;,&quot;秩父市&quot;,&quot;所沢市&quot;,&quot;飯能市&quot;,&quot;加須市&quot;,&quot;本庄市&quot;,&quot;東松山市&quot;,&quot;春日部市&quot;,&quot;狭山市&quot;,&quot;鴻巣市&quot;,&quot;深谷市&quot;,&quot;上尾市&quot;,&quot;草加市&quot;,&quot;越谷市&quot;,&quot;蕨市&quot;,&quot;戸田市&quot;,&quot;入間市&quot;,&quot;朝霞市&quot;,&quot;志木市&quot;,&quot;和光市&quot;,&quot;新座市&quot;,&quot;桶川市&quot;,&quot;久喜市&quot;,&quot;北本市&quot;,&quot;八潮市&quot;,&quot;富士見市&quot;,&quot;三郷市&quot;,&quot;蓮田市&quot;,&quot;坂戸市&quot;,&quot;鶴ヶ島市&quot;,&quot;日高市&quot;,&quot;ふじみ野市&quot;,&quot;白岡市&quot;,&quot;北足立郡&quot;,&quot;入間郡&quot;,&quot;比企郡&quot;,&quot;秩父郡&quot;,&quot;児玉郡&quot;,&quot;大里郡&quot;,&quot;南埼玉郡&quot;,&quot;北葛飾郡&quot;}}&#xA;}]" Name="municipal_data" />
+      <Variable x:TypeArguments="scg:Dictionary(x:String, s:String[])" Name="municipal_data">
+        <Variable.Default>
+          <mva:VisualBasicValue x:TypeArguments="scg:Dictionary(x:String, s:String[])" ExpressionText="New Dictionary( Of String, String()) From{&#xD;&#xA;&#x9;{&quot;東京都&quot;, {&quot;千代田区&quot;,&quot;中央区&quot;,&quot;港区&quot;,&quot;新宿区&quot;,&quot;文京区&quot;,&quot;台東区&quot;,&quot;墨田区&quot;,&quot;江東区&quot;,&quot;品川区&quot;,&quot;目黒区&quot;,&quot;大田区&quot;,&quot;世田谷区&quot;,&quot;渋谷区&quot;,&quot;中野区&quot;,&quot;杉並区&quot;,&quot;豊島区&quot;,&quot;北区&quot;,&quot;荒川区&quot;,&quot;板橋区&quot;,&quot;練馬区&quot;,&quot;足立区&quot;,&quot;葛飾区&quot;,&quot;江戸川区&quot;,&quot;八王子市&quot;,&quot;立川市&quot;,&quot;武蔵野市&quot;,&quot;三鷹市&quot;,&quot;青梅市&quot;,&quot;府中市&quot;,&quot;昭島市&quot;,&quot;調布市&quot;,&quot;町田市&quot;,&quot;小金井市&quot;,&quot;小平市&quot;,&quot;日野市&quot;,&quot;東村山市&quot;,&quot;国分寺市&quot;,&quot;国立市&quot;,&quot;福生市&quot;,&quot;狛江市&quot;,&quot;東大和市&quot;,&quot;清瀬市&quot;,&quot;東久留米市&quot;,&quot;武蔵村山市&quot;,&quot;多摩市&quot;,&quot;稲城市&quot;,&quot;羽村市&quot;,&quot;あきる野市&quot;,&quot;西東京市&quot;,&quot;西多摩郡&quot;}},&#xD;&#xA;&#x9;{&quot;神奈川県&quot;,{&quot;横浜市&quot;, &quot;川崎市&quot;, &quot;相模原市&quot;,&quot;横須賀市&quot;,&quot;平塚市&quot;,&quot;鎌倉市&quot;,&quot;藤沢市&quot;,&quot;小田原市&quot;,&quot;茅ヶ崎市&quot;,&quot;大和市&quot;,&quot;逗子市&quot;,&quot;三浦市&quot;,&quot;秦野市&quot;,&quot;厚木市&quot;,&quot;海老名市&quot;,&quot;座間市&quot;,&quot;南足柄市&quot;,&quot;綾瀬市&quot;,&quot;三浦郡&quot;,&quot;高座郡&quot;,&quot;中郡&quot;,&quot;足柄上郡&quot;,&quot;足柄下郡&quot;,&quot;愛甲郡&quot;}},&#xD;&#xA;&#x9;{&quot;千葉県&quot;,{&quot;千葉市&quot;,&quot;銚子市&quot;,&quot;市川市&quot;,&quot;船橋市&quot;,&quot;館山市&quot;,&quot;木更津市&quot;,&quot;松戸市&quot;,&quot;野田市&quot;,&quot;茂原市&quot;,&quot;成田市&quot;,&quot;佐倉市&quot;,&quot;東金市&quot;,&quot;旭市&quot;,&quot;習志野市&quot;,&quot;柏市&quot;,&quot;勝浦市&quot;,&quot;市原市&quot;,&quot;流山市&quot;,&quot;八千代市&quot;,&quot;我孫子市&quot;,&quot;鴨川市&quot;,&quot;鎌ケ谷市&quot;,&quot;君津市&quot;,&quot;富津市&quot;,&quot;四街道市&quot;,&quot;袖ケ浦市&quot;,&quot;八街市&quot;,&quot;印西市&quot;,&quot;白井市&quot;,&quot;富里市&quot;,&quot;南房総市&quot;,&quot;匝瑳市&quot;,&quot;香取市&quot;,&quot;山武市&quot;,&quot;いすみ市&quot;,&quot;大網白里市&quot;,&quot;印旛郡&quot;,&quot;香取郡&quot;,&quot;山武郡&quot;,&quot;長生郡&quot;,&quot;夷隅郡&quot;,&quot;安房郡&quot;}},&#xD;&#xA;&#x9;{&quot;埼玉県&quot;,{&quot;さいたま市&quot;,&quot;川越市&quot;,&quot;熊谷市&quot;,&quot;川口市&quot;,&quot;行田市&quot;,&quot;秩父市&quot;,&quot;所沢市&quot;,&quot;飯能市&quot;,&quot;加須市&quot;,&quot;本庄市&quot;,&quot;東松山市&quot;,&quot;春日部市&quot;,&quot;狭山市&quot;,&quot;鴻巣市&quot;,&quot;深谷市&quot;,&quot;上尾市&quot;,&quot;草加市&quot;,&quot;越谷市&quot;,&quot;蕨市&quot;,&quot;戸田市&quot;,&quot;入間市&quot;,&quot;朝霞市&quot;,&quot;志木市&quot;,&quot;和光市&quot;,&quot;新座市&quot;,&quot;桶川市&quot;,&quot;久喜市&quot;,&quot;北本市&quot;,&quot;八潮市&quot;,&quot;富士見市&quot;,&quot;三郷市&quot;,&quot;蓮田市&quot;,&quot;坂戸市&quot;,&quot;鶴ヶ島市&quot;,&quot;日高市&quot;,&quot;ふじみ野市&quot;,&quot;白岡市&quot;,&quot;北足立郡&quot;,&quot;入間郡&quot;,&quot;比企郡&quot;,&quot;秩父郡&quot;,&quot;児玉郡&quot;,&quot;大里郡&quot;,&quot;南埼玉郡&quot;,&quot;北葛飾郡&quot;}}&#xD;&#xA;}" />
+        </Variable.Default>
+      </Variable>
       <Variable x:TypeArguments="x:String" Name="property_type" />
       <Variable x:TypeArguments="s:String[]" Name="prefecture_list_not_processed" />
       <Variable x:TypeArguments="x:Int32" Default="0" Name="counter_for_property" />
@@ -107,19 +113,25 @@
       <Variable x:TypeArguments="x:Int32" Default="2" Name="athome" />
       <Variable x:TypeArguments="x:Int32" Default="3" Name="homes" />
       <Variable x:TypeArguments="x:Int32" Default="4" Name="suumo" />
+      <Variable x:TypeArguments="scg:Dictionary(x:String, s:String[])" Name="municipal_data_without_tokyo_kanagawa">
+        <Variable.Default>
+          <mva:VisualBasicValue x:TypeArguments="scg:Dictionary(x:String, s:String[])" ExpressionText="New Dictionary( Of String, String()) From{&#xD;&#xA;&#x9;{&quot;千葉県&quot;,{&quot;千葉市&quot;,&quot;銚子市&quot;,&quot;市川市&quot;,&quot;船橋市&quot;,&quot;館山市&quot;,&quot;木更津市&quot;,&quot;松戸市&quot;,&quot;野田市&quot;,&quot;茂原市&quot;,&quot;成田市&quot;,&quot;佐倉市&quot;,&quot;東金市&quot;,&quot;旭市&quot;,&quot;習志野市&quot;,&quot;柏市&quot;,&quot;勝浦市&quot;,&quot;市原市&quot;,&quot;流山市&quot;,&quot;八千代市&quot;,&quot;我孫子市&quot;,&quot;鴨川市&quot;,&quot;鎌ケ谷市&quot;,&quot;君津市&quot;,&quot;富津市&quot;,&quot;四街道市&quot;,&quot;袖ケ浦市&quot;,&quot;八街市&quot;,&quot;印西市&quot;,&quot;白井市&quot;,&quot;富里市&quot;,&quot;南房総市&quot;,&quot;匝瑳市&quot;,&quot;香取市&quot;,&quot;山武市&quot;,&quot;いすみ市&quot;,&quot;大網白里市&quot;,&quot;印旛郡&quot;,&quot;香取郡&quot;,&quot;山武郡&quot;,&quot;長生郡&quot;,&quot;夷隅郡&quot;,&quot;安房郡&quot;}},&#xD;&#xA;&#x9;{&quot;埼玉県&quot;,{&quot;さいたま市&quot;,&quot;川越市&quot;,&quot;熊谷市&quot;,&quot;川口市&quot;,&quot;行田市&quot;,&quot;秩父市&quot;,&quot;所沢市&quot;,&quot;飯能市&quot;,&quot;加須市&quot;,&quot;本庄市&quot;,&quot;東松山市&quot;,&quot;春日部市&quot;,&quot;狭山市&quot;,&quot;鴻巣市&quot;,&quot;深谷市&quot;,&quot;上尾市&quot;,&quot;草加市&quot;,&quot;越谷市&quot;,&quot;蕨市&quot;,&quot;戸田市&quot;,&quot;入間市&quot;,&quot;朝霞市&quot;,&quot;志木市&quot;,&quot;和光市&quot;,&quot;新座市&quot;,&quot;桶川市&quot;,&quot;久喜市&quot;,&quot;北本市&quot;,&quot;八潮市&quot;,&quot;富士見市&quot;,&quot;三郷市&quot;,&quot;蓮田市&quot;,&quot;坂戸市&quot;,&quot;鶴ヶ島市&quot;,&quot;日高市&quot;,&quot;ふじみ野市&quot;,&quot;白岡市&quot;,&quot;北足立郡&quot;,&quot;入間郡&quot;,&quot;比企郡&quot;,&quot;秩父郡&quot;,&quot;児玉郡&quot;,&quot;大里郡&quot;,&quot;南埼玉郡&quot;,&quot;北葛飾郡&quot;}}&#xD;&#xA;}" />
+        </Variable.Default>
+      </Variable>
+      <Variable x:TypeArguments="scg:Dictionary(x:String, s:String[])" Name="municipal_data_to_proceed" />
     </Flowchart.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         <av:Point x:Key="ShapeLocation">0,2.66666666666666</av:Point>
         <av:Size x:Key="ShapeSize">60,75</av:Size>
-        <av:PointCollection x:Key="ConnectorLocation">60,40.1666666666667 90,40.1666666666667 90,39.52 150,39.52</av:PointCollection>
+        <av:PointCollection x:Key="ConnectorLocation">60,40.1666666666667 90,40.1666666666667 90,39.6866666666667 100,39.6866666666667</av:PointCollection>
         <x:Double x:Key="Height">2794</x:Double>
         <x:Double x:Key="Width">1130</x:Double>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <Flowchart.StartNode>
-      <x:Reference>__ReferenceID9</x:Reference>
+      <x:Reference>__ReferenceID10</x:Reference>
     </Flowchart.StartNode>
     <FlowStep x:Name="__ReferenceID3">
       <sap:WorkflowViewStateService.ViewState>
@@ -504,34 +516,34 @@
     <FlowStep x:Name="__ReferenceID9">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <av:Point x:Key="ShapeLocation">150,14.02</av:Point>
+          <av:Point x:Key="ShapeLocation">340,14</av:Point>
           <av:Size x:Key="ShapeSize">200,52</av:Size>
-          <av:PointCollection x:Key="ConnectorLocation">350,39.52 380,39.52 380,39.1666666666667 470,39.1666666666667</av:PointCollection>
+          <av:PointCollection x:Key="ConnectorLocation">540,40 570,40</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <If Condition="[site_id = 1]" DisplayName="条件分岐" sap:VirtualizedContainerService.HintSize="3436,1197" sap2010:WorkflowViewState.IdRef="If_57">
+      <If Condition="[site_id = 1]" DisplayName="条件分岐" sap:VirtualizedContainerService.HintSize="3580,2735" sap2010:WorkflowViewState.IdRef="If_57">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
         <If.Then>
-          <Sequence DisplayName="レインズ" sap:VirtualizedContainerService.HintSize="450,81" sap2010:WorkflowViewState.IdRef="Sequence_386">
+          <Sequence DisplayName="レインズ" sap:VirtualizedContainerService.HintSize="594,2575" sap2010:WorkflowViewState.IdRef="Sequence_386">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:LogMessage DisplayName="メッセージをログ" sap:VirtualizedContainerService.HintSize="450,92" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;レインズ登録処理開始&quot;]" />
-            <ui:KillProcess Process="{x:Null}" ContinueOnError="True" DisplayName="chromeを一旦強制終了" sap:VirtualizedContainerService.HintSize="450,133" sap2010:WorkflowViewState.IdRef="KillProcess_3" ProcessName="chrome">
+            <ui:LogMessage DisplayName="メッセージをログ" sap:VirtualizedContainerService.HintSize="532,92" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;レインズ登録処理開始&quot;]" />
+            <ui:KillProcess Process="{x:Null}" ContinueOnError="True" DisplayName="chromeを一旦強制終了" sap:VirtualizedContainerService.HintSize="532,133" sap2010:WorkflowViewState.IdRef="KillProcess_3" ProcessName="chrome">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:KillProcess>
-            <Sequence DisplayName="レインズログイン処理" sap:VirtualizedContainerService.HintSize="450,244" sap2010:WorkflowViewState.IdRef="Sequence_402">
+            <Sequence DisplayName="レインズログイン処理" sap:VirtualizedContainerService.HintSize="532,244" sap2010:WorkflowViewState.IdRef="Sequence_402">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -545,67 +557,193 @@
                 </sap:WorkflowViewStateService.ViewState>
               </ui:KillProcess>
             </Sequence>
-            <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="TeamViewerのダイアログを閉じる" sap:VirtualizedContainerService.HintSize="450,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_182" UnSafe="False" WorkflowFileName="TeamViewerのダイアログを閉じる.xaml">
+            <If Condition="[district_id = 1]" DisplayName="条件分岐 (if)" sap:VirtualizedContainerService.HintSize="532,382" sap2010:WorkflowViewState.IdRef="If_65">
+              <If.Then>
+                <Sequence sap:VirtualizedContainerService.HintSize="496,193" sap2010:WorkflowViewState.IdRef="Sequence_433">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Assign DisplayName="代入" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_3">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="scg:Dictionary(x:String, s:String[])">[municipal_data_to_proceed]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="scg:Dictionary(x:String, s:String[])">[municipal_data_without_chiba_saitama]</InArgument>
+                    </Assign.Value>
+                  </Assign>
+                </Sequence>
+              </If.Then>
+              <If.Else>
+                <Sequence sap:VirtualizedContainerService.HintSize="450,103" sap2010:WorkflowViewState.IdRef="Sequence_434">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </Sequence>
+              </If.Else>
+            </If>
+            <If Condition="[district_id = 2]" DisplayName="条件分岐 (if)" sap:VirtualizedContainerService.HintSize="532,382" sap2010:WorkflowViewState.IdRef="If_66">
+              <If.Then>
+                <Sequence sap:VirtualizedContainerService.HintSize="496,193" sap2010:WorkflowViewState.IdRef="Sequence_435">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <Assign DisplayName="代入" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_4">
+                    <Assign.To>
+                      <OutArgument x:TypeArguments="scg:Dictionary(x:String, s:String[])">[municipal_data_to_proceed]</OutArgument>
+                    </Assign.To>
+                    <Assign.Value>
+                      <InArgument x:TypeArguments="scg:Dictionary(x:String, s:String[])">[municipal_data_without_tokyo_kanagawa]</InArgument>
+                    </Assign.Value>
+                  </Assign>
+                </Sequence>
+              </If.Then>
+              <If.Else>
+                <Sequence sap:VirtualizedContainerService.HintSize="450,103" sap2010:WorkflowViewState.IdRef="Sequence_436">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </Sequence>
+              </If.Else>
+            </If>
+            <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="TeamViewerのダイアログを閉じる" sap:VirtualizedContainerService.HintSize="532,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_182" UnSafe="False" WorkflowFileName="TeamViewerのダイアログを閉じる.xaml">
               <ui:InvokeWorkflowFile.Arguments>
                 <scg:Dictionary x:TypeArguments="x:String, Argument" />
               </ui:InvokeWorkflowFile.Arguments>
             </ui:InvokeWorkflowFile>
-            <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="ワークフロー ファイルを呼び出し" sap:VirtualizedContainerService.HintSize="450,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_193" UnSafe="False" WorkflowFileName="物件登録サイトの起動edge.xaml">
+            <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="ワークフロー ファイルを呼び出し" sap:VirtualizedContainerService.HintSize="532,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_193" UnSafe="False" WorkflowFileName="物件登録サイトの起動edge.xaml">
+              <ui:InvokeWorkflowFile.Arguments>
+                <InArgument x:TypeArguments="x:Int32" x:Key="district_id">
+                  <mva:VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="district_id" />
+                </InArgument>
+              </ui:InvokeWorkflowFile.Arguments>
+            </ui:InvokeWorkflowFile>
+            <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Reins起動時の処理 workflow" sap:VirtualizedContainerService.HintSize="532,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_198" UnSafe="False" WorkflowFileName="Reins起動時の処理.xaml">
               <ui:InvokeWorkflowFile.Arguments>
                 <scg:Dictionary x:TypeArguments="x:String, Argument" />
               </ui:InvokeWorkflowFile.Arguments>
             </ui:InvokeWorkflowFile>
-            <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Reins起動時の処理 workflow" sap:VirtualizedContainerService.HintSize="450,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_198" UnSafe="False" WorkflowFileName="Reins起動時の処理.xaml">
+            <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="レインズ_貸店舗" sap:VirtualizedContainerService.HintSize="532,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_217" UnSafe="False" WorkflowFileName="レインズ_東京・神奈川・千葉・埼玉.xaml">
               <ui:InvokeWorkflowFile.Arguments>
-                <scg:Dictionary x:TypeArguments="x:String, Argument" />
+                <InArgument x:TypeArguments="scg:Dictionary(x:String, s:String[])" x:Key="municipal_data">
+                  <mva:VisualBasicValue x:TypeArguments="scg:Dictionary(x:String, s:String[])" ExpressionText="municipal_data_to_proceed" />
+                </InArgument>
+                <InOutArgument x:TypeArguments="x:String" x:Key="prefecture">
+                  <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="prefecture" />
+                </InOutArgument>
+                <OutArgument x:TypeArguments="x:Int32" x:Key="counter">
+                  <mva:VisualBasicReference x:TypeArguments="x:Int32" ExpressionText="counter_for_prefecture" />
+                </OutArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="second_district">
+                  <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="second_district" />
+                </InArgument>
+                <OutArgument x:TypeArguments="x:String" x:Key="text_body">
+                  <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="text_body" />
+                </OutArgument>
+                <OutArgument x:TypeArguments="x:String" x:Key="id">
+                  <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="id" />
+                </OutArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="property_type">
+                  <Literal x:TypeArguments="x:String">賃貸外全(住宅以外建物全部)</Literal>
+                </InArgument>
+                <OutArgument x:TypeArguments="scg:Dictionary(x:String, s:String[])" x:Key="municipal_data_not_processed" />
+                <InArgument x:TypeArguments="x:Int32" x:Key="district_id">
+                  <mva:VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="district_id" />
+                </InArgument>
               </ui:InvokeWorkflowFile.Arguments>
             </ui:InvokeWorkflowFile>
-            <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="レインズ_貸店舗" sap:VirtualizedContainerService.HintSize="450,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_217" UnSafe="False" WorkflowFileName="レインズ_東京・神奈川・千葉・埼玉.xaml">
+            <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="レインズ_売りマンション" sap:VirtualizedContainerService.HintSize="532,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_196" UnSafe="False" WorkflowFileName="レインズ_東京・神奈川・千葉・埼玉.xaml">
               <ui:InvokeWorkflowFile.Arguments>
-                <InArgument x:TypeArguments="scg:Dictionary(x:String, s:String[])" x:Key="municipal_data">[municipal_data_without_chiba_saitama]</InArgument>
-                <InOutArgument x:TypeArguments="x:String" x:Key="prefecture">[prefecture]</InOutArgument>
-                <OutArgument x:TypeArguments="x:Int32" x:Key="counter">[counter_for_prefecture]</OutArgument>
-                <InArgument x:TypeArguments="x:String" x:Key="second_district">[second_district]</InArgument>
-                <OutArgument x:TypeArguments="x:String" x:Key="text_body">[text_body]</OutArgument>
-                <OutArgument x:TypeArguments="x:String" x:Key="id">[id]</OutArgument>
-                <InArgument x:TypeArguments="x:String" x:Key="property_type">賃貸外全(住宅以外建物全部)</InArgument>
+                <InArgument x:TypeArguments="scg:Dictionary(x:String, s:String[])" x:Key="municipal_data">
+                  <mva:VisualBasicValue x:TypeArguments="scg:Dictionary(x:String, s:String[])" ExpressionText="municipal_data_to_proceed" />
+                </InArgument>
+                <InOutArgument x:TypeArguments="x:String" x:Key="prefecture">
+                  <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="prefecture" />
+                </InOutArgument>
+                <OutArgument x:TypeArguments="x:Int32" x:Key="counter">
+                  <mva:VisualBasicReference x:TypeArguments="x:Int32" ExpressionText="counter_for_prefecture" />
+                </OutArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="second_district">
+                  <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="second_district" />
+                </InArgument>
+                <OutArgument x:TypeArguments="x:String" x:Key="text_body">
+                  <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="text_body" />
+                </OutArgument>
+                <OutArgument x:TypeArguments="x:String" x:Key="id">
+                  <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="id" />
+                </OutArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="property_type">
+                  <Literal x:TypeArguments="x:String">売マンション</Literal>
+                </InArgument>
                 <OutArgument x:TypeArguments="scg:Dictionary(x:String, s:String[])" x:Key="municipal_data_not_processed" />
+                <InArgument x:TypeArguments="x:Int32" x:Key="district_id">
+                  <mva:VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="district_id" />
+                </InArgument>
               </ui:InvokeWorkflowFile.Arguments>
             </ui:InvokeWorkflowFile>
-            <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="レインズ_売りマンション" sap:VirtualizedContainerService.HintSize="450,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_196" UnSafe="False" WorkflowFileName="レインズ_東京・神奈川・千葉・埼玉.xaml">
+            <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="レインズ_土地" sap:VirtualizedContainerService.HintSize="532,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_184" UnSafe="False" WorkflowFileName="レインズ_東京・神奈川・千葉・埼玉.xaml">
               <ui:InvokeWorkflowFile.Arguments>
-                <InArgument x:TypeArguments="scg:Dictionary(x:String, s:String[])" x:Key="municipal_data">[municipal_data_without_chiba_saitama]</InArgument>
-                <InOutArgument x:TypeArguments="x:String" x:Key="prefecture">[prefecture]</InOutArgument>
-                <OutArgument x:TypeArguments="x:Int32" x:Key="counter">[counter_for_prefecture]</OutArgument>
-                <InArgument x:TypeArguments="x:String" x:Key="second_district">[second_district]</InArgument>
-                <OutArgument x:TypeArguments="x:String" x:Key="text_body">[text_body]</OutArgument>
-                <OutArgument x:TypeArguments="x:String" x:Key="id">[id]</OutArgument>
-                <InArgument x:TypeArguments="x:String" x:Key="property_type">売マンション</InArgument>
+                <InArgument x:TypeArguments="scg:Dictionary(x:String, s:String[])" x:Key="municipal_data">
+                  <mva:VisualBasicValue x:TypeArguments="scg:Dictionary(x:String, s:String[])" ExpressionText="municipal_data_to_proceed" />
+                </InArgument>
+                <InOutArgument x:TypeArguments="x:String" x:Key="prefecture">
+                  <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="prefecture" />
+                </InOutArgument>
+                <OutArgument x:TypeArguments="x:Int32" x:Key="counter">
+                  <mva:VisualBasicReference x:TypeArguments="x:Int32" ExpressionText="counter_for_prefecture" />
+                </OutArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="second_district">
+                  <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="second_district" />
+                </InArgument>
+                <OutArgument x:TypeArguments="x:String" x:Key="text_body">
+                  <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="text_body" />
+                </OutArgument>
+                <OutArgument x:TypeArguments="x:String" x:Key="id">
+                  <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="id" />
+                </OutArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="property_type">
+                  <Literal x:TypeArguments="x:String">売土地</Literal>
+                </InArgument>
                 <OutArgument x:TypeArguments="scg:Dictionary(x:String, s:String[])" x:Key="municipal_data_not_processed" />
+                <InArgument x:TypeArguments="x:Int32" x:Key="district_id">
+                  <mva:VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="district_id" />
+                </InArgument>
               </ui:InvokeWorkflowFile.Arguments>
             </ui:InvokeWorkflowFile>
-            <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="レインズ_土地" sap:VirtualizedContainerService.HintSize="450,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_184" UnSafe="False" WorkflowFileName="レインズ_東京・神奈川・千葉・埼玉.xaml">
+            <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="レインズ_一戸建" sap:VirtualizedContainerService.HintSize="532,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_185" UnSafe="False" WorkflowFileName="レインズ_東京・神奈川・千葉・埼玉.xaml">
               <ui:InvokeWorkflowFile.Arguments>
-                <InArgument x:TypeArguments="scg:Dictionary(x:String, s:String[])" x:Key="municipal_data">[municipal_data_without_chiba_saitama]</InArgument>
-                <InOutArgument x:TypeArguments="x:String" x:Key="prefecture">[prefecture]</InOutArgument>
-                <OutArgument x:TypeArguments="x:Int32" x:Key="counter">[counter_for_prefecture]</OutArgument>
-                <InArgument x:TypeArguments="x:String" x:Key="second_district">[second_district]</InArgument>
-                <OutArgument x:TypeArguments="x:String" x:Key="text_body">[text_body]</OutArgument>
-                <OutArgument x:TypeArguments="x:String" x:Key="id">[id]</OutArgument>
-                <InArgument x:TypeArguments="x:String" x:Key="property_type">売土地</InArgument>
+                <InArgument x:TypeArguments="scg:Dictionary(x:String, s:String[])" x:Key="municipal_data">
+                  <mva:VisualBasicValue x:TypeArguments="scg:Dictionary(x:String, s:String[])" ExpressionText="municipal_data_to_proceed" />
+                </InArgument>
+                <InOutArgument x:TypeArguments="x:String" x:Key="prefecture">
+                  <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="prefecture" />
+                </InOutArgument>
+                <OutArgument x:TypeArguments="x:Int32" x:Key="counter">
+                  <mva:VisualBasicReference x:TypeArguments="x:Int32" ExpressionText="counter_for_prefecture" />
+                </OutArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="second_district">
+                  <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="second_district" />
+                </InArgument>
+                <OutArgument x:TypeArguments="x:String" x:Key="text_body">
+                  <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="text_body" />
+                </OutArgument>
+                <OutArgument x:TypeArguments="x:String" x:Key="id">
+                  <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="id" />
+                </OutArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="property_type">
+                  <Literal x:TypeArguments="x:String">売一戸建</Literal>
+                </InArgument>
                 <OutArgument x:TypeArguments="scg:Dictionary(x:String, s:String[])" x:Key="municipal_data_not_processed" />
-              </ui:InvokeWorkflowFile.Arguments>
-            </ui:InvokeWorkflowFile>
-            <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="レインズ_一戸建" sap:VirtualizedContainerService.HintSize="450,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_185" UnSafe="False" WorkflowFileName="レインズ_東京・神奈川・千葉・埼玉.xaml">
-              <ui:InvokeWorkflowFile.Arguments>
-                <InArgument x:TypeArguments="scg:Dictionary(x:String, s:String[])" x:Key="municipal_data">[municipal_data_without_chiba_saitama]</InArgument>
-                <InOutArgument x:TypeArguments="x:String" x:Key="prefecture">[prefecture]</InOutArgument>
-                <OutArgument x:TypeArguments="x:Int32" x:Key="counter">[counter_for_prefecture]</OutArgument>
-                <InArgument x:TypeArguments="x:String" x:Key="second_district">[second_district]</InArgument>
-                <OutArgument x:TypeArguments="x:String" x:Key="text_body">[text_body]</OutArgument>
-                <OutArgument x:TypeArguments="x:String" x:Key="id">[id]</OutArgument>
-                <InArgument x:TypeArguments="x:String" x:Key="property_type">売一戸建</InArgument>
-                <OutArgument x:TypeArguments="scg:Dictionary(x:String, s:String[])" x:Key="municipal_data_not_processed" />
+                <InArgument x:TypeArguments="x:Int32" x:Key="district_id">
+                  <mva:VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="district_id" />
+                </InArgument>
               </ui:InvokeWorkflowFile.Arguments>
             </ui:InvokeWorkflowFile>
           </Sequence>
@@ -629,13 +767,30 @@
                     <If.Then>
                       <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke atHome登録処理全行程 workflow" sap:VirtualizedContainerService.HintSize="334,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_218" UnSafe="False" WorkflowFileName="atHome登録処理全行程.xaml">
                         <ui:InvokeWorkflowFile.Arguments>
-                          <InArgument x:TypeArguments="s:String[]" x:Key="property_list">[{"売土地","中古一戸建て","貸店舗"}]</InArgument>
-                          <InArgument x:TypeArguments="x:String" x:Key="txt_html">[txt_html]</InArgument>
-                          <InArgument x:TypeArguments="s:String[]" x:Key="prefecture_list_not_processed">[prefecture_list_not_processed]</InArgument>
-                          <InArgument x:TypeArguments="x:Int32" x:Key="counter_for_prefecture">[counter_for_prefecture]</InArgument>
-                          <InArgument x:TypeArguments="s:String[]" x:Key="property_list_not_processed">[property_list_not_processed]</InArgument>
-                          <InArgument x:TypeArguments="s:String[]" x:Key="prefecture_list">[prefecture_list]</InArgument>
-                          <InArgument x:TypeArguments="x:Int32" x:Key="counter_for_property">[counter_for_property]</InArgument>
+                          <InArgument x:TypeArguments="s:String[]" x:Key="property_list">
+                            <mva:VisualBasicValue x:TypeArguments="s:String[]" ExpressionText="{}{&quot;売土地&quot;,&quot;中古一戸建て&quot;,&quot;貸店舗&quot;}" />
+                          </InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="txt_html">
+                            <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="txt_html" />
+                          </InArgument>
+                          <InArgument x:TypeArguments="s:String[]" x:Key="prefecture_list_not_processed">
+                            <mva:VisualBasicValue x:TypeArguments="s:String[]" ExpressionText="prefecture_list_not_processed" />
+                          </InArgument>
+                          <InArgument x:TypeArguments="x:Int32" x:Key="counter_for_prefecture">
+                            <mva:VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="counter_for_prefecture" />
+                          </InArgument>
+                          <InArgument x:TypeArguments="s:String[]" x:Key="property_list_not_processed">
+                            <mva:VisualBasicValue x:TypeArguments="s:String[]" ExpressionText="property_list_not_processed" />
+                          </InArgument>
+                          <InArgument x:TypeArguments="s:String[]" x:Key="prefecture_list">
+                            <mva:VisualBasicValue x:TypeArguments="s:String[]" ExpressionText="prefecture_list" />
+                          </InArgument>
+                          <InArgument x:TypeArguments="x:Int32" x:Key="counter_for_property">
+                            <mva:VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="counter_for_property" />
+                          </InArgument>
+                          <InArgument x:TypeArguments="x:Int32" x:Key="district_id">
+                            <mva:VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="district_id" />
+                          </InArgument>
                         </ui:InvokeWorkflowFile.Arguments>
                       </ui:InvokeWorkflowFile>
                     </If.Then>
@@ -656,13 +811,30 @@
                               </sap:WorkflowViewStateService.ViewState>
                               <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="ワークフロー ファイルを呼び出し" sap:VirtualizedContainerService.HintSize="388,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_219" UnSafe="False" WorkflowFileName="atHome登録処理全行程.xaml">
                                 <ui:InvokeWorkflowFile.Arguments>
-                                  <InArgument x:TypeArguments="s:String[]" x:Key="property_list">[{"中古マンション"}]</InArgument>
-                                  <InArgument x:TypeArguments="x:String" x:Key="txt_html">[txt_html]</InArgument>
-                                  <InArgument x:TypeArguments="s:String[]" x:Key="prefecture_list_not_processed">[prefecture_list_not_processed]</InArgument>
-                                  <InArgument x:TypeArguments="x:Int32" x:Key="counter_for_prefecture">[counter_for_prefecture]</InArgument>
-                                  <InArgument x:TypeArguments="s:String[]" x:Key="property_list_not_processed">[property_list_not_processed]</InArgument>
-                                  <InArgument x:TypeArguments="s:String[]" x:Key="prefecture_list">[prefecture_list]</InArgument>
-                                  <InArgument x:TypeArguments="x:Int32" x:Key="counter_for_property">[counter_for_property]</InArgument>
+                                  <InArgument x:TypeArguments="s:String[]" x:Key="property_list">
+                                    <mva:VisualBasicValue x:TypeArguments="s:String[]" ExpressionText="{}{&quot;中古マンション&quot;}" />
+                                  </InArgument>
+                                  <InArgument x:TypeArguments="x:String" x:Key="txt_html">
+                                    <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="txt_html" />
+                                  </InArgument>
+                                  <InArgument x:TypeArguments="s:String[]" x:Key="prefecture_list_not_processed">
+                                    <mva:VisualBasicValue x:TypeArguments="s:String[]" ExpressionText="prefecture_list_not_processed" />
+                                  </InArgument>
+                                  <InArgument x:TypeArguments="x:Int32" x:Key="counter_for_prefecture">
+                                    <mva:VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="counter_for_prefecture" />
+                                  </InArgument>
+                                  <InArgument x:TypeArguments="s:String[]" x:Key="property_list_not_processed">
+                                    <mva:VisualBasicValue x:TypeArguments="s:String[]" ExpressionText="property_list_not_processed" />
+                                  </InArgument>
+                                  <InArgument x:TypeArguments="s:String[]" x:Key="prefecture_list">
+                                    <mva:VisualBasicValue x:TypeArguments="s:String[]" ExpressionText="prefecture_list" />
+                                  </InArgument>
+                                  <InArgument x:TypeArguments="x:Int32" x:Key="counter_for_property">
+                                    <mva:VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="counter_for_property" />
+                                  </InArgument>
+                                  <InArgument x:TypeArguments="x:Int32" x:Key="district_id">
+                                    <mva:VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="district_id" />
+                                  </InArgument>
                                 </ui:InvokeWorkflowFile.Arguments>
                               </ui:InvokeWorkflowFile>
                             </Sequence>
@@ -676,13 +848,30 @@
                               </sap:WorkflowViewStateService.ViewState>
                               <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="ワークフロー ファイルを呼び出し" sap:VirtualizedContainerService.HintSize="388,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_220" UnSafe="False" WorkflowFileName="atHome登録処理全行程.xaml">
                                 <ui:InvokeWorkflowFile.Arguments>
-                                  <InArgument x:TypeArguments="s:String[]" x:Key="property_list">[{"賃貸"}]</InArgument>
-                                  <InArgument x:TypeArguments="x:String" x:Key="txt_html">[txt_html]</InArgument>
-                                  <InArgument x:TypeArguments="s:String[]" x:Key="prefecture_list_not_processed">[prefecture_list_not_processed]</InArgument>
-                                  <InArgument x:TypeArguments="x:Int32" x:Key="counter_for_prefecture">[counter_for_prefecture]</InArgument>
-                                  <InArgument x:TypeArguments="s:String[]" x:Key="property_list_not_processed">[property_list_not_processed]</InArgument>
-                                  <InArgument x:TypeArguments="s:String[]" x:Key="prefecture_list">[prefecture_list]</InArgument>
-                                  <InArgument x:TypeArguments="x:Int32" x:Key="counter_for_property">[counter_for_property]</InArgument>
+                                  <InArgument x:TypeArguments="s:String[]" x:Key="property_list">
+                                    <mva:VisualBasicValue x:TypeArguments="s:String[]" ExpressionText="{}{&quot;賃貸&quot;}" />
+                                  </InArgument>
+                                  <InArgument x:TypeArguments="x:String" x:Key="txt_html">
+                                    <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="txt_html" />
+                                  </InArgument>
+                                  <InArgument x:TypeArguments="s:String[]" x:Key="prefecture_list_not_processed">
+                                    <mva:VisualBasicValue x:TypeArguments="s:String[]" ExpressionText="prefecture_list_not_processed" />
+                                  </InArgument>
+                                  <InArgument x:TypeArguments="x:Int32" x:Key="counter_for_prefecture">
+                                    <mva:VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="counter_for_prefecture" />
+                                  </InArgument>
+                                  <InArgument x:TypeArguments="s:String[]" x:Key="property_list_not_processed">
+                                    <mva:VisualBasicValue x:TypeArguments="s:String[]" ExpressionText="property_list_not_processed" />
+                                  </InArgument>
+                                  <InArgument x:TypeArguments="s:String[]" x:Key="prefecture_list">
+                                    <mva:VisualBasicValue x:TypeArguments="s:String[]" ExpressionText="prefecture_list" />
+                                  </InArgument>
+                                  <InArgument x:TypeArguments="x:Int32" x:Key="counter_for_property">
+                                    <mva:VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="counter_for_property" />
+                                  </InArgument>
+                                  <InArgument x:TypeArguments="x:Int32" x:Key="district_id">
+                                    <mva:VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="district_id" />
+                                  </InArgument>
                                 </ui:InvokeWorkflowFile.Arguments>
                               </ui:InvokeWorkflowFile>
                             </Sequence>
@@ -706,10 +895,21 @@
                         <If.Then>
                           <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Homes登録処理全行程 workflow" sap:VirtualizedContainerService.HintSize="334,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_221" UnSafe="False" WorkflowFileName="Homes登録処理全行程.xaml">
                             <ui:InvokeWorkflowFile.Arguments>
-                              <InArgument x:TypeArguments="s:String[]" x:Key="property_list">[{"貸店舗","土地","中古一戸建て"}]</InArgument>
-                              <InArgument x:TypeArguments="s:String[]" x:Key="prefecture_list">[prefecture_list]</InArgument>
-                              <InArgument x:TypeArguments="x:String" x:Key="prefecture">[prefecture]</InArgument>
-                              <InArgument x:TypeArguments="x:String" x:Key="txt_html">[txt_html]</InArgument>
+                              <InArgument x:TypeArguments="s:String[]" x:Key="property_list">
+                                <mva:VisualBasicValue x:TypeArguments="s:String[]" ExpressionText="{}{&quot;貸店舗&quot;,&quot;土地&quot;,&quot;中古一戸建て&quot;}" />
+                              </InArgument>
+                              <InArgument x:TypeArguments="s:String[]" x:Key="prefecture_list">
+                                <mva:VisualBasicValue x:TypeArguments="s:String[]" ExpressionText="prefecture_list" />
+                              </InArgument>
+                              <InArgument x:TypeArguments="x:String" x:Key="prefecture">
+                                <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="prefecture" />
+                              </InArgument>
+                              <InArgument x:TypeArguments="x:String" x:Key="txt_html">
+                                <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="txt_html" />
+                              </InArgument>
+                              <InArgument x:TypeArguments="x:Int32" x:Key="district_id">
+                                <mva:VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="district_id" />
+                              </InArgument>
                             </ui:InvokeWorkflowFile.Arguments>
                           </ui:InvokeWorkflowFile>
                         </If.Then>
@@ -722,10 +922,21 @@
                             </sap:WorkflowViewStateService.ViewState>
                             <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="ワークフロー ファイルを呼び出し" sap:VirtualizedContainerService.HintSize="388,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_222" UnSafe="False" WorkflowFileName="Homes登録処理全行程.xaml">
                               <ui:InvokeWorkflowFile.Arguments>
-                                <InArgument x:TypeArguments="s:String[]" x:Key="property_list">[{"中古マンション"}]</InArgument>
-                                <InArgument x:TypeArguments="s:String[]" x:Key="prefecture_list">[prefecture_list]</InArgument>
-                                <InArgument x:TypeArguments="x:String" x:Key="prefecture">[prefecture]</InArgument>
-                                <InArgument x:TypeArguments="x:String" x:Key="txt_html">[txt_html]</InArgument>
+                                <InArgument x:TypeArguments="s:String[]" x:Key="property_list">
+                                  <mva:VisualBasicValue x:TypeArguments="s:String[]" ExpressionText="{}{&quot;中古マンション&quot;}" />
+                                </InArgument>
+                                <InArgument x:TypeArguments="s:String[]" x:Key="prefecture_list">
+                                  <mva:VisualBasicValue x:TypeArguments="s:String[]" ExpressionText="prefecture_list" />
+                                </InArgument>
+                                <InArgument x:TypeArguments="x:String" x:Key="prefecture">
+                                  <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="prefecture" />
+                                </InArgument>
+                                <InArgument x:TypeArguments="x:String" x:Key="txt_html">
+                                  <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="txt_html" />
+                                </InArgument>
+                                <InArgument x:TypeArguments="x:Int32" x:Key="district_id">
+                                  <mva:VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="district_id" />
+                                </InArgument>
                               </ui:InvokeWorkflowFile.Arguments>
                             </ui:InvokeWorkflowFile>
                           </Sequence>
@@ -743,16 +954,34 @@
                       <ui:LogMessage DisplayName="メッセージをログ" sap:VirtualizedContainerService.HintSize="388,92" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;SUUMO登録処理開始&quot;]" />
                       <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="SUUMO 登録前処理" sap:VirtualizedContainerService.HintSize="388,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_190" UnSafe="False" WorkflowFileName="登録前処理.xaml">
                         <ui:InvokeWorkflowFile.Arguments>
-                          <InArgument x:TypeArguments="x:String" x:Key="site_url">https://suumo.jp/kanto/</InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="site_url">
+                            <Literal x:TypeArguments="x:String">https://suumo.jp/kanto/</Literal>
+                          </InArgument>
+                          <InArgument x:TypeArguments="x:Int32" x:Key="district_id">
+                            <mva:VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="district_id" />
+                          </InArgument>
                         </ui:InvokeWorkflowFile.Arguments>
                       </ui:InvokeWorkflowFile>
                       <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke SUUMO workflow" sap:VirtualizedContainerService.HintSize="388,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_191" UnSafe="False" WorkflowFileName="SUUMO.xaml">
                         <ui:InvokeWorkflowFile.Arguments>
-                          <InOutArgument x:TypeArguments="s:String[]" x:Key="property_list">[property_list]</InOutArgument>
-                          <InOutArgument x:TypeArguments="x:String" x:Key="property_type">[property_type]</InOutArgument>
-                          <InArgument x:TypeArguments="s:String[]" x:Key="prefecture_list">[prefecture_list]</InArgument>
-                          <InOutArgument x:TypeArguments="x:String" x:Key="prefecture">[prefecture]</InOutArgument>
-                          <OutArgument x:TypeArguments="x:String" x:Key="txt_html">[txt_html]</OutArgument>
+                          <InOutArgument x:TypeArguments="s:String[]" x:Key="property_list">
+                            <mva:VisualBasicReference x:TypeArguments="s:String[]" ExpressionText="property_list" />
+                          </InOutArgument>
+                          <InOutArgument x:TypeArguments="x:String" x:Key="property_type">
+                            <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="property_type" />
+                          </InOutArgument>
+                          <InArgument x:TypeArguments="s:String[]" x:Key="prefecture_list">
+                            <mva:VisualBasicValue x:TypeArguments="s:String[]" ExpressionText="prefecture_list" />
+                          </InArgument>
+                          <InOutArgument x:TypeArguments="x:String" x:Key="prefecture">
+                            <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="prefecture" />
+                          </InOutArgument>
+                          <OutArgument x:TypeArguments="x:String" x:Key="txt_html">
+                            <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="txt_html" />
+                          </OutArgument>
+                          <InArgument x:TypeArguments="x:Int32" x:Key="district_id">
+                            <mva:VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="district_id" />
+                          </InArgument>
                         </ui:InvokeWorkflowFile.Arguments>
                       </ui:InvokeWorkflowFile>
                     </Sequence>
@@ -767,7 +996,7 @@
         <FlowStep x:Name="__ReferenceID8">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <av:Point x:Key="ShapeLocation">470,13.6666666666667</av:Point>
+              <av:Point x:Key="ShapeLocation">570,14</av:Point>
               <av:Size x:Key="ShapeSize">200,52</av:Size>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
@@ -1042,6 +1271,51 @@
           </Assign.Value>
         </Assign>
       </Sequence>
+    </FlowStep>
+    <FlowStep x:Name="__ReferenceID10">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <av:Point x:Key="ShapeLocation">100,13.6866666666667</av:Point>
+          <av:Size x:Key="ShapeSize">200,52</av:Size>
+          <av:PointCollection x:Key="ConnectorLocation">300,39.6866666666667 330,39.6866666666667 330,40 340,40</av:PointCollection>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <If Condition="[district_id = 2]" DisplayName="登録地方設定" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="If_67">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <If.Then>
+          <Sequence sap:VirtualizedContainerService.HintSize="496,193" sap2010:WorkflowViewState.IdRef="Sequence_437">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <Assign DisplayName="代入" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_5">
+              <Assign.To>
+                <OutArgument x:TypeArguments="s:String[]">[prefecture_list]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="s:String[]">[{"埼玉県","千葉県"}]</InArgument>
+              </Assign.Value>
+            </Assign>
+          </Sequence>
+        </If.Then>
+        <If.Else>
+          <Sequence sap2010:WorkflowViewState.IdRef="Sequence_438">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </Sequence>
+        </If.Else>
+      </If>
+      <FlowStep.Next>
+        <x:Reference>__ReferenceID9</x:Reference>
+      </FlowStep.Next>
     </FlowStep>
   </Flowchart>
 </Activity>

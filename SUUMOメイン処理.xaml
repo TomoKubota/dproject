@@ -3,8 +3,9 @@
     <x:Property Name="txt_html" Type="OutArgument(x:String)" />
     <x:Property Name="property_type" Type="InArgument(x:String)" />
     <x:Property Name="prefecture" Type="InArgument(x:String)" />
+    <x:Property Name="district_id" Type="InArgument(x:Int32)" />
   </x:Members>
-  <sap:VirtualizedContainerService.HintSize>1404,2350</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1228,2439</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="32">
@@ -67,28 +68,29 @@
       <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
       <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
       <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="シーケンス" sap:VirtualizedContainerService.HintSize="644,2285" sap2010:WorkflowViewState.IdRef="Sequence_284">
+  <Sequence DisplayName="シーケンス" sap:VirtualizedContainerService.HintSize="706,2374" sap2010:WorkflowViewState.IdRef="Sequence_284">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:LogMessage DisplayName="メッセージをログ" sap:VirtualizedContainerService.HintSize="602,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Warn" Message="[property_type &amp; &quot;_&quot; &amp; prefecture &amp; &quot;の処理を開始しました&quot;]" />
-    <Sequence DisplayName="対象物件リストに移動" sap:VirtualizedContainerService.HintSize="602,1910" sap2010:WorkflowViewState.IdRef="Sequence_279">
+    <ui:LogMessage DisplayName="メッセージをログ" sap:VirtualizedContainerService.HintSize="644,92" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Warn" Message="[property_type &amp; &quot;_&quot; &amp; prefecture &amp; &quot;の処理を開始しました&quot;]" />
+    <Sequence DisplayName="対象物件リストに移動" sap:VirtualizedContainerService.HintSize="644,1978" sap2010:WorkflowViewState.IdRef="Sequence_279">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="ブラウザーにアタッチ '          Page'" sap:VirtualizedContainerService.HintSize="560,1818" sap2010:WorkflowViewState.IdRef="BrowserScope_119" InformativeScreenshot="69808f3677b1bcf8fb8d832ec7e72ad1" Selector="&lt;html app='chrome.exe' title='*【SUUMO】*' /&gt;">
+      <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="ブラウザーにアタッチ '          Page'" sap:VirtualizedContainerService.HintSize="582,1867" sap2010:WorkflowViewState.IdRef="BrowserScope_119" InformativeScreenshot="69808f3677b1bcf8fb8d832ec7e72ad1" Selector="&lt;html app='chrome.exe' title='*【SUUMO】*' /&gt;">
         <ui:BrowserScope.Body>
           <ActivityAction x:TypeArguments="x:Object">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="526,1672" sap2010:WorkflowViewState.IdRef="Sequence_278">
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="548,1720" sap2010:WorkflowViewState.IdRef="Sequence_278">
               <Sequence.Variables>
                 <Variable x:TypeArguments="x:Boolean" Default="False" Name="next_button_exists" />
               </Sequence.Variables>
@@ -97,7 +99,7 @@
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="クリック 'IMG'" sap:VirtualizedContainerService.HintSize="484,106" sap2010:WorkflowViewState.IdRef="Click_239" KeyModifiers="None" MouseButton="BTN_LEFT">
+              <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="クリック 'IMG'" sap:VirtualizedContainerService.HintSize="486,107" sap2010:WorkflowViewState.IdRef="Click_239" KeyModifiers="None" MouseButton="BTN_LEFT">
                 <ui:Click.CursorPosition>
                   <ui:CursorPosition Position="Center">
                     <ui:CursorPosition.OffsetX>
@@ -119,7 +121,7 @@
                   </ui:Target>
                 </ui:Click.Target>
               </ui:Click>
-              <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="物件種別を選択" sap:VirtualizedContainerService.HintSize="484,106" sap2010:WorkflowViewState.IdRef="Click_236" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="True">
+              <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="物件種別を選択" sap:VirtualizedContainerService.HintSize="486,107" sap2010:WorkflowViewState.IdRef="Click_236" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="True">
                 <ui:Click.CursorPosition>
                   <ui:CursorPosition OffsetX="98" OffsetY="25" Position="TopLeft" />
                 </ui:Click.CursorPosition>
@@ -131,7 +133,7 @@
                   </ui:Target>
                 </ui:Click.Target>
               </ui:Click>
-              <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="新着物件を選択" sap:VirtualizedContainerService.HintSize="484,106" sap2010:WorkflowViewState.IdRef="Click_237" KeyModifiers="None" MouseButton="BTN_LEFT">
+              <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="新着物件を選択" sap:VirtualizedContainerService.HintSize="486,107" sap2010:WorkflowViewState.IdRef="Click_237" KeyModifiers="None" MouseButton="BTN_LEFT">
                 <ui:Click.CursorPosition>
                   <ui:CursorPosition Position="Center">
                     <ui:CursorPosition.OffsetX>
@@ -153,7 +155,7 @@
                   </ui:Target>
                 </ui:Click.Target>
               </ui:Click>
-              <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="都道府県を選択" sap:VirtualizedContainerService.HintSize="484,106" sap2010:WorkflowViewState.IdRef="Click_238" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="True">
+              <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="都道府県を選択" sap:VirtualizedContainerService.HintSize="486,107" sap2010:WorkflowViewState.IdRef="Click_238" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="True">
                 <ui:Click.CursorPosition>
                   <ui:CursorPosition OffsetX="53" OffsetY="1" Position="TopLeft" />
                 </ui:Click.CursorPosition>
@@ -165,7 +167,7 @@
                   </ui:Target>
                 </ui:Click.Target>
               </ui:Click>
-              <ui:SelectItem AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayAfter="2000" DisplayName="項目を選択 'SELECT  js-tabmenu1-pcC...'" sap:VirtualizedContainerService.HintSize="484,134" sap2010:WorkflowViewState.IdRef="SelectItem_1" Item="50件">
+              <ui:SelectItem AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayAfter="2000" DisplayName="項目を選択 'SELECT  js-tabmenu1-pcC...'" sap:VirtualizedContainerService.HintSize="486,135" sap2010:WorkflowViewState.IdRef="SelectItem_1" Item="50件">
                 <ui:SelectItem.Items>
                   <scg:List x:TypeArguments="x:String" Capacity="8">
                     <x:String>10件</x:String>
@@ -186,7 +188,7 @@
                   </ui:Target>
                 </ui:SelectItem.Target>
               </ui:SelectItem>
-              <ui:UiElementExists DisplayName="要素の存在を確認 'A '" Exists="[next_button_exists]" sap:VirtualizedContainerService.HintSize="484,106" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
+              <ui:UiElementExists DisplayName="要素の存在を確認 'A '" Exists="[next_button_exists]" sap:VirtualizedContainerService.HintSize="486,107" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
                 <ui:UiElementExists.Target>
                   <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="599ed062-2351-4d19-86d7-a493ec356a17" InformativeScreenshot="8a021ff0c0907a9a2e9be394f645e15a" Selector="&lt;webctrl aaname='次へ' idx='1' parentid='js-sectionBody-main' tag='A' /&gt;" TimeoutMS="1000">
                     <ui:Target.WaitForReady>
@@ -195,15 +197,15 @@
                   </ui:Target>
                 </ui:UiElementExists.Target>
               </ui:UiElementExists>
-              <If Condition="[next_button_exists = True]" DisplayName="条件分岐" sap:VirtualizedContainerService.HintSize="484,676" sap2010:WorkflowViewState.IdRef="If_1">
+              <If Condition="[next_button_exists = True]" DisplayName="条件分岐" sap:VirtualizedContainerService.HintSize="486,699" sap2010:WorkflowViewState.IdRef="If_1">
                 <If.Then>
-                  <Sequence DisplayName="シーケンス" sap:VirtualizedContainerService.HintSize="376,490" sap2010:WorkflowViewState.IdRef="Sequence_285">
+                  <Sequence DisplayName="シーケンス" sap:VirtualizedContainerService.HintSize="450,512" sap2010:WorkflowViewState.IdRef="Sequence_285">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DelayMS="2000" DisplayName="クリック 'A '" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_240" KeyModifiers="None" MouseButton="BTN_LEFT">
+                    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DelayMS="2000" DisplayName="クリック 'A '" sap:VirtualizedContainerService.HintSize="388,107" sap2010:WorkflowViewState.IdRef="Click_240" KeyModifiers="None" MouseButton="BTN_LEFT">
                       <ui:Click.CursorPosition>
                         <ui:CursorPosition Position="Center">
                           <ui:CursorPosition.OffsetX>
@@ -225,7 +227,7 @@
                         </ui:Target>
                       </ui:Click.Target>
                     </ui:Click>
-                    <ui:WaitUiElementAppear FoundElement="{x:Null}" WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="要素を探す 'A '" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_1">
+                    <ui:WaitUiElementAppear FoundElement="{x:Null}" WaitActive="{x:Null}" WaitVisible="{x:Null}" DisplayName="要素を探す 'A '" sap:VirtualizedContainerService.HintSize="388,107" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_1">
                       <ui:WaitUiElementAppear.Target>
                         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="86ccfd2a-2481-45e2-9a48-1533058d6059" InformativeScreenshot="b43b7da3c17d0d12edec80e12549a3f1" Selector="&lt;webctrl idx='1' parentid='js-sectionBody-main' tag='A' /&gt;">
                           <ui:Target.TimeoutMS>
@@ -237,7 +239,7 @@
                         </ui:Target>
                       </ui:WaitUiElementAppear.Target>
                     </ui:WaitUiElementAppear>
-                    <ui:Click AlterIfDisabled="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DelayBefore="2000" DelayMS="2000" DisplayName="クリック 'A '" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_241" KeyModifiers="None" MouseButton="BTN_LEFT">
+                    <ui:Click AlterIfDisabled="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DelayBefore="2000" DelayMS="2000" DisplayName="クリック 'A '" sap:VirtualizedContainerService.HintSize="388,107" sap2010:WorkflowViewState.IdRef="Click_241" KeyModifiers="None" MouseButton="BTN_LEFT">
                       <ui:Click.CursorPosition>
                         <ui:CursorPosition Position="Center">
                           <ui:CursorPosition.OffsetX>
@@ -267,7 +269,7 @@
         </ui:BrowserScope.Body>
       </ui:BrowserScope>
     </Sequence>
-    <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="ワークフロー ファイルを呼び出し" sap:VirtualizedContainerService.HintSize="602,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="すべてのページの物件を登録.xaml">
+    <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="ワークフロー ファイルを呼び出し" sap:VirtualizedContainerService.HintSize="644,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="すべてのページの物件を登録.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <OutArgument x:TypeArguments="x:String" x:Key="txt_html">
           <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="txt_html" />
@@ -278,6 +280,9 @@
         <InArgument x:TypeArguments="x:String" x:Key="property_type" />
         <InArgument x:TypeArguments="x:Int32" x:Key="number_of_target_pages">
           <Literal x:TypeArguments="x:Int32" Value="130" />
+        </InArgument>
+        <InArgument x:TypeArguments="x:Int32" x:Key="district_id">
+          <mva:VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="district_id" />
         </InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>

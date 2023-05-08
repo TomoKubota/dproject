@@ -1,12 +1,13 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="SUUMO" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="SUUMO" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="property_list" Type="InOutArgument(s:String[])" />
     <x:Property Name="property_type" Type="InOutArgument(x:String)" />
     <x:Property Name="prefecture_list" Type="InArgument(s:String[])" />
     <x:Property Name="prefecture" Type="InOutArgument(x:String)" />
     <x:Property Name="txt_html" Type="OutArgument(x:String)" />
+    <x:Property Name="district_id" Type="InArgument(x:Int32)" />
   </x:Members>
-  <sap:VirtualizedContainerService.HintSize>390,94.3333333333333</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1228,1149</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="32">
@@ -72,15 +73,17 @@
       <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
       <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
       <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="SUUMO" sap:VirtualizedContainerService.HintSize="200,69.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_356">
+  <Sequence DisplayName="SUUMO" sap:VirtualizedContainerService.HintSize="692,1084" sap2010:WorkflowViewState.IdRef="Sequence_356">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Assign DisplayName="代入" sap:VirtualizedContainerService.HintSize="508,62" sap2010:WorkflowViewState.IdRef="Assign_8">
+    <Assign DisplayName="代入" sap:VirtualizedContainerService.HintSize="630,82" sap2010:WorkflowViewState.IdRef="Assign_8">
       <Assign.To>
         <OutArgument x:TypeArguments="s:String[]">[property_list]</OutArgument>
       </Assign.To>
@@ -88,19 +91,19 @@
         <InArgument x:TypeArguments="s:String[]">[{"土地","中古一戸建て","中古マンション"}]</InArgument>
       </Assign.Value>
     </Assign>
-    <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="繰り返し (コレクションの各要素)" sap:VirtualizedContainerService.HintSize="508,779.333333333333" sap2010:WorkflowViewState.IdRef="ForEach`1_14" Values="[property_list]">
+    <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="繰り返し (コレクションの各要素)" sap:VirtualizedContainerService.HintSize="630,851" sap2010:WorkflowViewState.IdRef="ForEach`1_14" Values="[property_list]">
       <ui:ForEach.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="item" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="本文" sap:VirtualizedContainerService.HintSize="471.333333333333,640.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_355">
+          <Sequence DisplayName="本文" sap:VirtualizedContainerService.HintSize="594,715" sap2010:WorkflowViewState.IdRef="Sequence_355">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <Assign DisplayName="代入" sap:VirtualizedContainerService.HintSize="429.333333333333,62" sap2010:WorkflowViewState.IdRef="Assign_9">
+            <Assign DisplayName="代入" sap:VirtualizedContainerService.HintSize="532,82" sap2010:WorkflowViewState.IdRef="Assign_9">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:String">[property_type]</OutArgument>
               </Assign.To>
@@ -108,19 +111,19 @@
                 <InArgument x:TypeArguments="x:String">[item.ToString]</InArgument>
               </Assign.Value>
             </Assign>
-            <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="繰り返し (コレクションの各要素)" sap:VirtualizedContainerService.HintSize="429.333333333333,446.666666666667" sap2010:WorkflowViewState.IdRef="ForEach`1_13" Values="[prefecture_list]">
+            <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="繰り返し (コレクションの各要素)" sap:VirtualizedContainerService.HintSize="532,482" sap2010:WorkflowViewState.IdRef="ForEach`1_13" Values="[prefecture_list]">
               <ui:ForEach.Body>
                 <ActivityAction x:TypeArguments="x:Object">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="x:Object" Name="item" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="本文" sap:VirtualizedContainerService.HintSize="376,308" sap2010:WorkflowViewState.IdRef="Sequence_354">
+                  <Sequence DisplayName="本文" sap:VirtualizedContainerService.HintSize="496,346" sap2010:WorkflowViewState.IdRef="Sequence_354">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <Assign DisplayName="代入" sap:VirtualizedContainerService.HintSize="334,62" sap2010:WorkflowViewState.IdRef="Assign_10">
+                    <Assign DisplayName="代入" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_10">
                       <Assign.To>
                         <OutArgument x:TypeArguments="x:String">[prefecture]</OutArgument>
                       </Assign.To>
@@ -128,11 +131,20 @@
                         <InArgument x:TypeArguments="x:String">[item.ToString]</InArgument>
                       </Assign.Value>
                     </Assign>
-                    <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="SUUMOメイン処理" sap:VirtualizedContainerService.HintSize="334,114" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_162" UnSafe="False" WorkflowFileName="SUUMOメイン処理.xaml">
+                    <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="SUUMOメイン処理" sap:VirtualizedContainerService.HintSize="434,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_162" UnSafe="False" WorkflowFileName="SUUMOメイン処理.xaml">
                       <ui:InvokeWorkflowFile.Arguments>
-                        <OutArgument x:TypeArguments="x:String" x:Key="txt_html">[txt_html]</OutArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="property_type">[property_type]</InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="prefecture">[prefecture]</InArgument>
+                        <OutArgument x:TypeArguments="x:String" x:Key="txt_html">
+                          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="txt_html" />
+                        </OutArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="property_type">
+                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="property_type" />
+                        </InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="prefecture">
+                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="prefecture" />
+                        </InArgument>
+                        <InArgument x:TypeArguments="x:Int32" x:Key="district_id">
+                          <mva:VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="district_id" />
+                        </InArgument>
                       </ui:InvokeWorkflowFile.Arguments>
                     </ui:InvokeWorkflowFile>
                   </Sequence>

@@ -1,4 +1,9 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="物件登録サイトの起動edge" sap:VirtualizedContainerService.HintSize="1404,1329" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="物件登録サイトの起動edge" this:物件登録サイトの起動edge.district_id="1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="district_id" Type="InArgument(x:Int32)" />
+  </x:Members>
+  <sap:VirtualizedContainerService.HintSize>1228,3077</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="32">
       <x:String>System.Activities</x:String>
@@ -64,97 +69,216 @@
       <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
       <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
       <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="物件登録サイトの起動(edge)" sap:VirtualizedContainerService.HintSize="678,1264" sap2010:WorkflowViewState.IdRef="Sequence_384">
+  <Sequence DisplayName="物件登録サイトの起動(edge)" sap:VirtualizedContainerService.HintSize="836,3012" sap2010:WorkflowViewState.IdRef="Sequence_384">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:KillProcess Process="{x:Null}" ContinueOnError="True" DisplayName="edgeを一旦強制終了" sap:VirtualizedContainerService.HintSize="636,132" sap2010:WorkflowViewState.IdRef="KillProcess_1" ProcessName="msedge">
+    <ui:KillProcess Process="{x:Null}" ContinueOnError="True" DisplayName="edgeを一旦強制終了" sap:VirtualizedContainerService.HintSize="774,133" sap2010:WorkflowViewState.IdRef="KillProcess_1" ProcessName="msedge">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:KillProcess>
-    <ui:OpenBrowser CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="Edge" DisplayName="登録サイトを開く_edge" sap:VirtualizedContainerService.HintSize="636,1000" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" Url="https://matching.fourlist.net/">
-      <ui:OpenBrowser.Body>
-        <ActivityAction x:TypeArguments="x:Object">
-          <ActivityAction.Argument>
-            <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
-          </ActivityAction.Argument>
-          <Sequence DisplayName="シーケンス" sap:VirtualizedContainerService.HintSize="602,899" sap2010:WorkflowViewState.IdRef="Sequence_385">
+    <If Condition="[district_id = 1]" DisplayName="条件分岐 (if)" sap:VirtualizedContainerService.HintSize="774,1344" sap2010:WorkflowViewState.IdRef="If_55">
+      <If.Then>
+        <Sequence DisplayName="シーケンス" sap:VirtualizedContainerService.HintSize="738,1155" sap2010:WorkflowViewState.IdRef="Sequence_390">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:OpenBrowser CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="Edge" DisplayName="登録サイトを開く_edge" sap:VirtualizedContainerService.HintSize="676,1044" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" Url="https://matching.fourlist.net/">
+            <ui:OpenBrowser.Body>
+              <ActivityAction x:TypeArguments="x:Object">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+                </ActivityAction.Argument>
+                <Sequence DisplayName="シーケンス" sap:VirtualizedContainerService.HintSize="642,942" sap2010:WorkflowViewState.IdRef="Sequence_385">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Edge" DisplayName="ブラウザーにアタッチ 'msedge.exe  https://mat...'" sap:VirtualizedContainerService.HintSize="580,831" sap2010:WorkflowViewState.IdRef="BrowserScope_2" InformativeScreenshot="1bb56c9f0c262c6217be0491fe0f298e" Selector="&lt;html app='msedge.exe' title='https://matching.fourlist.net' /&gt;">
+                    <ui:BrowserScope.Body>
+                      <ActivityAction x:TypeArguments="x:Object">
+                        <ActivityAction.Argument>
+                          <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+                        </ActivityAction.Argument>
+                        <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="546,684" sap2010:WorkflowViewState.IdRef="Sequence_382">
+                          <Sequence.Variables>
+                            <Variable x:TypeArguments="x:Boolean" Default="False" Name="required_basic_authentication" />
+                            <Variable x:TypeArguments="x:Boolean" Default="False" Name="refresh_button_exist" />
+                          </Sequence.Variables>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:UiElementExists DisplayName="ベーシック認証要求の有無を確認" Exists="[required_basic_authentication]" sap:VirtualizedContainerService.HintSize="484,107" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
+                            <ui:UiElementExists.Target>
+                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="3fe869f8-96c9-4e94-bfdf-e2a747420dc7" InformativeScreenshot="199094684cab3f8552bd802204bc78e8" Selector="&lt;wnd app='msedge.exe' omit:cls='Chrome_WidgetWin_1' title='https://matching.fourlist.net*' /&gt;&lt;ctrl name='このサイトにアクセスするにはサインインしてください' role='dialog' /&gt;" TimeoutMS="2000">
+                                <ui:Target.WaitForReady>
+                                  <InArgument x:TypeArguments="ui:WaitForReady" />
+                                </ui:Target.WaitForReady>
+                              </ui:Target>
+                            </ui:UiElementExists.Target>
+                          </ui:UiElementExists>
+                          <If Condition="[required_basic_authentication = True]" DisplayName="ベーシック認証要求" sap:VirtualizedContainerService.HintSize="484,294" sap2010:WorkflowViewState.IdRef="If_54">
+                            <If.Then>
+                              <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="ログインボタンをクリック" sap:VirtualizedContainerService.HintSize="334,107" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT">
+                                <ui:Click.CursorPosition>
+                                  <ui:CursorPosition Position="Center">
+                                    <ui:CursorPosition.OffsetX>
+                                      <InArgument x:TypeArguments="x:Int32" />
+                                    </ui:CursorPosition.OffsetX>
+                                    <ui:CursorPosition.OffsetY>
+                                      <InArgument x:TypeArguments="x:Int32" />
+                                    </ui:CursorPosition.OffsetY>
+                                  </ui:CursorPosition>
+                                </ui:Click.CursorPosition>
+                                <ui:Click.Target>
+                                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="50eb9291-6274-4340-8df6-55ee7b987129" InformativeScreenshot="1d0ab1bd43c7c93a5d3a69c06f118bcf" Selector="&lt;wnd app='msedge.exe' omit:cls='Chrome_WidgetWin_1' title='https://matching.fourlist.net*' /&gt;&lt;ctrl name='このサイトにアクセスするにはサインインしてください' role='dialog' /&gt;&lt;ctrl name='サインイン' role='push button' /&gt;">
+                                    <ui:Target.TimeoutMS>
+                                      <InArgument x:TypeArguments="x:Int32" />
+                                    </ui:Target.TimeoutMS>
+                                    <ui:Target.WaitForReady>
+                                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                                    </ui:Target.WaitForReady>
+                                  </ui:Target>
+                                </ui:Click.Target>
+                              </ui:Click>
+                            </If.Then>
+                          </If>
+                          <ui:LogMessage DisplayName="メッセージをログ" sap:VirtualizedContainerService.HintSize="484,92" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;登録サイトの起動が完了しました&quot;]" />
+                        </Sequence>
+                      </ActivityAction>
+                    </ui:BrowserScope.Body>
+                  </ui:BrowserScope>
+                </Sequence>
+              </ActivityAction>
+            </ui:OpenBrowser.Body>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Edge" DisplayName="ブラウザーにアタッチ 'msedge.exe  https://mat...'" sap:VirtualizedContainerService.HintSize="560,807" sap2010:WorkflowViewState.IdRef="BrowserScope_2" InformativeScreenshot="1bb56c9f0c262c6217be0491fe0f298e" Selector="&lt;html app='msedge.exe' title='https://matching.fourlist.net' /&gt;">
-              <ui:BrowserScope.Body>
-                <ActivityAction x:TypeArguments="x:Object">
-                  <ActivityAction.Argument>
-                    <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
-                  </ActivityAction.Argument>
-                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="526,661" sap2010:WorkflowViewState.IdRef="Sequence_382">
-                    <Sequence.Variables>
-                      <Variable x:TypeArguments="x:Boolean" Default="False" Name="required_basic_authentication" />
-                      <Variable x:TypeArguments="x:Boolean" Default="False" Name="refresh_button_exist" />
-                    </Sequence.Variables>
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                    <ui:UiElementExists DisplayName="ベーシック認証要求の有無を確認" Exists="[required_basic_authentication]" sap:VirtualizedContainerService.HintSize="484,106" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
-                      <ui:UiElementExists.Target>
-                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="3fe869f8-96c9-4e94-bfdf-e2a747420dc7" InformativeScreenshot="199094684cab3f8552bd802204bc78e8" Selector="&lt;wnd app='msedge.exe' omit:cls='Chrome_WidgetWin_1' title='https://matching.fourlist.net*' /&gt;&lt;ctrl name='このサイトにアクセスするにはサインインしてください' role='dialog' /&gt;" TimeoutMS="2000">
-                          <ui:Target.WaitForReady>
-                            <InArgument x:TypeArguments="ui:WaitForReady" />
-                          </ui:Target.WaitForReady>
-                        </ui:Target>
-                      </ui:UiElementExists.Target>
-                    </ui:UiElementExists>
-                    <If Condition="[required_basic_authentication = True]" DisplayName="ベーシック認証要求" sap:VirtualizedContainerService.HintSize="484,292" sap2010:WorkflowViewState.IdRef="If_54">
-                      <If.Then>
-                        <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="ログインボタンをクリック" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT">
-                          <ui:Click.CursorPosition>
-                            <ui:CursorPosition Position="Center">
-                              <ui:CursorPosition.OffsetX>
-                                <InArgument x:TypeArguments="x:Int32" />
-                              </ui:CursorPosition.OffsetX>
-                              <ui:CursorPosition.OffsetY>
-                                <InArgument x:TypeArguments="x:Int32" />
-                              </ui:CursorPosition.OffsetY>
-                            </ui:CursorPosition>
-                          </ui:Click.CursorPosition>
-                          <ui:Click.Target>
-                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="50eb9291-6274-4340-8df6-55ee7b987129" InformativeScreenshot="1d0ab1bd43c7c93a5d3a69c06f118bcf" Selector="&lt;wnd app='msedge.exe' omit:cls='Chrome_WidgetWin_1' title='https://matching.fourlist.net*' /&gt;&lt;ctrl name='このサイトにアクセスするにはサインインしてください' role='dialog' /&gt;&lt;ctrl name='サインイン' role='push button' /&gt;">
-                              <ui:Target.TimeoutMS>
-                                <InArgument x:TypeArguments="x:Int32" />
-                              </ui:Target.TimeoutMS>
-                              <ui:Target.WaitForReady>
-                                <InArgument x:TypeArguments="ui:WaitForReady" />
-                              </ui:Target.WaitForReady>
-                            </ui:Target>
-                          </ui:Click.Target>
-                        </ui:Click>
-                      </If.Then>
-                    </If>
-                    <ui:LogMessage DisplayName="メッセージをログ" sap:VirtualizedContainerService.HintSize="484,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;登録サイトの起動が完了しました&quot;]" />
-                  </Sequence>
-                </ActivityAction>
-              </ui:BrowserScope.Body>
-            </ui:BrowserScope>
-          </Sequence>
-        </ActivityAction>
-      </ui:OpenBrowser.Body>
-      <sap:WorkflowViewStateService.ViewState>
-        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-        </scg:Dictionary>
-      </sap:WorkflowViewStateService.ViewState>
-    </ui:OpenBrowser>
+          </ui:OpenBrowser>
+        </Sequence>
+      </If.Then>
+      <If.Else>
+        <Sequence sap2010:WorkflowViewState.IdRef="Sequence_387">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </Sequence>
+      </If.Else>
+    </If>
+    <If Condition="[district_id = 2]" DisplayName="条件分岐 (if)" sap:VirtualizedContainerService.HintSize="774,1344" sap2010:WorkflowViewState.IdRef="If_57">
+      <If.Then>
+        <Sequence sap:VirtualizedContainerService.HintSize="738,1155" sap2010:WorkflowViewState.IdRef="Sequence_392">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:OpenBrowser CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="Edge" DisplayName="登録サイトを開く_edge" sap:VirtualizedContainerService.HintSize="676,1044" sap2010:WorkflowViewState.IdRef="OpenBrowser_2" Url="https://matching2.fourlist.net/">
+            <ui:OpenBrowser.Body>
+              <ActivityAction x:TypeArguments="x:Object">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+                </ActivityAction.Argument>
+                <Sequence DisplayName="シーケンス" sap:VirtualizedContainerService.HintSize="642,942" sap2010:WorkflowViewState.IdRef="Sequence_391">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Edge" DisplayName="ブラウザーにアタッチ 'msedge.exe  https://mat...'" sap:VirtualizedContainerService.HintSize="580,831" sap2010:WorkflowViewState.IdRef="BrowserScope_3" InformativeScreenshot="1bb56c9f0c262c6217be0491fe0f298e" Selector="&lt;html app='msedge.exe' title='https://matching2.fourlist.net' /&gt;">
+                    <ui:BrowserScope.Body>
+                      <ActivityAction x:TypeArguments="x:Object">
+                        <ActivityAction.Argument>
+                          <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+                        </ActivityAction.Argument>
+                        <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="546,684" sap2010:WorkflowViewState.IdRef="Sequence_389">
+                          <Sequence.Variables>
+                            <Variable x:TypeArguments="x:Boolean" Default="False" Name="required_basic_authentication" />
+                            <Variable x:TypeArguments="x:Boolean" Default="False" Name="refresh_button_exist" />
+                          </Sequence.Variables>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:UiElementExists DisplayName="ベーシック認証要求の有無を確認" Exists="[required_basic_authentication]" sap:VirtualizedContainerService.HintSize="484,107" sap2010:WorkflowViewState.IdRef="UiElementExists_2">
+                            <ui:UiElementExists.Target>
+                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="3fe869f8-96c9-4e94-bfdf-e2a747420dc7" InformativeScreenshot="199094684cab3f8552bd802204bc78e8" Selector="&lt;wnd app='msedge.exe' omit:cls='Chrome_WidgetWin_1' title='https://matching2.fourlist.net*' /&gt;&lt;ctrl name='このサイトにアクセスするにはサインインしてください' role='dialog' /&gt;" TimeoutMS="2000">
+                                <ui:Target.WaitForReady>
+                                  <InArgument x:TypeArguments="ui:WaitForReady" />
+                                </ui:Target.WaitForReady>
+                              </ui:Target>
+                            </ui:UiElementExists.Target>
+                          </ui:UiElementExists>
+                          <If Condition="[required_basic_authentication = True]" DisplayName="ベーシック認証要求" sap:VirtualizedContainerService.HintSize="484,294" sap2010:WorkflowViewState.IdRef="If_56">
+                            <If.Then>
+                              <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="ログインボタンをクリック" sap:VirtualizedContainerService.HintSize="334,107" sap2010:WorkflowViewState.IdRef="Click_2" KeyModifiers="None" MouseButton="BTN_LEFT">
+                                <ui:Click.CursorPosition>
+                                  <ui:CursorPosition Position="Center">
+                                    <ui:CursorPosition.OffsetX>
+                                      <InArgument x:TypeArguments="x:Int32" />
+                                    </ui:CursorPosition.OffsetX>
+                                    <ui:CursorPosition.OffsetY>
+                                      <InArgument x:TypeArguments="x:Int32" />
+                                    </ui:CursorPosition.OffsetY>
+                                  </ui:CursorPosition>
+                                </ui:Click.CursorPosition>
+                                <ui:Click.Target>
+                                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="50eb9291-6274-4340-8df6-55ee7b987129" InformativeScreenshot="1d0ab1bd43c7c93a5d3a69c06f118bcf" Selector="&lt;wnd app='msedge.exe' omit:cls='Chrome_WidgetWin_1' title='https://matching2.fourlist.net*' /&gt;&lt;ctrl name='このサイトにアクセスするにはサインインしてください' role='dialog' /&gt;&lt;ctrl name='サインイン' role='push button' /&gt;">
+                                    <ui:Target.TimeoutMS>
+                                      <InArgument x:TypeArguments="x:Int32" />
+                                    </ui:Target.TimeoutMS>
+                                    <ui:Target.WaitForReady>
+                                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                                    </ui:Target.WaitForReady>
+                                  </ui:Target>
+                                </ui:Click.Target>
+                              </ui:Click>
+                            </If.Then>
+                          </If>
+                          <ui:LogMessage DisplayName="メッセージをログ" sap:VirtualizedContainerService.HintSize="484,92" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;登録サイトの起動が完了しました&quot;]" />
+                        </Sequence>
+                      </ActivityAction>
+                    </ui:BrowserScope.Body>
+                  </ui:BrowserScope>
+                </Sequence>
+              </ActivityAction>
+            </ui:OpenBrowser.Body>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </ui:OpenBrowser>
+        </Sequence>
+      </If.Then>
+      <If.Else>
+        <Sequence sap2010:WorkflowViewState.IdRef="Sequence_393">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </Sequence>
+      </If.Else>
+    </If>
   </Sequence>
 </Activity>

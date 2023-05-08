@@ -1,11 +1,12 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Homes繰り返し" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Homes繰り返し" this:Homes繰り返し.district_id="1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="property_list" Type="InArgument(s:String[])" />
     <x:Property Name="prefecture_list" Type="InArgument(s:String[])" />
     <x:Property Name="prefecture" Type="InOutArgument(x:String)" />
     <x:Property Name="txt_html" Type="OutArgument(x:String)" />
+    <x:Property Name="district_id" Type="InArgument(x:Int32)" />
   </x:Members>
-  <sap:VirtualizedContainerService.HintSize>1475,1251</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1763,1248</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="32">
@@ -73,33 +74,34 @@
       <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
       <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
       <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="繰り返し (コレクションの各要素)" sap:VirtualizedContainerService.HintSize="1485,1074" sap2010:WorkflowViewState.IdRef="ForEach`1_10" Values="[property_list]">
+  <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="繰り返し (コレクションの各要素)" sap:VirtualizedContainerService.HintSize="1773,1183" sap2010:WorkflowViewState.IdRef="ForEach`1_10" Values="[property_list]">
     <ui:ForEach.Body>
       <ActivityAction x:TypeArguments="x:Object">
         <ActivityAction.Argument>
           <DelegateInArgument x:TypeArguments="x:Object" Name="property_type" />
         </ActivityAction.Argument>
-        <Sequence DisplayName="本文" sap:VirtualizedContainerService.HintSize="1449,940" sap2010:WorkflowViewState.IdRef="Sequence_351">
+        <Sequence DisplayName="本文" sap:VirtualizedContainerService.HintSize="1737,1047" sap2010:WorkflowViewState.IdRef="Sequence_351">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="繰り返し (コレクションの各要素)" sap:VirtualizedContainerService.HintSize="1407,848" sap2010:WorkflowViewState.IdRef="ForEach`1_9" Values="[prefecture_list]">
+          <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="繰り返し (コレクションの各要素)" sap:VirtualizedContainerService.HintSize="1675,936" sap2010:WorkflowViewState.IdRef="ForEach`1_9" Values="[prefecture_list]">
             <ui:ForEach.Body>
               <ActivityAction x:TypeArguments="x:Object">
                 <ActivityAction.Argument>
                   <DelegateInArgument x:TypeArguments="x:Object" Name="item" />
                 </ActivityAction.Argument>
-                <Sequence DisplayName="本文" sap:VirtualizedContainerService.HintSize="1371,714" sap2010:WorkflowViewState.IdRef="Sequence_350">
+                <Sequence DisplayName="本文" sap:VirtualizedContainerService.HintSize="1639,800" sap2010:WorkflowViewState.IdRef="Sequence_350">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <Assign DisplayName="都道府県名をテキストに変換" sap:VirtualizedContainerService.HintSize="1329,60" sap2010:WorkflowViewState.IdRef="Assign_6">
+                  <Assign DisplayName="都道府県名をテキストに変換" sap:VirtualizedContainerService.HintSize="1577,82" sap2010:WorkflowViewState.IdRef="Assign_6">
                     <Assign.To>
                       <OutArgument x:TypeArguments="x:String">[prefecture]</OutArgument>
                     </Assign.To>
@@ -107,25 +109,34 @@
                       <InArgument x:TypeArguments="x:String">[item.ToString]</InArgument>
                     </Assign.Value>
                   </Assign>
-                  <If Condition="[prefecture = &quot;東京都&quot;]" DisplayName="条件分岐" sap:VirtualizedContainerService.HintSize="1329,522" sap2010:WorkflowViewState.IdRef="If_53">
+                  <If Condition="[prefecture = &quot;東京都&quot;]" DisplayName="条件分岐" sap:VirtualizedContainerService.HintSize="1577,567" sap2010:WorkflowViewState.IdRef="If_53">
                     <If.Then>
-                      <Sequence DisplayName="シーケンス" sap:VirtualizedContainerService.HintSize="621,362" sap2010:WorkflowViewState.IdRef="Sequence_355">
+                      <Sequence DisplayName="シーケンス" sap:VirtualizedContainerService.HintSize="641,384" sap2010:WorkflowViewState.IdRef="Sequence_355">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <If Condition="[property_type.ToString = &quot;賃貸&quot;]" DisplayName="条件分岐" sap:VirtualizedContainerService.HintSize="579,270" sap2010:WorkflowViewState.IdRef="If_52">
+                        <If Condition="[property_type.ToString = &quot;賃貸&quot;]" DisplayName="条件分岐" sap:VirtualizedContainerService.HintSize="579,273" sap2010:WorkflowViewState.IdRef="If_52">
                           <If.Then>
-                            <ui:Break DisplayName="繰り返しをブレーク" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="Break_2" />
+                            <ui:Break DisplayName="繰り返しをブレーク" sap:VirtualizedContainerService.HintSize="200,25" sap2010:WorkflowViewState.IdRef="Break_2" />
                           </If.Then>
                           <If.Else>
-                            <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Homesメイン処理 workflow" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_177" UnSafe="False" WorkflowFileName="Homesメイン処理.xaml">
+                            <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Homesメイン処理 workflow" sap:VirtualizedContainerService.HintSize="334,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_177" UnSafe="False" WorkflowFileName="Homesメイン処理.xaml">
                               <ui:InvokeWorkflowFile.Arguments>
-                                <OutArgument x:TypeArguments="x:String" x:Key="txt_html">[txt_html]</OutArgument>
-                                <InArgument x:TypeArguments="x:String" x:Key="prefecture">[prefecture]</InArgument>
-                                <InArgument x:TypeArguments="x:String" x:Key="property_type">[property_type.ToString]</InArgument>
+                                <OutArgument x:TypeArguments="x:String" x:Key="txt_html">
+                                  <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="txt_html" />
+                                </OutArgument>
+                                <InArgument x:TypeArguments="x:String" x:Key="prefecture">
+                                  <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="prefecture" />
+                                </InArgument>
+                                <InArgument x:TypeArguments="x:String" x:Key="property_type">
+                                  <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="property_type.ToString" />
+                                </InArgument>
                                 <InArgument x:TypeArguments="x:String" x:Key="argument1" />
+                                <InArgument x:TypeArguments="x:Int32" x:Key="district_id">
+                                  <mva:VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="district_id" />
+                                </InArgument>
                               </ui:InvokeWorkflowFile.Arguments>
                             </ui:InvokeWorkflowFile>
                           </If.Else>
@@ -133,30 +144,39 @@
                       </Sequence>
                     </If.Then>
                     <If.Else>
-                      <Sequence DisplayName="シーケンス" sap:VirtualizedContainerService.HintSize="663,364" sap2010:WorkflowViewState.IdRef="Sequence_354">
+                      <Sequence DisplayName="シーケンス" sap:VirtualizedContainerService.HintSize="891,407" sap2010:WorkflowViewState.IdRef="Sequence_354">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <If Condition="[property_type.ToString = &quot;賃貸&quot;]" DisplayName="条件分岐" sap:VirtualizedContainerService.HintSize="621,272" sap2010:WorkflowViewState.IdRef="If_55">
+                        <If Condition="[property_type.ToString = &quot;賃貸&quot;]" DisplayName="条件分岐" sap:VirtualizedContainerService.HintSize="829,296" sap2010:WorkflowViewState.IdRef="If_55">
                           <If.Then>
-                            <Sequence DisplayName="シーケンス" sap:VirtualizedContainerService.HintSize="242,114" sap2010:WorkflowViewState.IdRef="Sequence_357">
+                            <Sequence DisplayName="シーケンス" sap:VirtualizedContainerService.HintSize="450,136" sap2010:WorkflowViewState.IdRef="Sequence_357">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <ui:Break DisplayName="繰り返しをブレーク" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="Break_4" />
+                              <ui:Break DisplayName="繰り返しをブレーク" sap:VirtualizedContainerService.HintSize="388,25" sap2010:WorkflowViewState.IdRef="Break_4" />
                             </Sequence>
                           </If.Then>
                           <If.Else>
-                            <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Homesメイン処理 workflow" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_180" UnSafe="False" WorkflowFileName="Homesメイン処理.xaml">
+                            <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Homesメイン処理 workflow" sap:VirtualizedContainerService.HintSize="334,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_180" UnSafe="False" WorkflowFileName="Homesメイン処理.xaml">
                               <ui:InvokeWorkflowFile.Arguments>
-                                <OutArgument x:TypeArguments="x:String" x:Key="txt_html">[txt_html]</OutArgument>
-                                <InArgument x:TypeArguments="x:String" x:Key="prefecture">[prefecture]</InArgument>
-                                <InArgument x:TypeArguments="x:String" x:Key="property_type">[property_type.ToString]</InArgument>
+                                <OutArgument x:TypeArguments="x:String" x:Key="txt_html">
+                                  <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="txt_html" />
+                                </OutArgument>
+                                <InArgument x:TypeArguments="x:String" x:Key="prefecture">
+                                  <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="prefecture" />
+                                </InArgument>
+                                <InArgument x:TypeArguments="x:String" x:Key="property_type">
+                                  <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="property_type.ToString" />
+                                </InArgument>
                                 <InArgument x:TypeArguments="x:String" x:Key="argument1" />
+                                <InArgument x:TypeArguments="x:Int32" x:Key="district_id">
+                                  <mva:VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="district_id" />
+                                </InArgument>
                               </ui:InvokeWorkflowFile.Arguments>
                             </ui:InvokeWorkflowFile>
                           </If.Else>
