@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="atHome_メイン処理" this:atHome_メイン処理.district_id="1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="atHome_メイン処理" this:atHome_メイン処理.district_id="1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="txt_html" Type="OutArgument(x:String)" />
     <x:Property Name="prefecture" Type="InArgument(x:String)" />
@@ -6,7 +6,7 @@
     <x:Property Name="number_of_target_pages" Type="InArgument(x:Int32)" />
     <x:Property Name="district_id" Type="InArgument(x:Int32)" />
   </x:Members>
-  <sap:VirtualizedContainerService.HintSize>2209,2267</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>4138,2927</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="32">
@@ -73,7 +73,7 @@
       <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="メイン処理全体" sap:VirtualizedContainerService.HintSize="2219,2202" sap2010:WorkflowViewState.IdRef="Sequence_79">
+  <Sequence DisplayName="メイン処理全体" sap:VirtualizedContainerService.HintSize="4148,2862" sap2010:WorkflowViewState.IdRef="Sequence_79">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="parentid" />
     </Sequence.Variables>
@@ -82,7 +82,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:MultipleAssign DisplayName="複数代入" sap:VirtualizedContainerService.HintSize="2157,130" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+    <ui:MultipleAssign DisplayName="複数代入" sap:VirtualizedContainerService.HintSize="4086,130" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
       <ui:MultipleAssign.AssignOperations>
         <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
           <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
@@ -104,26 +104,26 @@
         </scg:List>
       </ui:MultipleAssign.AssignOperations>
     </ui:MultipleAssign>
-    <ui:LogMessage DisplayName="メッセージをログ" sap:VirtualizedContainerService.HintSize="2157,92" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[property_type &amp; &quot;_&quot; &amp; prefecture &amp; &quot;の処理を開始&quot;]" />
-    <Sequence DisplayName="対象物件リストに移動" sap:VirtualizedContainerService.HintSize="2157,1636" sap2010:WorkflowViewState.IdRef="Sequence_71">
+    <ui:LogMessage DisplayName="メッセージをログ" sap:VirtualizedContainerService.HintSize="4086,92" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[property_type &amp; &quot;_&quot; &amp; prefecture &amp; &quot;の処理を開始&quot;]" />
+    <Sequence DisplayName="対象物件リストに移動" sap:VirtualizedContainerService.HintSize="4086,2296" sap2010:WorkflowViewState.IdRef="Sequence_71">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="ブラウザーにアタッチ '          Page'" sap:VirtualizedContainerService.HintSize="2095,1525" sap2010:WorkflowViewState.IdRef="BrowserScope_23" InformativeScreenshot="d201c3082a28cf9235260d3844f8e052" Selector="&lt;html app='chrome.exe' title='*【アットホーム】*' /&gt;">
+      <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="ブラウザーにアタッチ '          Page'" sap:VirtualizedContainerService.HintSize="4024,2185" sap2010:WorkflowViewState.IdRef="BrowserScope_23" InformativeScreenshot="d201c3082a28cf9235260d3844f8e052" Selector="&lt;html app='chrome.exe' title='*【アットホーム】*' /&gt;">
         <ui:BrowserScope.Body>
           <ActivityAction x:TypeArguments="x:Object">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="2061,1378" sap2010:WorkflowViewState.IdRef="Sequence_70">
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="3990,2038" sap2010:WorkflowViewState.IdRef="Sequence_70">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <If Condition="[prefecture = &quot;神奈川&quot;]" DisplayName="条件分岐" sap:VirtualizedContainerService.HintSize="1999,1114" sap2010:WorkflowViewState.IdRef="If_1">
+              <If Condition="[prefecture = &quot;神奈川&quot;]" DisplayName="条件分岐" sap:VirtualizedContainerService.HintSize="3928,1774" sap2010:WorkflowViewState.IdRef="If_1">
                 <If.Then>
                   <Sequence DisplayName="シーケンス" sap:VirtualizedContainerService.HintSize="496,934" sap2010:WorkflowViewState.IdRef="Sequence_84">
                     <sap:WorkflowViewStateService.ViewState>
@@ -197,7 +197,7 @@
                   </Sequence>
                 </If.Then>
                 <If.Else>
-                  <If Condition="[prefecture = &quot;東京&quot;]" DisplayName="条件分岐" sap:VirtualizedContainerService.HintSize="1458,956" sap2010:WorkflowViewState.IdRef="If_3">
+                  <If Condition="[prefecture = &quot;東京&quot;]" DisplayName="条件分岐" sap:VirtualizedContainerService.HintSize="3387,1616" sap2010:WorkflowViewState.IdRef="If_3">
                     <If.Then>
                       <Sequence DisplayName="シーケンス" sap:VirtualizedContainerService.HintSize="496,787" sap2010:WorkflowViewState.IdRef="Sequence_81">
                         <sap:WorkflowViewStateService.ViewState>
@@ -259,7 +259,7 @@
                       </Sequence>
                     </If.Then>
                     <If.Else>
-                      <If Condition="[prefecture =&quot;千葉&quot;]" DisplayName="条件分岐" sap:VirtualizedContainerService.HintSize="917,798" sap2010:WorkflowViewState.IdRef="If_2">
+                      <If Condition="[prefecture =&quot;千葉&quot;]" DisplayName="条件分岐" sap:VirtualizedContainerService.HintSize="2846,1458" sap2010:WorkflowViewState.IdRef="If_2">
                         <If.Then>
                           <Sequence DisplayName="シーケンス" sap:VirtualizedContainerService.HintSize="496,640" sap2010:WorkflowViewState.IdRef="Sequence_82">
                             <sap:WorkflowViewStateService.ViewState>
@@ -296,7 +296,7 @@
                             </ui:Check>
                             <ui:Check AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" Action="Check" DisplayName="チェック 'LABEL'" sap:VirtualizedContainerService.HintSize="434,107" sap2010:WorkflowViewState.IdRef="Check_17">
                               <ui:Check.Target>
-                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="cd86dc92-0de1-4326-8ff8-42a53821f289" InformativeScreenshot="f88ac4683283eadd9c8bbf989ad3740f" Selector="&lt;webctrl aaname='その他の地域' parentid='search-city-grp' tag='LABEL' /&gt;">
+                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="cd86dc92-0de1-4326-8ff8-42a53821f289" InformativeScreenshot="f88ac4683283eadd9c8bbf989ad3740f" Selector="&lt;webctrl aaname='その他の地域' omit:parentid='search-city-grp' tag='LABEL' /&gt;">
                                   <ui:Target.TimeoutMS>
                                     <InArgument x:TypeArguments="x:Int32" />
                                   </ui:Target.TimeoutMS>
@@ -309,51 +309,192 @@
                           </Sequence>
                         </If.Then>
                         <If.Else>
-                          <Sequence DisplayName="シーケンス" sap:VirtualizedContainerService.HintSize="376,596" sap2010:WorkflowViewState.IdRef="Sequence_83">
+                          <Sequence DisplayName="シーケンス" sap:VirtualizedContainerService.HintSize="2305,1300" sap2010:WorkflowViewState.IdRef="Sequence_83">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <Assign DisplayName="代入" sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_4">
-                              <Assign.To>
-                                <OutArgument x:TypeArguments="x:String">[parentid]</OutArgument>
-                              </Assign.To>
-                              <Assign.Value>
-                                <InArgument x:TypeArguments="x:String">pref-saitama</InArgument>
-                              </Assign.Value>
-                            </Assign>
-                            <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke atHome_物件・県指定 workflow" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_130" UnSafe="False" WorkflowFileName="atHome_物件・県指定.xaml">
-                              <ui:InvokeWorkflowFile.Arguments>
-                                <InArgument x:TypeArguments="x:String" x:Key="parentid">[parentid]</InArgument>
-                                <InArgument x:TypeArguments="x:String" x:Key="property_type">[property_type]</InArgument>
-                                <InArgument x:TypeArguments="x:String" x:Key="prefecture">[prefecture]</InArgument>
-                              </ui:InvokeWorkflowFile.Arguments>
-                            </ui:InvokeWorkflowFile>
-                            <ui:Check AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" Action="Check" DisplayName="チェック 'INPUT  00140'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Check_18">
-                              <ui:Check.Target>
-                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d5f86318-fe05-4553-b837-a16a2c42c210" InformativeScreenshot="cfe92a6ed333cbc080fb4df6ffcafb2c" Selector="&lt;webctrl aaname='さいたま市' tag='LABEL' /&gt;">
-                                  <ui:Target.TimeoutMS>
-                                    <InArgument x:TypeArguments="x:Int32" />
-                                  </ui:Target.TimeoutMS>
-                                  <ui:Target.WaitForReady>
-                                    <InArgument x:TypeArguments="ui:WaitForReady" />
-                                  </ui:Target.WaitForReady>
-                                </ui:Target>
-                              </ui:Check.Target>
-                            </ui:Check>
-                            <ui:Check AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" Action="Check" DisplayName="チェック 'LABEL'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Check_19">
-                              <ui:Check.Target>
-                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="cd86dc92-0de1-4326-8ff8-42a53821f289" InformativeScreenshot="f88ac4683283eadd9c8bbf989ad3740f" Selector="&lt;webctrl aaname='その他の地域' parentid='search-city-grp' tag='LABEL' /&gt;">
-                                  <ui:Target.TimeoutMS>
-                                    <InArgument x:TypeArguments="x:Int32" />
-                                  </ui:Target.TimeoutMS>
-                                  <ui:Target.WaitForReady>
-                                    <InArgument x:TypeArguments="ui:WaitForReady" />
-                                  </ui:Target.WaitForReady>
-                                </ui:Target>
-                              </ui:Check.Target>
-                            </ui:Check>
+                            <If Condition="[prefecture = &quot;埼玉&quot;]" DisplayName="条件分岐 (if)" sap:VirtualizedContainerService.HintSize="2243,1189" sap2010:WorkflowViewState.IdRef="If_4">
+                              <If.Then>
+                                <Sequence sap:VirtualizedContainerService.HintSize="496,640" sap2010:WorkflowViewState.IdRef="Sequence_85">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <Assign DisplayName="代入" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_4">
+                                    <Assign.To>
+                                      <OutArgument x:TypeArguments="x:String">[parentid]</OutArgument>
+                                    </Assign.To>
+                                    <Assign.Value>
+                                      <InArgument x:TypeArguments="x:String">pref-saitama</InArgument>
+                                    </Assign.Value>
+                                  </Assign>
+                                  <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke atHome_物件・県指定 workflow" sap:VirtualizedContainerService.HintSize="434,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_130" UnSafe="False" WorkflowFileName="atHome_物件・県指定.xaml">
+                                    <ui:InvokeWorkflowFile.Arguments>
+                                      <InArgument x:TypeArguments="x:String" x:Key="parentid">[parentid]</InArgument>
+                                      <InArgument x:TypeArguments="x:String" x:Key="property_type">[property_type]</InArgument>
+                                      <InArgument x:TypeArguments="x:String" x:Key="prefecture">[prefecture]</InArgument>
+                                    </ui:InvokeWorkflowFile.Arguments>
+                                  </ui:InvokeWorkflowFile>
+                                  <ui:Check AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" Action="Check" DisplayName="チェック 'INPUT  00140'" sap:VirtualizedContainerService.HintSize="434,107" sap2010:WorkflowViewState.IdRef="Check_18">
+                                    <ui:Check.Target>
+                                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d5f86318-fe05-4553-b837-a16a2c42c210" InformativeScreenshot="cfe92a6ed333cbc080fb4df6ffcafb2c" Selector="&lt;webctrl aaname='さいたま市' tag='LABEL' /&gt;">
+                                        <ui:Target.TimeoutMS>
+                                          <InArgument x:TypeArguments="x:Int32" />
+                                        </ui:Target.TimeoutMS>
+                                        <ui:Target.WaitForReady>
+                                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                                        </ui:Target.WaitForReady>
+                                      </ui:Target>
+                                    </ui:Check.Target>
+                                  </ui:Check>
+                                  <ui:Check AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" Action="Check" DisplayName="チェック 'LABEL'" sap:VirtualizedContainerService.HintSize="434,107" sap2010:WorkflowViewState.IdRef="Check_19">
+                                    <ui:Check.Target>
+                                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="cd86dc92-0de1-4326-8ff8-42a53821f289" InformativeScreenshot="f88ac4683283eadd9c8bbf989ad3740f" Selector="&lt;webctrl aaname='その他の地域' omit:parentid='search-city-grp' tag='LABEL' /&gt;">
+                                        <ui:Target.TimeoutMS>
+                                          <InArgument x:TypeArguments="x:Int32" />
+                                        </ui:Target.TimeoutMS>
+                                        <ui:Target.WaitForReady>
+                                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                                        </ui:Target.WaitForReady>
+                                      </ui:Target>
+                                    </ui:Check.Target>
+                                  </ui:Check>
+                                </Sequence>
+                              </If.Then>
+                              <If.Else>
+                                <Sequence DisplayName="シーケンス" sap:VirtualizedContainerService.HintSize="1702,1031" sap2010:WorkflowViewState.IdRef="Sequence_89">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <If Condition="[prefecture = &quot;栃木&quot;]" DisplayName="条件分岐 (if)" sap:VirtualizedContainerService.HintSize="1640,920" sap2010:WorkflowViewState.IdRef="If_5">
+                                    <If.Then>
+                                      <Sequence sap:VirtualizedContainerService.HintSize="496,493" sap2010:WorkflowViewState.IdRef="Sequence_87">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                        <Assign DisplayName="代入" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_6">
+                                          <Assign.To>
+                                            <OutArgument x:TypeArguments="x:String">[parentid]</OutArgument>
+                                          </Assign.To>
+                                          <Assign.Value>
+                                            <InArgument x:TypeArguments="x:String">pref-tochigi</InArgument>
+                                          </Assign.Value>
+                                        </Assign>
+                                        <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke atHome_物件・県指定 workflow" sap:VirtualizedContainerService.HintSize="434,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_131" UnSafe="False" WorkflowFileName="atHome_物件・県指定.xaml">
+                                          <ui:InvokeWorkflowFile.Arguments>
+                                            <InArgument x:TypeArguments="x:String" x:Key="parentid">[parentid]</InArgument>
+                                            <InArgument x:TypeArguments="x:String" x:Key="property_type">[property_type]</InArgument>
+                                            <InArgument x:TypeArguments="x:String" x:Key="prefecture">[prefecture]</InArgument>
+                                          </ui:InvokeWorkflowFile.Arguments>
+                                        </ui:InvokeWorkflowFile>
+                                        <ui:Check AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" Action="Check" DisplayName="チェック 'INPUT  00140'" sap:VirtualizedContainerService.HintSize="434,107" sap2010:WorkflowViewState.IdRef="Check_24">
+                                          <ui:Check.Target>
+                                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d5f86318-fe05-4553-b837-a16a2c42c210" InformativeScreenshot="d949c1059d2c95d6ba6d9bcbeadf4ed7" Selector="&lt;html app='chrome.exe' title='【アットホーム】*' /&gt;&lt;webctrl omit:parentid='search-city-grp' tag='LABEL' aaname='栃木県' /&gt;">
+                                              <ui:Target.TimeoutMS>
+                                                <InArgument x:TypeArguments="x:Int32" />
+                                              </ui:Target.TimeoutMS>
+                                              <ui:Target.WaitForReady>
+                                                <InArgument x:TypeArguments="ui:WaitForReady" />
+                                              </ui:Target.WaitForReady>
+                                            </ui:Target>
+                                          </ui:Check.Target>
+                                        </ui:Check>
+                                      </Sequence>
+                                    </If.Then>
+                                    <If.Else>
+                                      <Sequence DisplayName="シーケンス" sap:VirtualizedContainerService.HintSize="1099,762" sap2010:WorkflowViewState.IdRef="Sequence_92">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                        <If Condition="[prefecture = &quot;茨城&quot;]" DisplayName="条件分岐 (if)" sap:VirtualizedContainerService.HintSize="1037,651" sap2010:WorkflowViewState.IdRef="If_6">
+                                          <If.Then>
+                                            <Sequence sap:VirtualizedContainerService.HintSize="496,493" sap2010:WorkflowViewState.IdRef="Sequence_90">
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                              <Assign DisplayName="代入" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_7">
+                                                <Assign.To>
+                                                  <OutArgument x:TypeArguments="x:String">[parentid]</OutArgument>
+                                                </Assign.To>
+                                                <Assign.Value>
+                                                  <InArgument x:TypeArguments="x:String">pref-ibaraki</InArgument>
+                                                </Assign.Value>
+                                              </Assign>
+                                              <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke atHome_物件・県指定 workflow" sap:VirtualizedContainerService.HintSize="434,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_132" UnSafe="False" WorkflowFileName="atHome_物件・県指定.xaml">
+                                                <ui:InvokeWorkflowFile.Arguments>
+                                                  <InArgument x:TypeArguments="x:String" x:Key="parentid">[parentid]</InArgument>
+                                                  <InArgument x:TypeArguments="x:String" x:Key="property_type">[property_type]</InArgument>
+                                                  <InArgument x:TypeArguments="x:String" x:Key="prefecture">[prefecture]</InArgument>
+                                                </ui:InvokeWorkflowFile.Arguments>
+                                              </ui:InvokeWorkflowFile>
+                                              <ui:Check AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" Action="Check" DisplayName="チェック 'INPUT  00140'" sap:VirtualizedContainerService.HintSize="434,107" sap2010:WorkflowViewState.IdRef="Check_25">
+                                                <ui:Check.Target>
+                                                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d5f86318-fe05-4553-b837-a16a2c42c210" InformativeScreenshot="766b4b9b3898dc75258ec5fea09e6ecf" Selector="&lt;html app='chrome.exe' title='【アットホーム】*' /&gt;&lt;webctrl omit:parentid='search-city-grp' tag='LABEL' aaname='茨城県' /&gt;">
+                                                    <ui:Target.TimeoutMS>
+                                                      <InArgument x:TypeArguments="x:Int32" />
+                                                    </ui:Target.TimeoutMS>
+                                                    <ui:Target.WaitForReady>
+                                                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                                                    </ui:Target.WaitForReady>
+                                                  </ui:Target>
+                                                </ui:Check.Target>
+                                              </ui:Check>
+                                            </Sequence>
+                                          </If.Then>
+                                          <If.Else>
+                                            <Sequence sap:VirtualizedContainerService.HintSize="496,493" sap2010:WorkflowViewState.IdRef="Sequence_91">
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                              <Assign DisplayName="代入" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_8">
+                                                <Assign.To>
+                                                  <OutArgument x:TypeArguments="x:String">[parentid]</OutArgument>
+                                                </Assign.To>
+                                                <Assign.Value>
+                                                  <InArgument x:TypeArguments="x:String">pref-gunma</InArgument>
+                                                </Assign.Value>
+                                              </Assign>
+                                              <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke atHome_物件・県指定 workflow" sap:VirtualizedContainerService.HintSize="434,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_133" UnSafe="False" WorkflowFileName="atHome_物件・県指定.xaml">
+                                                <ui:InvokeWorkflowFile.Arguments>
+                                                  <InArgument x:TypeArguments="x:String" x:Key="parentid">[parentid]</InArgument>
+                                                  <InArgument x:TypeArguments="x:String" x:Key="property_type">[property_type]</InArgument>
+                                                  <InArgument x:TypeArguments="x:String" x:Key="prefecture">[prefecture]</InArgument>
+                                                </ui:InvokeWorkflowFile.Arguments>
+                                              </ui:InvokeWorkflowFile>
+                                              <ui:Check AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" Action="Check" DisplayName="チェック 'INPUT  00140'" sap:VirtualizedContainerService.HintSize="434,107" sap2010:WorkflowViewState.IdRef="Check_26">
+                                                <ui:Check.Target>
+                                                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d5f86318-fe05-4553-b837-a16a2c42c210" InformativeScreenshot="6188ffe32be33016f9b112464e9db3cf" Selector="&lt;html app='chrome.exe' title='【アットホーム】*' /&gt;&lt;webctrl omit:parentid='search-city-grp' tag='LABEL' aaname='群馬県' /&gt;">
+                                                    <ui:Target.TimeoutMS>
+                                                      <InArgument x:TypeArguments="x:Int32" />
+                                                    </ui:Target.TimeoutMS>
+                                                    <ui:Target.WaitForReady>
+                                                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                                                    </ui:Target.WaitForReady>
+                                                  </ui:Target>
+                                                </ui:Check.Target>
+                                              </ui:Check>
+                                            </Sequence>
+                                          </If.Else>
+                                        </If>
+                                      </Sequence>
+                                    </If.Else>
+                                  </If>
+                                </Sequence>
+                              </If.Else>
+                            </If>
                           </Sequence>
                         </If.Else>
                       </If>
@@ -361,7 +502,7 @@
                   </If>
                 </If.Else>
               </If>
-              <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke atHome検索結果表示 workflow" sap:VirtualizedContainerService.HintSize="1999,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_126" UnSafe="False" WorkflowFileName="atHome検索結果表示.xaml">
+              <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke atHome検索結果表示 workflow" sap:VirtualizedContainerService.HintSize="3928,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_126" UnSafe="False" WorkflowFileName="atHome検索結果表示.xaml">
                 <ui:InvokeWorkflowFile.Arguments>
                   <InArgument x:TypeArguments="x:String" x:Key="property_type">[property_type]</InArgument>
                 </ui:InvokeWorkflowFile.Arguments>
@@ -371,23 +512,13 @@
         </ui:BrowserScope.Body>
       </ui:BrowserScope>
     </Sequence>
-    <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="ワークフロー ファイルを呼び出し" sap:VirtualizedContainerService.HintSize="2157,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_125" UnSafe="False" WorkflowFileName="すべてのページの物件を登録.xaml">
+    <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="ワークフロー ファイルを呼び出し" sap:VirtualizedContainerService.HintSize="4086,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_125" UnSafe="False" WorkflowFileName="すべてのページの物件を登録.xaml">
       <ui:InvokeWorkflowFile.Arguments>
-        <OutArgument x:TypeArguments="x:String" x:Key="txt_html">
-          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="txt_html" />
-        </OutArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="site_name">
-          <Literal x:TypeArguments="x:String">【アットホーム】</Literal>
-        </InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="property_type">
-          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="property_type" />
-        </InArgument>
-        <InArgument x:TypeArguments="x:Int32" x:Key="number_of_target_pages">
-          <mva:VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="number_of_target_pages" />
-        </InArgument>
-        <InArgument x:TypeArguments="x:Int32" x:Key="district_id">
-          <mva:VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="district_id" />
-        </InArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="txt_html">[txt_html]</OutArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="site_name">【アットホーム】</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="property_type">[property_type]</InArgument>
+        <InArgument x:TypeArguments="x:Int32" x:Key="number_of_target_pages">[number_of_target_pages]</InArgument>
+        <InArgument x:TypeArguments="x:Int32" x:Key="district_id">[district_id]</InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
   </Sequence>
