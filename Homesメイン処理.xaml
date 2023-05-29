@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Homesメイン処理" this:Homesメイン処理.district_id="1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Homesメイン処理" this:Homesメイン処理.district_id="1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="txt_html" Type="OutArgument(x:String)" />
     <x:Property Name="prefecture" Type="InArgument(x:String)" />
@@ -6,7 +6,7 @@
     <x:Property Name="argument1" Type="InArgument(x:String)" />
     <x:Property Name="district_id" Type="InArgument(x:Int32)" />
   </x:Members>
-  <sap:VirtualizedContainerService.HintSize>1909,3978</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>3952,4896</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="32">
@@ -69,11 +69,11 @@
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
       <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
       <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
       <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="シーケンス" sap:VirtualizedContainerService.HintSize="1919,3913" sap2010:WorkflowViewState.IdRef="Sequence_3">
+  <Sequence DisplayName="シーケンス" sap:VirtualizedContainerService.HintSize="3962,4831" sap2010:WorkflowViewState.IdRef="Sequence_3">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="prefecture_short_name" />
       <Variable x:TypeArguments="s:String[]" Default="[{&quot;横浜市港北区&quot;,&quot;横浜市鶴見区&quot;,&quot;横浜市神奈川区&quot;,&quot;横浜市西区&quot;,&quot;横浜市中区&quot;,&quot;横浜市南区&quot;,&quot;横浜市保土ケ谷区&quot;,&quot;横浜市磯子区&quot;,&quot;横浜市金沢区&quot;,&quot;横浜市戸塚区&quot;,&quot;横浜市港南区&quot;,&quot;横浜市旭区&quot;,&quot;横浜市緑区&quot;,&quot;横浜市瀬谷区&quot;,&quot;横浜市栄区&quot;,&quot;横浜市泉区&quot;,&quot;横浜市青葉区&quot;,&quot;横浜市都筑区&quot;,&quot;川崎市川崎区&quot;,&quot;川崎市幸区&quot;,&quot;川崎市中原区&quot;,&quot;川崎市高津区&quot;,&quot;川崎市多摩区&quot;,&quot;川崎市宮前&quot;,&quot;川崎市宮前&quot;,&quot;川崎市麻生区&quot;,&quot;相模原市緑区&quot;,&quot;相模原市緑区&quot;,&quot;相模原市中央区&quot;,&quot;相模原市南区&quot;,&quot;横須賀市&quot;,&quot;平塚市&quot;,&quot;鎌倉市&quot;,&quot;藤沢市&quot;,&quot;小田原市&quot;,&quot;茅ヶ崎市&quot;,&quot;逗子市&quot;,&quot;三浦市&quot;,&quot;秦野市&quot;,&quot;厚木市&quot;,&quot;大和市&quot;,&quot;伊勢原市&quot;,&quot;海老名市&quot;,&quot;座間市&quot;,&quot;南足柄市&quot;,&quot;綾瀬市&quot;,&quot;三浦郡葉山町&quot;,&quot;高座郡寒川町&quot;,&quot;中郡大磯町&quot;,&quot;中郡二宮町&quot;,&quot;足柄上郡中井町&quot;,&quot;足柄上郡大井町&quot;,&quot;足柄上郡松田町&quot;,&quot;足柄上郡山北町&quot;,&quot;足柄上郡開成町&quot;,&quot;足柄下郡箱根町&quot;,&quot;足柄下郡真鶴町&quot;,&quot;足柄下郡湯河原町&quot;,&quot;愛甲郡愛川町&quot;,&quot;愛甲郡清川村&quot;}]" Name="kanagawa_district_data" />
@@ -84,19 +84,19 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence DisplayName="対象物件リストに移動" sap:VirtualizedContainerService.HintSize="1857,3802" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence DisplayName="対象物件リストに移動" sap:VirtualizedContainerService.HintSize="3900,4720" sap2010:WorkflowViewState.IdRef="Sequence_2">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="ブラウザーにアタッチ '          Page'" sap:VirtualizedContainerService.HintSize="1795,3691" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="202cafbb65313592c5d714e7780446a1" Selector="&lt;html app='chrome.exe' title='【ホームズ】*' /&gt;">
+      <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="ブラウザーにアタッチ '          Page'" sap:VirtualizedContainerService.HintSize="3838,4609" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="202cafbb65313592c5d714e7780446a1" Selector="&lt;html app='chrome.exe' title='【ホームズ】*' /&gt;">
         <ui:BrowserScope.Body>
           <ActivityAction x:TypeArguments="x:Object">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1761,3544" sap2010:WorkflowViewState.IdRef="Sequence_1">
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="3804,4462" sap2010:WorkflowViewState.IdRef="Sequence_1">
               <Sequence.Variables>
                 <Variable x:TypeArguments="x:Boolean" Default="False" Name="next_button_exists" />
                 <Variable x:TypeArguments="scg:Dictionary(x:String, s:String[])" Default="[New Dictionary( Of String, String()) From{&#xA;&#x9;{&quot;東京都&quot;, {&quot;千代田区&quot;,&quot;中央区&quot;,&quot;港区&quot;,&quot;新宿区&quot;,&quot;文京区&quot;,&quot;台東区&quot;,&quot;墨田区&quot;,&quot;江東区&quot;,&quot;品川区&quot;,&quot;目黒区&quot;,&quot;大田区&quot;,&quot;世田谷区&quot;,&quot;渋谷区&quot;,&quot;中野区&quot;,&quot;杉並区&quot;,&quot;豊島区&quot;,&quot;北区&quot;,&quot;荒川区&quot;,&quot;板橋区&quot;,&quot;練馬区&quot;,&quot;足立区&quot;,&quot;葛飾区&quot;,&quot;江戸川区&quot;,&quot;八王子市&quot;,&quot;立川市&quot;,&quot;武蔵野市&quot;,&quot;三鷹市&quot;,&quot;青梅市&quot;,&quot;府中市&quot;,&quot;昭島市&quot;,&quot;調布市&quot;,&quot;町田市&quot;,&quot;小金井市&quot;,&quot;小平市&quot;,&quot;日野市&quot;,&quot;東村山市&quot;,&quot;国分寺市&quot;,&quot;国立市&quot;,&quot;福生市&quot;,&quot;狛江市&quot;,&quot;東大和市&quot;,&quot;清瀬市&quot;,&quot;東久留米市&quot;,&quot;武蔵村山市&quot;,&quot;多摩市&quot;,&quot;稲城市&quot;,&quot;羽村市&quot;,&quot;あきる野市&quot;,&quot;西東京市&quot;,&quot;西多摩郡&quot;}},&#xA;&#x9;{&quot;神奈川県&quot;,{&quot;横浜市&quot;, &quot;川崎市&quot;, &quot;相模原市&quot;,&quot;横須賀市&quot;,&quot;平塚市&quot;,&quot;鎌倉市&quot;,&quot;藤沢市&quot;,&quot;小田原市&quot;,&quot;茅ヶ崎市&quot;,&quot;逗子市&quot;,&quot;三浦市&quot;,&quot;秦野市&quot;,&quot;厚木市&quot;,&quot;大和市&quot;,&quot;伊勢原市&quot;,&quot;海老名市&quot;,&quot;座間市&quot;,&quot;南足柄市&quot;,&quot;綾瀬市&quot;,&quot;三浦郡&quot;,&quot;高座郡&quot;,&quot;中郡&quot;,&quot;足柄上郡&quot;,&quot;足柄下郡&quot;,&quot;愛甲郡&quot;}}&#xA;}]" Name="municipal_data_without_chiba_saitama" />
@@ -106,7 +106,7 @@
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="クリック 'IMG'" sap:VirtualizedContainerService.HintSize="1699,107" sap2010:WorkflowViewState.IdRef="Click_10" KeyModifiers="None" MouseButton="BTN_LEFT">
+              <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="クリック 'IMG'" sap:VirtualizedContainerService.HintSize="3742,107" sap2010:WorkflowViewState.IdRef="Click_10" KeyModifiers="None" MouseButton="BTN_LEFT">
                 <ui:Click.CursorPosition>
                   <ui:CursorPosition Position="Center">
                     <ui:CursorPosition.OffsetX>
@@ -128,8 +128,8 @@
                   </ui:Target>
                 </ui:Click.Target>
               </ui:Click>
-              <ui:LogMessage DisplayName="メッセージをログ" sap:VirtualizedContainerService.HintSize="1699,92" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Warn" Message="[property_type &amp; &quot;_&quot; &amp; prefecture &amp; &quot;の処理を開始しました&quot;]" />
-              <If Condition="[prefecture = &quot;東京都&quot;]" DisplayName="条件分岐" sap:VirtualizedContainerService.HintSize="1699,556" sap2010:WorkflowViewState.IdRef="If_3">
+              <ui:LogMessage DisplayName="メッセージをログ" sap:VirtualizedContainerService.HintSize="3742,92" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Warn" Message="[property_type &amp; &quot;_&quot; &amp; prefecture &amp; &quot;の処理を開始しました&quot;]" />
+              <If Condition="[prefecture = &quot;東京都&quot;]" DisplayName="条件分岐" sap:VirtualizedContainerService.HintSize="3742,1474" sap2010:WorkflowViewState.IdRef="If_3">
                 <If.Then>
                   <Assign DisplayName="代入" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_1">
                     <Assign.To>
@@ -141,7 +141,7 @@
                   </Assign>
                 </If.Then>
                 <If.Else>
-                  <If Condition="[prefecture = &quot;神奈川県&quot;]" DisplayName="条件分岐" sap:VirtualizedContainerService.HintSize="1220,398" sap2010:WorkflowViewState.IdRef="If_2">
+                  <If Condition="[prefecture = &quot;神奈川県&quot;]" DisplayName="条件分岐" sap:VirtualizedContainerService.HintSize="3263,1316" sap2010:WorkflowViewState.IdRef="If_2">
                     <If.Then>
                       <Assign DisplayName="代入" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_2">
                         <Assign.To>
@@ -153,7 +153,7 @@
                       </Assign>
                     </If.Then>
                     <If.Else>
-                      <If Condition="[prefecture = &quot;千葉県&quot;]" DisplayName="条件分岐" sap:VirtualizedContainerService.HintSize="741,240" sap2010:WorkflowViewState.IdRef="If_1">
+                      <If Condition="[prefecture = &quot;千葉県&quot;]" DisplayName="条件分岐" sap:VirtualizedContainerService.HintSize="2784,1158" sap2010:WorkflowViewState.IdRef="If_1">
                         <If.Then>
                           <Assign DisplayName="代入" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_3">
                             <Assign.To>
@@ -165,21 +165,112 @@
                           </Assign>
                         </If.Then>
                         <If.Else>
-                          <Assign DisplayName="代入" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_4">
-                            <Assign.To>
-                              <OutArgument x:TypeArguments="x:String">[prefecture_short_name]</OutArgument>
-                            </Assign.To>
-                            <Assign.Value>
-                              <InArgument x:TypeArguments="x:String">埼玉</InArgument>
-                            </Assign.Value>
-                          </Assign>
+                          <Sequence DisplayName="シーケンス" sap:VirtualizedContainerService.HintSize="2305,1000" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <If Condition="[prefecture = &quot;埼玉県&quot;]" DisplayName="条件分岐 (if)" sap:VirtualizedContainerService.HintSize="2243,889" sap2010:WorkflowViewState.IdRef="If_11">
+                              <If.Then>
+                                <Sequence DisplayName="シーケンス" sap:VirtualizedContainerService.HintSize="496,193" sap2010:WorkflowViewState.IdRef="Sequence_19">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <Assign DisplayName="代入" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_4">
+                                    <Assign.To>
+                                      <OutArgument x:TypeArguments="x:String">[prefecture_short_name]</OutArgument>
+                                    </Assign.To>
+                                    <Assign.Value>
+                                      <InArgument x:TypeArguments="x:String">埼玉</InArgument>
+                                    </Assign.Value>
+                                  </Assign>
+                                </Sequence>
+                              </If.Then>
+                              <If.Else>
+                                <Sequence DisplayName="シーケンス" sap:VirtualizedContainerService.HintSize="1702,731" sap2010:WorkflowViewState.IdRef="Sequence_22">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <If Condition="[prefecture = &quot;茨城県&quot;]" DisplayName="条件分岐 (if)" sap:VirtualizedContainerService.HintSize="1640,620" sap2010:WorkflowViewState.IdRef="If_12">
+                                    <If.Then>
+                                      <Sequence sap:VirtualizedContainerService.HintSize="496,193" sap2010:WorkflowViewState.IdRef="Sequence_20">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                        <Assign DisplayName="代入" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_5">
+                                          <Assign.To>
+                                            <OutArgument x:TypeArguments="x:String">[prefecture_short_name]</OutArgument>
+                                          </Assign.To>
+                                          <Assign.Value>
+                                            <InArgument x:TypeArguments="x:String">茨城</InArgument>
+                                          </Assign.Value>
+                                        </Assign>
+                                      </Sequence>
+                                    </If.Then>
+                                    <If.Else>
+                                      <Sequence DisplayName="シーケンス" sap:VirtualizedContainerService.HintSize="1099,462" sap2010:WorkflowViewState.IdRef="Sequence_25">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                        <If Condition="[prefecture = &quot;栃木県&quot;]" DisplayName="条件分岐 (if)" sap:VirtualizedContainerService.HintSize="1037,351" sap2010:WorkflowViewState.IdRef="If_13">
+                                          <If.Then>
+                                            <Sequence sap:VirtualizedContainerService.HintSize="496,193" sap2010:WorkflowViewState.IdRef="Sequence_23">
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                              <Assign DisplayName="代入" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_6">
+                                                <Assign.To>
+                                                  <OutArgument x:TypeArguments="x:String">[prefecture_short_name]</OutArgument>
+                                                </Assign.To>
+                                                <Assign.Value>
+                                                  <InArgument x:TypeArguments="x:String">栃木</InArgument>
+                                                </Assign.Value>
+                                              </Assign>
+                                            </Sequence>
+                                          </If.Then>
+                                          <If.Else>
+                                            <Sequence sap:VirtualizedContainerService.HintSize="496,193" sap2010:WorkflowViewState.IdRef="Sequence_24">
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                              <Assign DisplayName="代入" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_7">
+                                                <Assign.To>
+                                                  <OutArgument x:TypeArguments="x:String">[prefecture_short_name]</OutArgument>
+                                                </Assign.To>
+                                                <Assign.Value>
+                                                  <InArgument x:TypeArguments="x:String">群馬</InArgument>
+                                                </Assign.Value>
+                                              </Assign>
+                                            </Sequence>
+                                          </If.Else>
+                                        </If>
+                                      </Sequence>
+                                    </If.Else>
+                                  </If>
+                                </Sequence>
+                              </If.Else>
+                            </If>
+                          </Sequence>
                         </If.Else>
                       </If>
                     </If.Else>
                   </If>
                 </If.Else>
               </If>
-              <If Condition="[property_type = &quot;賃貸&quot;]" DisplayName="条件分岐" sap:VirtualizedContainerService.HintSize="1699,2558" sap2010:WorkflowViewState.IdRef="If_7">
+              <If Condition="[property_type = &quot;賃貸&quot;]" DisplayName="条件分岐" sap:VirtualizedContainerService.HintSize="3742,2558" sap2010:WorkflowViewState.IdRef="If_7">
                 <If.Then>
                   <Sequence DisplayName="シーケンス" sap:VirtualizedContainerService.HintSize="450,812" sap2010:WorkflowViewState.IdRef="Sequence_7">
                     <sap:WorkflowViewStateService.ViewState>
@@ -485,19 +576,11 @@
                       </If>
                       <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke すべてのページの物件を登録 workflow" sap:VirtualizedContainerService.HintSize="486,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="すべてのページの物件を登録.xaml">
                         <ui:InvokeWorkflowFile.Arguments>
-                          <OutArgument x:TypeArguments="x:String" x:Key="txt_html">
-                            <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="txt_html" />
-                          </OutArgument>
-                          <InArgument x:TypeArguments="x:String" x:Key="site_name">
-                            <Literal x:TypeArguments="x:String">【ホームズ】</Literal>
-                          </InArgument>
+                          <OutArgument x:TypeArguments="x:String" x:Key="txt_html">[txt_html]</OutArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="site_name">【ホームズ】</InArgument>
                           <InArgument x:TypeArguments="x:String" x:Key="property_type" />
-                          <InArgument x:TypeArguments="x:Int32" x:Key="number_of_target_pages">
-                            <Literal x:TypeArguments="x:Int32" Value="130" />
-                          </InArgument>
-                          <InArgument x:TypeArguments="x:Int32" x:Key="district_id">
-                            <mva:VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="district_id" />
-                          </InArgument>
+                          <InArgument x:TypeArguments="x:Int32" x:Key="number_of_target_pages">130</InArgument>
+                          <InArgument x:TypeArguments="x:Int32" x:Key="district_id">[district_id]</InArgument>
                         </ui:InvokeWorkflowFile.Arguments>
                       </ui:InvokeWorkflowFile>
                     </Sequence>

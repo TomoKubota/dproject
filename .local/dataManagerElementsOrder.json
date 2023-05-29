@@ -53,14 +53,14 @@
       "SortBy": 0,
       "VariablesSectionElementsOrder": [],
       "ArgumentsSectionElementsOrder": [
-        "district_id",
         "property_list",
-        "txt_html",
         "prefecture_list_not_processed",
         "counter_for_prefecture",
         "property_list_not_processed",
         "prefecture_list",
-        "counter_for_property"
+        "counter_for_property",
+        "district_id",
+        "txt_html"
       ],
       "ConstantsSectionElementsOrder": null,
       "AddedNamespaces": null
@@ -298,11 +298,11 @@
       "Path": "FourList登録処理繰り返し版.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "browser_name&Sequence_372",
+        "browser_type&Sequence_372",
         "loop_counter&Sequence_372",
         "uielement&Sequence_372",
-        "no_err_flg_recieved&Sequence_372",
-        "browser_type&Sequence_377",
-        "browser_name&Sequence_377"
+        "no_err_flg_recieved&Sequence_372"
       ],
       "ArgumentsSectionElementsOrder": [
         "district_id"
@@ -395,6 +395,47 @@
         "txt_html",
         "property_type",
         "prefecture"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Reins起動時の処理.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "reins_special_element_exists&Sequence_5",
+        "windowReins&Sequence_5"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "レインズトップページに戻る.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "レインズ_次のページに移動.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "elementExists"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "atHome検索結果表示.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "next_button_exists&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "property_type"
       ],
       "ConstantsSectionElementsOrder": null,
       "AddedNamespaces": null
